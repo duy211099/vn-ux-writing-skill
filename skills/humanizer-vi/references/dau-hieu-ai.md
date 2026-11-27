@@ -32,11 +32,11 @@ Ví dụ dưới đây viết mới cho tài liệu này, không lấy từ bài
 
 **Sửa:** thay lời khen bằng chi tiết có trong bài (số, tên, việc cụ thể). Không có chi tiết thì nói nhỏ lại. Không bịa chi tiết mới. *Rất* trong câu bình thường (*rất hợp*, *rất ít người*) không phải dấu hiệu.
 
-> **Trước:** Với hơn 20 năm kinh nghiệm, tiệm sửa xe đạp Bình mang đến dịch vụ chất lượng vượt trội cùng tay nghề hoàn hảo.
-> **Sau:** Tiệm sửa xe đạp Bình đã mở hơn 20 năm.
+> **Trước:** Thợ của tiệm sửa xe đạp Bình có hơn 20 năm kinh nghiệm, mang đến dịch vụ chất lượng vượt trội cùng tay nghề hoàn hảo.
+> **Sau:** Thợ của tiệm sửa xe đạp Bình có hơn 20 năm kinh nghiệm.
 
 > **Trước:** Homestay sở hữu tầm nhìn tuyệt đẹp chưa từng có ra thung lũng.
-> **Sau:** Từ homestay nhìn thẳng ra thung lũng.
+> **Sau:** Homestay nhìn ra thung lũng.
 
 ## 3. Câu kết dàn dựng
 
@@ -86,7 +86,7 @@ Ví dụ dưới đây viết mới cho tài liệu này, không lấy từ bài
 **Sửa:** nói thẳng vế khẳng định.
 
 > **Trước:** Học vẽ không cần năng khiếu, chỉ cần sự kiên trì.
-> **Sau:** Người chưa từng cầm cọ vẫn theo được lớp này.
+> **Sau:** Học vẽ cần kiên trì; năng khiếu thì không bắt buộc.
 
 > **Trước:** Ứng dụng không chỉ giúp ghi chú mà còn là người bạn đồng hành trong công việc.
 > **Sau:** Ứng dụng dùng để ghi chú trong công việc.
@@ -105,7 +105,7 @@ Ví dụ dưới đây viết mới cho tài liệu này, không lấy từ bài
 > **Sau:** Đơn hàng sẽ giao chậm hai ngày. Xin lỗi bạn vì phải chờ thêm.
 
 > **Trước:** Ứng dụng được thiết kế để giúp bạn quản lý chi tiêu của bạn một cách dễ dàng.
-> **Sau:** Ứng dụng giúp bạn ghi chi tiêu dễ dàng.
+> **Sau:** Ứng dụng giúp bạn quản lý chi tiêu dễ dàng.
 
 ## 8. Mở bài dàn dựng
 
@@ -115,8 +115,8 @@ Ví dụ dưới đây viết mới cho tài liệu này, không lấy từ bài
 
 **Sửa:** bắt đầu bằng ý chính hoặc chi tiết cụ thể nhất, viết thành câu kể. Rút ngắn câu hỏi tu từ vẫn là câu hỏi tu từ; bài Facebook cũng vậy.
 
-> **Trước:** Bạn đã bao giờ tự hỏi vì sao cây trong nhà cứ héo dù tưới đều? Hãy cùng tìm hiểu nhé!
-> **Sau:** Cây trong nhà héo dù tưới đều thì thường là do tưới quá nhiều.
+> **Trước:** Bạn đã bao giờ tự hỏi vì sao cây trong nhà cứ héo dù tưới đều? Hãy cùng tìm hiểu nhé! Nguyên nhân thường gặp nhất là tưới quá nhiều.
+> **Sau:** Cây trong nhà héo dù tưới đều thì nguyên nhân thường gặp nhất là tưới quá nhiều.
 
 ## 9. Markdown trong Facebook và email
 
@@ -138,7 +138,7 @@ Ví dụ dưới đây viết mới cho tài liệu này, không lấy từ bài
 **Sửa:** dùng động từ chỉ việc thật.
 
 > **Trước:** Khóa học mang đến cho bạn kiến thức nền tảng về khẩu độ và tốc độ chụp.
-> **Sau:** Khóa học dạy khẩu độ và tốc độ chụp từ đầu.
+> **Sau:** Khóa học dạy kiến thức nền tảng về khẩu độ và tốc độ chụp.
 
 ## 11. Nêu vấn đề rồi "để chúng tôi lo"
 
@@ -147,7 +147,7 @@ Ví dụ dưới đây viết mới cho tài liệu này, không lấy từ bài
 **Sửa:** nói sản phẩm làm gì, bỏ màn dựng vấn đề nếu nó chung chung.
 
 > **Trước:** Bận rộn đến mức quên uống nước? Hãy để Giọt Nước nhắc bạn!
-> **Sau:** Giọt Nước nhắc bạn uống nước theo giờ bạn đặt.
+> **Sau:** Giọt Nước nhắc bạn uống nước.
 
 ## 12. Dẫn nguồn mơ hồ
 
@@ -155,10 +155,10 @@ Ví dụ dưới đây viết mới cho tài liệu này, không lấy từ bài
 
 **Vì sao:** mượn uy tín của một nguồn không có tên.
 
-**Sửa:** nếu bài nêu tên nguồn, giữ. Nếu không, bỏ cụm dẫn nguồn (*Nghiên cứu cho thấy*, *Nhiều người thành đạt nói*), giữ ý nhưng nói đúng mức chắc chắn (*có thể giúp*, *nhiều người thấy*), hoặc hỏi người dùng nguồn. Không bịa tên nghiên cứu, tác giả, năm.
+**Sửa:** nếu bài nêu tên nguồn, giữ. Nếu không, bỏ cụm dẫn nguồn (*Nghiên cứu cho thấy*, *Người trong nghề vẫn nói*), giữ ý nhưng nói đúng mức chắc chắn (*có thể giúp*, *nhiều người thấy*), hoặc hỏi người dùng nguồn. Không bịa tên nghiên cứu, tác giả, năm.
 
 > **Trước:** Nghiên cứu cho thấy ngủ trưa 20 phút giúp tăng năng suất.
-> **Sau:** Ngủ trưa chừng 20 phút có thể giúp buổi chiều tỉnh táo hơn.
+> **Sau:** Ngủ trưa 20 phút có thể giúp tăng năng suất.
 
 ## 13. Câu cùng nhịp
 
@@ -167,6 +167,12 @@ Ví dụ dưới đây viết mới cho tài liệu này, không lấy từ bài
 **Dấu hiệu:** ba câu hoặc ba đoạn liền nhau cùng một khuôn (*Thứ nhất… Thứ hai… Thứ ba…* với các đoạn dài bằng nhau; mọi mục đều *X giúp bạn Y*).
 
 **Sửa:** đổi chủ ngữ, gộp hai đoạn ngắn, để một đoạn dài một đoạn ngắn.
+
+> **Trước:** Thứ nhất, ứng dụng giúp bạn lưu công thức nấu ăn. Thứ hai, ứng dụng giúp bạn lên thực đơn cả tuần. Thứ ba, ứng dụng giúp bạn tạo danh sách đi chợ.
+> **Sau:** Ứng dụng lưu công thức nấu ăn và lên thực đơn cả tuần. Danh sách đi chợ cũng tạo được ngay trong đó.
+
+> **Trước:** Bếp gọn hơn. Tủ lạnh gọn hơn. Cuối tuần cũng nhẹ đầu hơn.
+> **Sau:** Bếp và tủ lạnh gọn hơn, cuối tuần cũng nhẹ đầu hơn.
 
 ## 14. Hán Việt và động từ chồng
 
@@ -177,7 +183,7 @@ Ví dụ dưới đây viết mới cho tài liệu này, không lấy từ bài
 **Sửa:** dùng động từ chính. Giữ giọng trang trọng nếu bài trang trọng: *Quý khách*, *Kính gửi*, *Trân trọng* không phải dấu hiệu.
 
 > **Trước:** Chúng tôi sẽ tiến hành thực hiện việc nâng cấp hệ thống nhằm nâng cao chất lượng dịch vụ.
-> **Sau:** Chúng tôi sẽ nâng cấp hệ thống để dịch vụ chạy tốt hơn.
+> **Sau:** Chúng tôi sẽ nâng cấp hệ thống để cải thiện chất lượng dịch vụ.
 
 ## 15. Từ nối đệm
 

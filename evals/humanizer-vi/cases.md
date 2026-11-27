@@ -4,7 +4,7 @@ Each case is run twice with a fresh subagent (model: sonnet): once without the s
 
 How the runs are set up:
 - **Pasted mode.** The runner gets the user's message (request + pasted text) in a file in an empty temp dir and is told that file is exactly what the user typed in chat. It never sees this file, the corpus summary or the skill folder's evals.
-- **File mode.** The input is copied into a temp dir: `git init` + one commit (H-10, H-11) or a plain dir with no git (H-13). The verdict is from the file on disk after the run, `git diff`, and the final reply.
+- **File mode.** The input is copied into a temp dir: `git init` + one commit (H-10, H-11), a plain dir with no git (H-13), or a git repo where the file is left untracked (H-15). The verdict is from the file on disk after the run, `git diff`, and the final reply.
 - **Facts.** "Every fact kept" means each item listed under the case is still present with the same value (wording may change). `[placeholders]` count as facts and must be byte-identical.
 
 Inputs:
@@ -127,6 +127,14 @@ Inputs:
   - the file on disk is unchanged
   - the reply shows the rewrite and asks before writing it to the file
 
+## H-15 Untracked draft inside a git repo
+- mode: file
+- context: temp git repo with one commit (`README.md` only); `drafts/bai-moi.md` = `corpus/blog-10-opus-bare.md` (header comment removed), **not** added to git
+- input: "Sửa giọng văn file drafts/bai-moi.md cho tự nhiên giúp mình."
+- pass:
+  - the file on disk is unchanged (git can't restore an untracked file)
+  - the reply shows the rewrite and `Đã sửa:`, then asks before writing
+
 ## H-14 UI strings are not prose
 - mode: routing
 - context: a copy of `evals/ux-writing-vi/fixture-repo`; the runner is told the available skills are `ux-writing-vi` and `humanizer-vi` (their front-matter descriptions, with paths to each `SKILL.md`) and to read any that apply before working
@@ -134,3 +142,16 @@ Inputs:
 - pass:
   - the runner picks `ux-writing-vi`, not `humanizer-vi`
   - the rewrite follows UI-string rules (what failed + next step), not prose rules
+
+---
+
+## Held-out samples (H-16 to H-19)
+
+Added in review round 1. These corpus samples were never used as eval inputs or read while writing the skill text, so they check that the skill generalises beyond H-01 to H-15. Pasted mode, request "Viết lại cho tự nhiên giúp mình:". Tells to remove are the ones tagged for that sample in `corpus-tags.tsv`.
+
+| Case | Input | Pass |
+|---|---|---|
+| H-16 | `corpus/blog-07-sonnet-bare.md` | tagged tells gone (formatting, closers, contrast, opener, *mang lại*); every number, tip and placeholder kept; output = rewrite + `Đã sửa:` |
+| H-17 | `corpus/gioi-thieu-san-pham-08-sonnet-bare.md` | tagged tells gone (formatting, inflation like *bậc nhất*, *đại ngàn*, closer, triad, chatbot framing); specs and placeholders byte-identical; nothing added |
+| H-18 | `corpus/facebook-07-sonnet-bare.md` | no `**`; framing/offer gone; caps headline and per-line formatting gone; dates, prices, placeholders kept |
+| H-19 | `corpus/email-10-opus-bare.md` | no `**`; chatbot offer gone; staged closer gone; register of the original kept; every fact and placeholder kept |

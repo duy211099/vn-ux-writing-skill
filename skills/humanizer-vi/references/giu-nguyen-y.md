@@ -19,22 +19,22 @@ Viết lại để bỏ dấu hiệu AI, không phải để đổi nội dung. 
 | Thứ hạng, so sánh | *đầu tiên*, *duy nhất*, *lớn thứ hai*, *nhiều nhất* | *một trong những* thành *lớn nhất* |
 | Đồng thời, nhân quả | *cùng lúc*, *trong khi*, *vì… nên*, *sau khi* | hai việc làm cùng lúc thành làm lần lượt |
 | Mức chắc chắn | *có thể*, *được cho là*, *khoảng*, *thường* | *có thể giúp* thành *giúp* |
-| Cam kết, điều kiện | bảo hành, đổi trả, *nếu…*, *chỉ áp dụng…*, *(nếu có)* | bỏ *chính hãng 100%* |
-| Chỗ trống | `[Tên quán]`, `[xx] m²`, `{name}`: giữ **từng ký tự**, kể cả vị trí ngoặc | `[Tùy chọn]` thành `[Nếu có]`; `[xx dB]` thành `[xx] dB` |
-| Thuật ngữ | từ tiếng Anh người viết dùng (*deploy*, *commit*, *API*, *pull request*), tên công nghệ (*CI/CD*) | *deploy* thành *triển khai*; bỏ tên *CI/CD* |
+| Cam kết, điều kiện | bảo hành, đổi trả, *nếu…*, *chỉ áp dụng…*, *(nếu có)* | bỏ *bảo hành 12 tháng* |
+| Chỗ trống | `[Tên quán]`, `[xx] m²`, `{name}`: giữ **từng ký tự**, kể cả vị trí ngoặc | `[Ghi chú]` thành `[Nếu cần]`; `[xx kg]` thành `[xx] kg` |
+| Thuật ngữ | từ tiếng Anh người viết dùng (*merge*, *branch*, *build*, *cache*), tên công nghệ (*Docker*) | *merge* thành *hợp nhất*; bỏ tên *Docker* |
 
 ## Đừng thêm
 
 Thêm cũng là đổi ý. Không thêm:
 
-- con số suy ra (*9:00–12:00* thì đừng viết thêm *3 tiếng*; *[số] lớp* thì đừng viết *bốn lớp*)
+- con số suy ra (*8:00–10:00* thì đừng viết thêm *2 tiếng*; *[số] món* thì đừng viết *ba món*)
 - trải nghiệm của người viết (*mình đã thử…*, *mình đọc mỗi ngày…*) nếu bài gốc không có
-- lời khẳng định mới (*khách đặt nhiều nhất là…*, *phù hợp mọi lứa tuổi*)
+- lời khẳng định mới (*được yêu thích nhất*, *phù hợp mọi lứa tuổi*)
 - tên nguồn, tên nghiên cứu, tên thương hiệu không có trong bài
-- quy trình hay điều kiện mới (*báo trước khi đặt*)
+- quy trình hay điều kiện mới (*cần đặt cọc trước*)
 
 Câu chung chung mà không có chi tiết để thay thì viết lại đơn giản hơn hoặc bỏ. Đừng đoán chi tiết.
 
 ## Khi không chắc
 
-Nếu không biết một câu có phải dữ kiện hay không, giữ nó. Nếu một lời khẳng định có vẻ sai (ngày không khớp thứ, *đầu năm* trong bài tháng 11), giữ nguyên trong bản viết lại và nói một dòng trong `Đã sửa:` để người viết tự quyết. Không tự sửa dữ kiện.
+Nếu không biết một câu có phải dữ kiện hay không, giữ nó. Nếu một lời khẳng định có vẻ sai (ngày không khớp thứ, *mùa hè* trong bài đăng tháng 12), giữ nguyên trong bản viết lại và nói một dòng trong `Đã sửa:` để người viết tự quyết. Không tự sửa dữ kiện.

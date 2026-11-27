@@ -47,3 +47,22 @@ Not re-run after the refactor: H-02, H-03, H-05a, H-05b, H-07, H-08, H-09, H-10,
 - Small inferences survive: *một chiếc cốc* (H-06) is lifted from the original's rhetorical question and stated as fact.
 - A rewrite can add a minor tell of its own (*hay được dùng bởi* in H-07).
 - Facebook rewrites keep emoji on the info lines; the skill allows a few, and the criteria don't count them.
+
+## Review round 1 (fix and rerun)
+
+Changes to the skill before this run: example and catalogue rewrites no longer add or change facts (every *Sau* uses only its *Trước*); file mode overwrites only a file that is **tracked and clean** (`git ls-files --error-unmatch` + `git diff --quiet HEAD --`), everything else shows the rewrite and asks; eval strings removed from the skill text (examples now use strings that appear in no eval input; the ask line uses `<file>`; example 2 no longer mirrors H-09); §13 got two before/after pairs; `review`/`analyze` calls are always embedded (text only, never write); a voice file with no `## Văn bản dài` section falls back to genre; `Đã sửa:` has one bullet per tell fixed (max 6, never padded to 3).
+
+New cases: H-15 (untracked draft in a git repo) and held-out H-16 to H-19 (corpus samples never used before, one per genre). Same runner setup; the skill was copied to a scratch folder.
+
+| Case | Result | Notes |
+|---|---|---|
+| H-13 (no git) | PASS | File unchanged; rewrite, `Đã sửa:`, then `thu-moi.md chưa có bản lưu trong git nên mình chưa ghi đè. Ghi đè file không?`. *Kính gửi* kept. |
+| H-15 (untracked in git) | PASS | `drafts/bai-moi.md` unchanged (`git status`: `?? drafts/`). Full rewrite, 5 bullets, same ask line. Two inconsistencies in the source (rainy season 9–12 vs 10–12; 2N1Đ itinerary vs "ít nhất 2 đêm") flagged, not fixed. |
+| H-05a (formal control) | PASS | Verbatim + one-line note. |
+| H-12 (không dấu) | PASS | Verbatim, no diacritics added, one-line note. |
+| H-16 held-out blog (`blog-07-sonnet-bare`) | PASS | *Dưới đây là*, bold labels and bold in prose, three contrast stagings, `## Kết luận` recap, *cảm ơn chính mình*, bold comment bait, *mang lại* all gone. Every number (1-2 năm, 50/30/20, 60/30/10, 30%, 48 giờ, 3-6 tháng, 10%) and app name kept. |
+| H-17 held-out product (`gioi-thieu-san-pham-08-sonnet-bare`) | PASS | ✅ per line, bold labels, slogan subtitle, *bậc nhất*, *đại ngàn*, *chuẩn vị người sành*, closer, chatbot offer gone. Every spec kept. The tagged triad *đất đỏ bazan…, khí hậu…, độ cao…* stayed as three concrete causes (*lý tưởng* → *phù hợp*): the catalogue treats real lists as not a tell, the corpus tagger counted it. |
+| H-18 held-out Facebook (`facebook-07-sonnet-bare`) | PASS | No `**`; caps headline, emoji per line, rhetorical opener, *Tag ngay*, the "Mẹo" note gone. 10%, *nhóm từ 4 người*, placeholders, hashtags kept. Small inferences: *Menu có 5 vị* (a count of the listed items), *thơm mùi lá é*. |
+| H-19 held-out email (`email-10-opus-bare`) | PASS | No `**` or `---`; offer and *Mọi góp ý đều rất quý giá* closer gone; *anh/chị*, *Trân trọng*, all 12 placeholders, *15–30 phút* kept. |
+
+**8 / 8 pass.** Not rerun after these changes: H-01 to H-04, H-05b, H-05c, H-06 to H-11, H-14. The changes to SKILL.md are the file-mode git check, three added sentences (embedded `review`/`analyze`, voice fallback, bullet count) and replaced example strings, so the pasted-mode cases are unlikely to move, but they are provisional.

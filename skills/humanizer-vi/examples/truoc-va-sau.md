@@ -1,6 +1,6 @@
 # Trước và sau
 
-Ví dụ viết lại trọn vẹn, mỗi ví dụ theo đúng dạng trả lời khi người dùng dán văn bản: bản viết lại trước, rồi `Đã sửa:`. Mọi văn bản ở đây viết mới cho tài liệu này.
+Ví dụ viết lại trọn vẹn, mỗi ví dụ theo đúng dạng trả lời khi người dùng dán văn bản: bản viết lại trước, rồi `Đã sửa:`. Mọi văn bản ở đây viết mới cho tài liệu này. Mỗi gạch đầu dòng là một dấu hiệu đã sửa: bài chỉ có hai dấu hiệu thì hai gạch (ví dụ 4 và 7), không thêm cho đủ ba. Bản *Sau* chỉ dùng thông tin có trong bản *Trước*.
 
 ## 1. Blog cá nhân
 
@@ -20,11 +20,11 @@ Ví dụ viết lại trọn vẹn, mỗi ví dụ theo đúng dạng trả lờ
 
 > # Chạy bộ buổi sáng
 >
-> Mình bắt đầu chạy từ tháng 3, mỗi sáng 3 km quanh hồ Thiền Quang. Tuần đầu đau chân đến mức phải đi thang máy xuống tầng 2. Giờ thì khỏe hơn, và buổi sáng thấy đầu óc yên hơn hẳn.
+> Mình bắt đầu chạy từ tháng 3, mỗi sáng 3 km quanh hồ Thiền Quang. Tuần đầu đau chân đến mức phải đi thang máy xuống tầng 2. Chạy giúp mình khỏe hơn và thấy bình yên hơn.
 
 Đã sửa:
 - Mở bài bằng câu hỏi tu từ và *Hãy cùng mình tìm hiểu nhé*: bỏ, vào thẳng chuyện của người viết.
-- Đối lập dàn dựng: *không chỉ giúp mình khỏe hơn mà còn…* → *Giờ thì khỏe hơn, và…*
+- Đối lập dàn dựng: *không chỉ giúp mình khỏe hơn mà còn…* → *Chạy giúp mình khỏe hơn và…*
 - Thổi phồng: *sự bình yên vô cùng quý giá*, *món quà tuyệt vời nhất*.
 - Câu kết dàn dựng: bỏ mục *Lời kết* và *Hãy bắt đầu… ngay hôm nay!*
 - Tiêu đề viết hoa từng chữ và phụ đề *Hành Trình Thay Đổi Bản Thân*.
@@ -35,19 +35,19 @@ Giữ: tháng 3, 3 km, hồ Thiền Quang, chuyện đi thang máy. Chi tiết c
 
 **Trước:**
 
-> Trong thời đại số, việc viết test đóng vai trò vô cùng quan trọng. Khi bạn chạy `npm test`, Vitest sẽ tiến hành thực hiện kiểm tra toàn bộ 86 file test của bạn một cách nhanh chóng, chính xác và hiệu quả. Điều này giúp bạn tự tin hơn mỗi khi merge pull request.
+> Trong thời đại số, tốc độ tải trang đóng vai trò vô cùng quan trọng. Khi bạn thêm `loading="lazy"` vào thẻ ảnh, trình duyệt sẽ tiến hành thực hiện việc hoãn tải ảnh nằm ngoài màn hình một cách thông minh, tiết kiệm và hiệu quả. Điều này giúp trang chủ của mình giảm từ 3,2 MB xuống 900 KB.
 
 **Sau:**
 
-> Chạy `npm test` là Vitest kiểm tra cả 86 file test. Có kết quả đó rồi thì merge pull request yên tâm hơn.
+> Thêm `loading="lazy"` vào thẻ ảnh thì trình duyệt hoãn tải những ảnh nằm ngoài màn hình. Trang chủ của mình nhờ vậy giảm từ 3,2 MB xuống 900 KB.
 
 Đã sửa:
 - Mở bài *Trong thời đại số… vô cùng quan trọng*: bỏ.
-- Động từ chồng: *tiến hành thực hiện kiểm tra* → *kiểm tra*.
-- Bộ ba *nhanh chóng, chính xác và hiệu quả* và *một cách*: bỏ.
-- *Điều này* mở câu → *Có kết quả đó rồi thì*.
+- Động từ chồng: *tiến hành thực hiện việc hoãn tải* → *hoãn tải*.
+- Bộ ba *thông minh, tiết kiệm và hiệu quả* và *một cách*: bỏ.
+- *Điều này* mở câu → *nhờ vậy*.
 
-Giữ nguyên `npm test`, *Vitest*, *86 file*, *merge*, *pull request*.
+Giữ nguyên `loading="lazy"`, *3,2 MB*, *900 KB*.
 
 ## 3. Giới thiệu sản phẩm
 
@@ -67,13 +67,13 @@ Giữ nguyên `npm test`, *Vitest*, *86 file*, *merge*, *pull request*.
 
 > Ấm siêu tốc Gốm Sen
 >
-> Lòng ấm bằng gốm tráng men nên nước không có mùi nhựa. Ấm chứa 1,2 lít, đun sôi trong khoảng 4 phút. Bảo hành [xx] tháng.
+> Ấm Gốm Sen có lòng gốm tráng men, không có mùi nhựa, an toàn khi dùng. Ấm chứa 1,2 lít, đun sôi trong khoảng 4 phút. Bảo hành [xx] tháng.
 
 Đã sửa:
 - Dấu vết chatbot: bỏ câu dẫn *Dưới đây là…* và lời mời thêm ưu đãi.
 - Tiêu đề toàn chữ hoa, emoji hai bên, khẩu hiệu *Tinh hoa bếp Việt*.
-- Nêu vấn đề rồi *Hãy để Gốm Sen giải quyết*: giữ ý *không mùi nhựa*, gắn với lòng gốm.
-- *mang đến trải nghiệm… hoàn hảo*, *được thiết kế để an toàn, bền bỉ và sang trọng*: bỏ, vì bài không có chi tiết nào chứng minh.
+- Nêu vấn đề rồi *Hãy để Gốm Sen giải quyết*: bỏ màn dựng, giữ ý *không mùi nhựa*.
+- *mang đến trải nghiệm… hoàn hảo*, bộ ba *bền bỉ và sang trọng*: bỏ, vì bài không có chi tiết nào chứng minh. *An toàn* là một lời cam kết nên giữ.
 
 Giữ: 1,2 lít, khoảng 4 phút, gốm tráng men, `[xx]` đúng từng ký tự.
 
@@ -87,7 +87,7 @@ Giữ: 1,2 lít, khoảng 4 phút, gốm tráng men, `[xx]` đúng từng ký t�
 
 **Sau:**
 
-> Mình sửa máy giặt tận nhà ở Quận 7 và Nhà Bè. Gọi là thợ đến trong vòng 2 giờ. Phí kiểm tra 50.000đ, sửa thì không tính phí này.
+> Mình sửa máy giặt tận nhà ở Quận 7 và Nhà Bè. Thợ đến trong vòng 2 giờ. Phí kiểm tra 50.000đ, sửa thì không tính phí này.
 
 Đã sửa:
 - Xưng hô theo `docs/giong-van.md`: *chúng tôi* → *mình*.
@@ -110,7 +110,7 @@ Giữ: 1,2 lít, khoảng 4 phút, gốm tráng men, `[xx]` đúng từng ký t�
 
 > Tiệm bánh Mây nghỉ Tết từ 25/1 đến hết 2/2/2027 🎉
 >
-> Đơn bánh Tết nhận đến 20/1. Đơn từ 300.000đ được giao miễn phí trong nội thành.
+> Đơn đặt trước Tết nhận đến 20/1. Đơn từ 300.000đ được giao miễn phí trong nội thành.
 >
 > Cảm ơn cả nhà đã ủng hộ Mây suốt năm qua 💖
 
@@ -167,7 +167,7 @@ Giữ *Kính gửi*, *Quý phụ huynh*, *Trân trọng*: thư gửi phụ huynh
 
 > Chào anh Tùng,
 >
-> Em gửi anh 3 phương án logo trong file PDF đính kèm. Anh xem rồi góp ý giúp em nhé.
+> Em làm xong logo rồi, 3 phương án nằm trong file PDF đính kèm. Anh có gì thắc mắc thì nhắn em nhé.
 >
 > Em Ngân
 
