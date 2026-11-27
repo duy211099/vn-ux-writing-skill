@@ -44,3 +44,34 @@ Reruns after the fix: see the end of this file.
 | B-05 (rerun 2) | PASS | Opens with `"Không có dữ liệu." → "Chưa có đơn hàng nào" + … — lý do`; no voice-file mention. |
 
 Not re-run: B-01, B-08 and B-10 had the same voice-file noise. They're covered by the same rule, but untested after the change.
+
+## Run 2026-11-27 (after plugin restructure)
+
+Run: 2026-11-27, after the skill moved to `skills/ux-writing-vi/` and the voice file became `docs/giong-van.md`. Model: sonnet, one fresh subagent per case, told to read `skills/ux-writing-vi/SKILL.md` first and follow it. Mode A cases ran in a fresh git copy of the fixture; verdict from the diff plus the final reply. B-09 read the PNG; B-10 read the HTML file directly instead of a served URL.
+
+**Summary:** 20 / 20 cases pass every criterion, same as the previous run (20 / 20). No regressions, no changes to the skill. This run also covers B-01, B-08 and B-10 under the final Mode B wording, which the previous run had only provisionally. One case needed a rerun: A-01's first reply gave the choices but not how to change them (criterion 3); the rerun printed the full one-line notice ending "Sửa file này nếu muốn đổi", so it is runner variance, not a text regression.
+
+| Case | Previous | Now | Output / notes |
+|---|---|---|---|
+| A-01 | PASS | PASS (rerun) | `docs/giong-van.md` created (bạn, no self-reference, *xóa*), no `docs/ux-voice.md`; `order.reorder` = "Đặt lại đơn"; no questions. First run: notice lacked "how to change" in the reply; rerun gave the full line. |
+| A-02 | PASS | PASS | "Chưa thanh toán được vì quá thời gian chờ. Thẻ chưa bị trừ tiền. Thử lại." No "của bạn", no *vui lòng*. |
+| A-03 | PASS | PASS | "Xác nhận" → "Đặt món"; only that string changed in Checkout.jsx; voice file created. |
+| A-04 | PASS | PASS | "Dự kiến giao trong 30–45 phút." hardcoded, en dash, not moved to i18n. |
+| A-05 | PASS | PASS | "Quý khách đã đạt hạn mức chuyển tiền hôm nay. Thử lại vào ngày mai hoặc liên hệ ngân hàng để tăng hạn mức." Formal, next step. |
+| A-06 | PASS | PASS | `badge_one` = `badge_other` = "{{count}} món trong giỏ hàng". |
+| A-07 | PASS | PASS | Only `cart.checkout` added ("Thanh toán"); five weak strings listed with an offer to review. |
+| A-08 | PASS | PASS | "Xoá thẻ" / "Xoá thẻ?"; voice file records *xoá, huỷ, hoà*, quý khách. |
+| B-01 | PASS | PASS | `Trước → Sau`: "Ảnh quá lớn. Chọn ảnh dưới 5 MB rồi tải lên lại." Reason in Vietnamese; no voice-file mention. |
+| B-02 | PASS | PASS | "Xóa ảnh này?" + consequence + [Xóa ảnh] [Hủy]. |
+| B-03 | PASS | PASS | Rewrites carry no *vui lòng* (one only in an optional formal variant); split into specific messages. |
+| B-04 | PASS | PASS | "OK" → "Lưu địa chỉ" with reason. |
+| B-05 | PASS | PASS | "Chưa có đơn hàng nào" + "Đơn bạn đặt sẽ hiện ở đây…" + [Xem sản phẩm]; no "dữ liệu" in the rewrite. |
+| B-06 | PASS | PASS | "Nhận thông báo khi đơn hàng có cập nhật." [Bật thông báo] [Để sau]. |
+| B-07 | PASS | PASS | "Xóa tài khoản?" with consequence and [Xóa tài khoản] [Hủy]; error rewritten with a next step. NFC reported by the runner (strings re-typed as NFC); not machine-checked. |
+| B-08 | PASS | PASS | "Lưu". |
+| B-09 | PASS | PASS | All six strings extracted; sentence-case title, "Submit" → "Đăng nhập", link text, error without "Lỗi:" / "!"; `Trước → Sau` with reasons. |
+| B-10 | PASS | PASS | "chúng tôi" removed; empty state with action; specific buttons; benefit-first permission ask; `Trước → Sau`. |
+| B-11 | PASS | PASS | "Mã OTP đã hết hạn. Nhấn "Gửi lại mã" để nhận mã mới." Formal, no pronoun, keeps OTP. |
+| B-12 | PASS | PASS | Flags *quý khách* / *bạn* / *mình*, unifies on *bạn*, drops the "mình" self-reference. |
+
+No Mode B reply mentioned the voice file. The Mode A runs read `docs/giong-van.md` first (all created it where none existed).
