@@ -49,11 +49,13 @@ Not re-run: B-01, B-08 and B-10 had the same voice-file noise. They're covered b
 
 Run: 2026-11-27, after the skill moved to `skills/ux-writing-vi/` and the voice file became `docs/giong-van.md`. Model: sonnet, one fresh subagent per case, told to read `skills/ux-writing-vi/SKILL.md` first and follow it. Mode A cases ran in a fresh git copy of the fixture; verdict from the diff plus the final reply. B-09 read the PNG; B-10 read the HTML file directly instead of a served URL.
 
-**Summary:** 20 / 20 cases pass every criterion, same as the previous run (20 / 20). No regressions, no changes to the skill. This run also covers B-01, B-08 and B-10 under the final Mode B wording, which the previous run had only provisionally. One case needed a rerun: A-01's first reply gave the choices but not how to change them (criterion 3); the rerun printed the full one-line notice ending "Sửa file này nếu muốn đổi", so it is runner variance, not a text regression.
+**Summary:** 19 / 20 cases pass on the first run (previous run: 20 / 20). The one first-run miss is A-01 (criterion 3: the reply listed the voice choices but not how to change them). A-01 then passed on a rerun and on three further fresh-runner runs (see below), so the miss is not reproducible but is not proven to be noise either. No change to the skill. This run also covers B-01, B-08 and B-10 under the final Mode B wording, which the previous run had only provisionally.
+
+**A-01 repeat runs (fresh runner, fresh fixture copy each):** run 1 miss (no "how to change"); rerun PASS ("... Sửa file này nếu muốn đổi"); x1 PASS (same line); x2 PASS (same line); x3 marginal PASS (voice file created and choices stated, "how to change" given as "the user can edit that file" addressed to the caller, not as the one-line notice). Pass rate on the three extra runs: 3 / 3 (one of them marginal); over all five runs: 4 / 5 clean plus one marginal. All five created `docs/giong-van.md` and none created `docs/ux-voice.md`; none asked questions. Other checks: A-05 created `docs/giong-van.md` (as did all Mode A cases that started without one); B-07's strings, as returned by the runner, are NFC (`unicodedata.normalize('NFC', s) == s` is True for all five).
 
 | Case | Previous | Now | Output / notes |
 |---|---|---|---|
-| A-01 | PASS | PASS (rerun) | `docs/giong-van.md` created (bạn, no self-reference, *xóa*), no `docs/ux-voice.md`; `order.reorder` = "Đặt lại đơn"; no questions. First run: notice lacked "how to change" in the reply; rerun gave the full line. |
+| A-01 | PASS | FAIL first run, PASS on 4 later runs | `docs/giong-van.md` created (bạn, no self-reference, *xóa*), no `docs/ux-voice.md`; `order.reorder` = "Đặt lại đơn"; no questions. First run: notice lacked "how to change" in the reply; rerun gave the full line. |
 | A-02 | PASS | PASS | "Chưa thanh toán được vì quá thời gian chờ. Thẻ chưa bị trừ tiền. Thử lại." No "của bạn", no *vui lòng*. |
 | A-03 | PASS | PASS | "Xác nhận" → "Đặt món"; only that string changed in Checkout.jsx; voice file created. |
 | A-04 | PASS | PASS | "Dự kiến giao trong 30–45 phút." hardcoded, en dash, not moved to i18n. |
@@ -67,7 +69,7 @@ Run: 2026-11-27, after the skill moved to `skills/ux-writing-vi/` and the voice 
 | B-04 | PASS | PASS | "OK" → "Lưu địa chỉ" with reason. |
 | B-05 | PASS | PASS | "Chưa có đơn hàng nào" + "Đơn bạn đặt sẽ hiện ở đây…" + [Xem sản phẩm]; no "dữ liệu" in the rewrite. |
 | B-06 | PASS | PASS | "Nhận thông báo khi đơn hàng có cập nhật." [Bật thông báo] [Để sau]. |
-| B-07 | PASS | PASS | "Xóa tài khoản?" with consequence and [Xóa tài khoản] [Hủy]; error rewritten with a next step. NFC reported by the runner (strings re-typed as NFC); not machine-checked. |
+| B-07 | PASS | PASS | "Xóa tài khoản?" with consequence and [Xóa tài khoản] [Hủy]; error rewritten with a next step. NFC machine-checked on the reply strings. |
 | B-08 | PASS | PASS | "Lưu". |
 | B-09 | PASS | PASS | All six strings extracted; sentence-case title, "Submit" → "Đăng nhập", link text, error without "Lỗi:" / "!"; `Trước → Sau` with reasons. |
 | B-10 | PASS | PASS | "chúng tôi" removed; empty state with action; specific buttons; benefit-first permission ask; `Trước → Sau`. |
