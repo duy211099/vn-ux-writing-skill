@@ -1,0 +1,8 @@
+{
+  "name": "viet-writing",
+  "version": "0.2.0",
+  "description": "Vietnamese UX writing for AI agents: natural UI copy, AI-tell removal, a shared voice, and review/analyze commands.",
+  "author": { "name": "Duy Pham" },
+  "repository": "https://github.com/duy211099/vn-ux-writing-skill",
+  "keywords": ["vietnamese", "ux-writing"]
+}
