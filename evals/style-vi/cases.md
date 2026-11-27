@@ -5,6 +5,8 @@ Each case is run twice with a fresh subagent: once without the skill (baseline, 
 Seeds (copied into the fixture copy before the run, then committed so the diff shows only the agent's changes):
 - `seeds/giong-van.md` — a filled voice file for Bếp Nhà in the new format (user *bạn*, prose voice: Bếp Nhà, xen kẽ, trò chuyện).
 - `seeds/ux-voice.md` — the same choices in the old `ux-writing-vi` format, without a `## Văn bản dài` section.
+- `seeds/giong-van-chua-co-van-dai.md` — a new-format voice file as `ux-writing-vi` creates it alone: UI fields filled, every `## Văn bản dài` field still a `[ví dụ: …]` placeholder.
+- `seeds/ra-mat.md` — a Vietnamese launch post written as Bếp Nhà that addresses the reader as *bạn*.
 
 ---
 
@@ -28,13 +30,14 @@ Seeds (copied into the fixture copy before the run, then committed so the diff s
   - no questions are asked first
 
 ## S-03 Change the user pronoun
-- context: fixture-repo + `seeds/giong-van.md` at `docs/giong-van.md`
+- context: fixture-repo + `seeds/giong-van.md` at `docs/giong-van.md` + `seeds/ra-mat.md` at `blog/ra-mat.md`
 - input: "Đổi cách xưng hô sang quý khách nhé."
 - pass:
   - `docs/giong-van.md` now calls the user *quý khách* (register and particles adjusted is fine)
   - the reply lists the strings that now disagree: `cart.empty`, `cart.remove`, `order.placed` in `src/locales/vi.json` (all use *bạn*)
   - `vi.json` and every other file except the voice file are unchanged
   - it offers to update the listed strings rather than doing it
+  - `blog/ra-mat.md` and the voice file's own comments are not listed (a UI pronoun change checks UI strings only)
 
 ## S-04 What is our voice?
 - context: fixture-repo + `seeds/giong-van.md` at `docs/giong-van.md`
@@ -43,3 +46,11 @@ Seeds (copied into the fixture copy before the run, then committed so the diff s
   - the answer summarises the voice file in a few lines (about 6 or fewer): user pronoun, self-reference, tone, prose voice
   - it names `docs/giong-van.md` as the place to change it
   - no files change
+
+## S-05 Voice file exists, prose section unset
+- context: fixture-repo + `seeds/giong-van-chua-co-van-dai.md` at `docs/giong-van.md`
+- input: "Mình chuẩn bị viết blog cho Bếp Nhà. Chốt giọng văn cho bài viết dài trước giúp mình."
+- pass:
+  - `Người viết tự xưng`, `Độ dài câu`, `Mức cá nhân` and `Tránh dùng` under `## Văn bản dài` are filled, not placeholders, with a food-app default
+  - the UI sections of `docs/giong-van.md` are unchanged, and no other file is created or changed
+  - the reply states the choice in about one line and how to change it; no questions

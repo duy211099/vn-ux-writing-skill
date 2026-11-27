@@ -2,7 +2,7 @@
 
 Run: 2026-11-27. Model: sonnet, one fresh subagent per case, told to read `skills/style-vi/SKILL.md` first and follow it. Each case ran in a fresh git copy of `evals/ux-writing-vi/fixture-repo/` with the case's seed committed; the verdict is from the diff plus the final reply. Baseline: [baseline.md](baseline.md).
 
-**Summary:** 4 / 4 cases pass on the final run (baseline: 0 / 4).
+**Summary:** 4 / 4 cases pass on the final run (baseline: 0 / 4). After review fix round 1, S-03 (re-run) and the new S-05 also pass; see the end of this file.
 
 ## Final run (after refactor)
 
@@ -26,3 +26,14 @@ The first GREEN run also passed 4 / 4, but two problems were visible:
 | S-02 | PASS | Same as final. |
 | S-03 | PASS | Listed the three `vi.json` keys; file set to *quý khách*, trang trọng, no *nhé*. |
 | S-04 | PASS | Four lines, echoing the example (see 1). |
+
+## Review fix round 1 (2026-11-27)
+
+The review found two gaps. First, nothing told the skill to fill an unset `## Văn bản dài` in an existing file; S-02 had passed by improvisation. Second, Job 3's search for disagreeing text was unscoped, so a UI pronoun change would also list README and blog lines. Fixes: a new Job 1b and a description trigger for "prose section unset"; Job 3 now searches UI strings for UI fields and prose for prose fields, and never the voice file itself. Both cases below ran with the fixed skill, each in a fresh copy.
+
+| Case | Result | Output / notes |
+|---|---|---|
+| S-03 (with `blog/ra-mat.md` addressing the reader as *bạn*) | PASS | Voice file: *quý khách*, "Trang trọng", *nhé* không dùng, *vui lòng* allowed. Listed only `cart.empty`, `cart.remove`, `order.placed`. `blog/ra-mat.md` and the `package.json` description (listed in the earlier run) are no longer listed. Only the voice file changed. |
+| S-05 (new) | PASS | Filled `Người viết tự xưng: Bếp Nhà`, `Độ dài câu: xen kẽ`, `Mức cá nhân: trò chuyện`, `Tránh dùng: <seed list>`; `Đoạn văn mẫu` left as a placeholder; UI lines untouched; no other file. Reply: "Đã thêm giọng văn dài vào docs/giong-van.md: xưng "Bếp Nhà", câu xen kẽ, giọng trò chuyện (giao đồ ăn). Sửa file này nếu muốn đổi." |
+
+S-01, S-02 and S-04 were not re-run. Their paths (Job 1 and Job 2, and the old-file rule) are unchanged except that S-02's case is now routed explicitly through Job 1b.
