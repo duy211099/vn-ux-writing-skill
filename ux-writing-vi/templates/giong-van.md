@@ -8,7 +8,7 @@ Lĩnh vực: [ví dụ: giao đồ ăn]
 ## Xưng hô với người dùng
 
 bạn, hoặc bỏ đại từ khi câu vẫn rõ
-<!-- Đổi thành "quý khách" cho ngân hàng, bảo hiểm; hoặc theo cách repo đang dùng. -->
+<!-- Đổi thành "quý khách" cho ngân hàng, bảo hiểm; hoặc theo cách repo đang dùng ("quý khách", "anh/chị", "bạn"). -->
 
 ## Ứng dụng tự xưng
 
@@ -31,7 +31,7 @@ Trung tính, thân thiện
 
 - Kiểu dấu thanh: *xóa, hòa* (truyền thống)
 - Đăng nhập, Đăng ký, Mật khẩu, Mã OTP, Email
-- Tiền: 100.000đ
+- Tiền: 100.000đ <!-- Ngân hàng, hóa đơn: 100.000 VND -->
 <!-- Thêm từ riêng của ứng dụng, ví dụ "món" thay cho "sản phẩm". Kiểu dấu thanh theo repo nếu repo đã có. -->
 
 ## Ví dụ trong ứng dụng

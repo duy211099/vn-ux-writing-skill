@@ -21,7 +21,7 @@ Nguyên tắc: giữ từ mượn tiếng Anh khi người Việt đã dùng que
 | search | Tìm kiếm / Tìm | Search | Nút hoặc ô nhập ngắn: "Tìm". |
 | filter | Bộ lọc / Lọc | Filter | |
 | sort | Sắp xếp | Sort | |
-| cart | Giỏ hàng | Giỏ, Cart | |
+| cart | Giỏ hàng | Cart | "Giỏ" được dùng khi chỗ hẹp: "Thêm vào giỏ". |
 | checkout | Thanh toán | Checkout | Nút có thể ghi kèm số tiền. |
 | order | Đơn hàng / Đơn | Order | Ứng dụng đồ ăn: "đơn" hoặc "món" tùy ngữ cảnh. |
 | item (in cart) | Món (đồ ăn), Sản phẩm (bán lẻ) | Mục, Item | Chọn theo lĩnh vực. |

@@ -85,7 +85,7 @@ Xác nhận việc đã xong. Ngắn, cụ thể, đôi khi kèm bước tiếp 
 Mẫu: `Đã [động từ] [đối tượng]` hoặc `[Đối tượng] đã [trạng thái]`. Không dùng bị động "đã được… thành công".
 
 - ✅ Đã lưu thay đổi
-- ✅ Đã gửi hóa đơn đến email của bạn
+- ✅ Đã gửi hóa đơn qua email
 - ✅ Đặt xong rồi! Món sẽ đến trong khoảng 25 phút.
 - ❌ Thành công! — thành công việc gì?
 - ❌ Hồ sơ của bạn đã được cập nhật thành công. — bị động, thừa chữ.
@@ -136,7 +136,7 @@ Mẫu: tiêu đề ≤ 40 ký tự, nội dung ≤ 90 ký tự. Thông tin quan 
 
 - ✅ Món sắp đến / Tài xế Minh còn khoảng 3 phút nữa.
 - ✅ Còn 2 ngày để dùng voucher 50.000đ / Áp dụng cho đơn từ 150.000đ.
-- ✅ Đã nhận 1.200.000đ / Từ NGUYEN VAN AN, nội dung: tiền nhà tháng 11.
+- ✅ (ngân hàng) Tiền vào: +1.200.000 VND / Từ NGUYEN VAN AN, nội dung: tiền nhà tháng 11.
 - ❌ 🔥🔥 SIÊU SALE CỰC SỐC!!! Vào ngay kẻo lỡ — la hét, không nói gì cụ thể.
 - ❌ Thông báo / Bạn có một thông báo mới. — người dùng phải mở mới biết.
 
@@ -159,7 +159,7 @@ Vài màn đầu tiên. Mỗi màn một lợi ích, nói việc người dùng 
 Mẫu: tiêu đề là lợi ích (≤ 6 chữ), một câu giải thích, nút đi tiếp là hành động thật ("Đặt món đầu tiên") hoặc "Tiếp", luôn có "Bỏ qua".
 
 - ✅ Đặt lịch khám trong 1 phút / Chọn bác sĩ, chọn giờ, xong. / [Tiếp]
-- ✅ Nhắc uống thuốc đúng giờ / Thêm đơn thuốc, ứng dụng sẽ nhắc từng liều. / [Thêm đơn thuốc] [Bỏ qua]
+- ✅ Nhắc uống thuốc đúng giờ / Thêm đơn thuốc để được nhắc từng liều. / [Thêm đơn thuốc] [Bỏ qua]
 - ✅ Sẵn sàng rồi / [Tìm bác sĩ gần bạn]
 - ❌ Chào mừng bạn đến với ứng dụng chăm sóc sức khỏe hàng đầu Việt Nam! — khen mình, không nói người dùng được gì.
 - ❌ Ứng dụng giúp bạn quản lý sức khỏe một cách toàn diện và hiệu quả. — "một cách", tính từ rỗng.

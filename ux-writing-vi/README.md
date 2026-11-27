@@ -67,7 +67,7 @@ ux-writing-vi/
 
 - Khung bốn tiêu chuẩn (có mục đích, ngắn gọn, tự nhiên, rõ ràng) và các mẫu nội dung phỏng theo [UX Writing Skill](https://github.com/content-designer/ux-writing-skill) của Christopher Greer (giấy phép MIT).
 - Quy tắc ngôn ngữ (viết hoa, dấu câu, định dạng số, tránh dịch từng chữ) được diễn đạt lại từ [Microsoft Vietnamese Localization Style Guide](https://learn.microsoft.com/globalization/reference/microsoft-style-guides). Không sao chép nguyên văn.
-- Mọi ví dụ tiếng Việt được viết mới.
+- Mọi ví dụ tiếng Việt được viết mới, không lấy từ các nguồn trên.
 
 Giấy phép: MIT. Xem [LICENSE](LICENSE).
 

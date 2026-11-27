@@ -13,7 +13,7 @@ Người dùng skill thường không có kinh nghiệm viết UX. **Đừng h�
 | Mức trang trọng | Trung tính, thân thiện | Như một nhân viên lịch sự nói chuyện với khách trẻ: rõ ràng, không suồng sã, không hành chính. |
 | Trợ từ | Xem phần Trợ từ | *nhé* dùng thưa; không *nha*, *ạ* trong giao diện. |
 
-✅ Chưa tải được video. Video dài hơn 3 phút, hãy cắt ngắn rồi tải lại.
+✅ Chưa tải được video. Video dài hơn 3 phút. Cắt ngắn rồi tải lại.
 ❌ Chúng tôi rất tiếc! Hệ thống của chúng tôi không thể tải video của bạn.
 
 ✅ Đã gửi mã đến 0912 345 678.
@@ -69,3 +69,6 @@ Trước khi áp mặc định, đọc các chuỗi tiếng Việt đã có (fil
 
 ✅ (repo dùng *quý khách*) Quý khách cần xác thực khuôn mặt để chuyển khoản trên 10 triệu đồng.
 ❌ (repo dùng *quý khách*) Bạn cần quét mặt để chuyển khoản trên 10 triệu nhé.
+
+✅ (repo dùng *anh/chị*) Anh/chị cần xác thực khuôn mặt để chuyển khoản trên 10 triệu đồng.
+❌ (repo dùng *anh/chị*) Bạn cần xác thực khuôn mặt… (đổi cách gọi giữa chừng)

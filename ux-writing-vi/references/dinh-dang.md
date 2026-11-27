@@ -44,7 +44,7 @@ Quy tắc trình bày chữ, số, ngày giờ và tiền trong giao diện ti�
 |---|---|
 | Đăng nhập vào tài khoản | Đăng Nhập Vào Tài Khoản |
 | Lưu thay đổi | Lưu Thay Đổi. |
-| Số điện thoại chưa đúng. Kiểm tra lại rồi thử lần nữa. | Lỗi : Số điện thoại không hợp lệ ! |
+| Số điện thoại cần 10 chữ số. | Lỗi : Số điện thoại không hợp lệ ! |
 
 ## Unicode và dấu thanh
 

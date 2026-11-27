@@ -8,9 +8,9 @@ Giọng mặc định (*bạn* hoặc bỏ đại từ, trung tính thân thiệ
 
 1. **Trước:** Lỗi: Không thể kết nối tới máy chủ! → **Sau:** Không tải được danh sách quán. Kiểm tra mạng rồi kéo xuống để tải lại. — Nói việc gì hỏng và cách sửa; bỏ "Lỗi:" và "!".
 2. **Trước:** Số điện thoại không hợp lệ. → **Sau:** Số điện thoại cần đủ 10 chữ số, bắt đầu bằng 0. — Nói sai ở đâu để người dùng sửa được ngay.
-3. **Trước:** Thanh toán thất bại. → **Sau:** Chưa thanh toán được. Thẻ đã hết hạn, hãy thêm thẻ khác. — "X thất bại" là trật tự tiếng Anh; thiếu nguyên nhân và bước tiếp.
+3. **Trước:** Thanh toán thất bại. → **Sau:** Chưa thanh toán được. Thẻ đã hết hạn. Thêm thẻ khác để thanh toán. — "X thất bại" là trật tự tiếng Anh; thiếu nguyên nhân và bước tiếp.
 4. **Trước:** Tên đăng nhập hoặc mật khẩu sai. Vui lòng thử lại. Vui lòng liên hệ hỗ trợ nếu cần trợ giúp. → **Sau:** Email hoặc mật khẩu chưa đúng. Thử lại hoặc đặt lại mật khẩu. — Bỏ *vui lòng* lặp lại; đưa ra lối ra cụ thể thay cho "liên hệ hỗ trợ".
-5. (ngân hàng) **Trước:** Giao dịch không thành công do số dư không đủ. → **Sau:** Số dư không đủ để chuyển 2.000.000 VND. Quý khách nạp thêm tiền hoặc chọn tài khoản khác. — Đưa nguyên nhân lên đầu, nêu số tiền, cho bước tiếp; giữ giọng trang trọng.
+5. (ngân hàng) **Trước:** Giao dịch không thành công do số dư không đủ. → **Sau:** Số dư không đủ để chuyển 2.000.000 VND. Quý khách vui lòng nạp thêm tiền hoặc chọn tài khoản khác. — Đưa nguyên nhân lên đầu, nêu số tiền, cho bước tiếp; giữ giọng trang trọng.
 
 ## Nút
 
@@ -27,7 +27,7 @@ Giọng mặc định (*bạn* hoặc bỏ đại từ, trung tính thân thiệ
 ## Trạng thái trống
 
 12. **Trước:** Không có thông báo. → **Sau:** Chưa có thông báo nào. Khuyến mãi và cập nhật đơn hàng sẽ hiện ở đây. — Nói điều gì sẽ xuất hiện.
-13. **Trước:** Không tìm thấy kết quả nào phù hợp với yêu cầu tìm kiếm của bạn. → **Sau:** Không tìm thấy "bún bò huế". Thử từ khóa ngắn hơn, ví dụ "bún bò". — Nhắc lại từ khóa; gợi ý cách tìm khác.
+13. **Trước:** Không tìm thấy kết quả nào phù hợp với yêu cầu tìm kiếm của bạn. → **Sau:** Không tìm thấy "bún bò Huế". Thử từ khóa ngắn hơn, ví dụ "bún bò". — Nhắc lại từ khóa; gợi ý cách tìm khác.
 14. **Trước:** Danh sách yêu thích trống. → **Sau:** Chưa lưu sản phẩm nào. Nhấn ♡ để lưu món đồ bạn thích. [Khám phá sản phẩm] — Cho bước bắt đầu.
 
 ## Thành công
@@ -37,7 +37,7 @@ Giọng mặc định (*bạn* hoặc bỏ đại từ, trung tính thân thiệ
 
 ## Xin quyền và thông báo đẩy
 
-17. **Trước:** Cho phép "Sổ Chi Tiêu" truy cập ảnh của bạn? → **Sau:** Chụp hóa đơn để tự điền số tiền. [Cho phép dùng camera] [Để sau] — Nêu lợi ích trước khi xin quyền.
+17. **Trước:** Cho phép "Sổ Chi Tiêu" truy cập ảnh của bạn? → **Sau:** Chọn ảnh hóa đơn để tự điền số tiền. [Cho phép truy cập ảnh] [Để sau] — Nêu lợi ích trước khi xin quyền.
 18. **Trước:** Thông báo: Bạn có đơn hàng mới cập nhật trạng thái. → **Sau:** Đơn #2817 đang giao / Dự kiến đến trước 17:00 hôm nay. — Thông báo đẩy phải đọc lướt là hiểu.
 
 ## Form

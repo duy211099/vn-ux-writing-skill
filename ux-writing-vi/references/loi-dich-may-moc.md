@@ -12,15 +12,15 @@ Nguyên tắc chung: hiểu chuỗi tiếng Anh muốn người dùng biết gì
 | Có / Không (nút hộp thoại) | Xóa / Hủy | Người dùng không cần đọc lại câu hỏi để biết nút làm gì. |
 | Vui lòng nhập email. Vui lòng kiểm tra lại. | Nhập email để nhận hóa đơn. | *Vui lòng* lặp lại nghe như văn bản hành chính. Trong giọng thân thiện, dùng thẳng động từ. |
 | Tệp đã được tải lên bởi Minh. | Minh đã tải tệp lên. | Câu bị động với "được… bởi" là dấu hiệu dịch. Tiếng Việt chuộng câu chủ động. |
-| Đơn hàng của bạn đã được đặt thành công. | Đặt hàng thành công. / Đã nhận đơn của bạn. | Bỏ "của bạn" và bị động thừa. |
+| Đơn hàng của bạn đã được đặt thành công. | Đặt hàng thành công. / Đã nhận đơn hàng. | Bỏ "của bạn" và bị động thừa. |
 | Mật khẩu của bạn đã được thay đổi. | Đã đổi mật khẩu. | "Của bạn" dịch từ "your" thường thừa: ngữ cảnh đã rõ là của ai. |
 | Nhấp vào đây để xem điều khoản. | Xem điều khoản sử dụng (là liên kết) | Chữ của liên kết phải tự nói nó dẫn đi đâu. "Nhấp" cũng không đúng trên điện thoại. |
 | Cài Đặt Thông Báo Của Bạn | Cài đặt thông báo | Viết hoa từng chữ là kiểu tiếng Anh. Tiêu đề ngắn là đủ. |
 | Chào mừng bạn đến với dịch vụ của chúng tôi! | Chào mừng đến với Phòng Khám An Tâm | Dùng tên ứng dụng hoặc dịch vụ. "Của chúng tôi" là dịch từ "our". |
 | Dịch vụ cung cấp cho bạn khả năng đặt lịch khám một cách nhanh chóng. | Đặt lịch khám trong 1 phút, không cần gọi điện. | "Cung cấp cho bạn khả năng", "một cách + tính từ" là dịch từ "provide you with the ability", "efficiently". Nói việc người dùng làm được. |
 | Danh sách trống. | Chưa có quán yêu thích. Nhấn ♡ ở quán bất kỳ để lưu lại. | "Danh sách", "dữ liệu" là từ của hệ thống. Trạng thái trống cần nói điều gì sẽ xuất hiện và bước tiếp theo. |
-| Lưu hình ảnh thất bại. | Chưa lưu được ảnh. | "X thất bại" là trật tự tiếng Anh. Tiếng Việt: "Không/Chưa + động từ + được". |
-| Tải về không thành công | Không tải được | Ngắn và tự nhiên hơn. |
+| Gửi tin nhắn thất bại. | Chưa gửi được tin nhắn. | "X thất bại" là trật tự tiếng Anh. Tiếng Việt: "Không/Chưa + động từ + được". |
+| Đồng bộ danh bạ không thành công | Chưa đồng bộ được danh bạ | Ngắn và tự nhiên hơn. |
 | Hết thời gian kết nối. | Máy chủ không phản hồi. Kiểm tra mạng rồi thử lại. | "Connection timed out" dịch sát thành "hết thời gian" nghe cụt. Nói điều thực sự xảy ra. |
 | Ứng dụng muốn truy cập vị trí của bạn. Cho phép? | Bật vị trí để tìm quán gần bạn. [Bật vị trí] [Để sau] | Nêu lợi ích trước, nút ghi rõ hành động. |
 | Đồng ý / OK / Xác nhận (nút chính) | Thanh toán 245.000đ / Lưu địa chỉ / Bật thông báo | Nút là động từ + đối tượng. "Đồng ý" nghe như chấp nhận điều khoản. |

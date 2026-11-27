@@ -1,6 +1,6 @@
 ---
 name: ux-writing-vi
-description: Use when writing, editing or reviewing Vietnamese user interface text — buttons, labels, errors, empty states, dialogs, notifications, onboarding, form hints — including adding or changing keys in Vietnamese locale files (vi.json, *_vi.arb, vi.lproj, vi.po), English-source strings in a repo that has a Vietnamese locale, hardcoded Vietnamese strings in components, or when someone shares Vietnamese copy, a screenshot or a URL of a Vietnamese screen and asks to improve it.
+description: Use when writing, editing or reviewing Vietnamese user interface text — buttons, labels, errors, empty states, dialogs, notifications, onboarding, form hints — including adding or changing keys in Vietnamese locale files (vi.json, vi.yml, vi.ts, *_vi.arb, values-vi/strings.xml, vi.lproj, vi.po), English-source strings in a repo that has a Vietnamese locale, hardcoded Vietnamese strings in components, or when someone shares Vietnamese copy, a screenshot or a URL of a Vietnamese screen and asks to improve it.
 ---
 
 # Vietnamese UX writing
@@ -76,13 +76,15 @@ Full patterns with do/don't examples: [references/mau-noi-dung.md](references/ma
 2. **"Bạn có chắc chắn muốn… không?"** with "Có/Không" buttons. Use `[Động từ] [đối tượng]?` and buttons that name the action.
 3. **Stacked *vui lòng*.** At most one per screen, and in a friendly voice usually none: start with the verb.
 4. **Translation tics.** "của bạn" / "của chúng tôi" everywhere, passive "đã được… thành công", "một cách + tính từ", title case.
-5. **The app talking about itself.** "Chúng tôi…", "Mình đã…", "ứng dụng của chúng tôi". Drop the subject or use the app's name.
+5. **The app talking about itself.** "Chúng tôi…", "Mình đã…", "ứng dụng của chúng tôi". Drop the subject or use the app's name (*chúng tôi* is fine only for finance, legal or policy text — trừ văn bản tài chính, pháp lý, chính sách).
 
 Also: use the domain's own words ("món" in a food app, not "sản phẩm"), no English left in the UI except accepted terms (OTP, email), and no abbreviations on buttons or labels.
 
 ## Mechanics
 
 - **Placeholders are byte-for-byte.** Keep `{{count}}`, `{name}`, `%s`, `%1$d`, `<b>…</b>` exactly. Vietnamese has no plural forms: one sentence works for every count. For i18next, the `_other` key is enough for `vi`; if the project keeps `_one` too, give it the same text.
+- **ICU and native plurals** (Flutter ARB, FormatJS `{count, plural, …}`, Android `<plurals>`, iOS `.stringsdict`): keep the `plural`/`select` structure and every placeholder, write Vietnamese inside each branch, and always keep `other` (for `vi` it can be the only branch besides `=0`).
+- **Several `%s`/`%d` in one string:** if Vietnamese word order differs, switch to positional `%1$s`, `%2$s` instead of reordering unindexed ones, and say so.
 - **Output NFC.** Normalize any Vietnamese you write or rewrite to Unicode NFC, even if the input was decomposed (NFD).
 - **Tone marks** follow the repo (*xóa* or *xoá*); the default is *xóa*. The style applies to every word, not just the one you saw: a *xoá* repo also writes *huỷ*, *hoà*, *thuỷ*. Never mix the two.
 - **Number, date and currency formats**: `1.526`, `4,5`, `14:30`, `27/11/2026`, `100.000đ` (banking: `100.000 VND`). See [references/dinh-dang.md](references/dinh-dang.md).
