@@ -1,0 +1,15 @@
+{
+  "profile": {
+    "title": "Thông tin tài khoản",
+    "saved": "Thông tin của quý khách đã được cập nhật thành công",
+    "saveError": "Đã xảy ra lỗi. Quý khách vui lòng thử lại sau."
+  },
+  "address": {
+    "delete": "Xoá địa chỉ",
+    "deleteConfirm": "Quý khách có chắc chắn muốn xoá địa chỉ này không?",
+    "cancel": "Huỷ"
+  },
+  "account": {
+    "close": "Quý khách muốn huỷ tài khoản? Mọi dữ liệu sẽ bị xoá vĩnh viễn."
+  }
+}

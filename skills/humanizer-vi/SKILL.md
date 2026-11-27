@@ -73,7 +73,7 @@ If the text has no tells, reply with the text unchanged, then one line: `Không 
 4. Write the file as Unicode NFC, even if it was NFD on disk. If an exact-match edit fails because the file is NFD, rewrite the whole file instead.
 5. No tells: leave the file untouched and reply `Không thấy dấu hiệu văn AI trong <file>, mình giữ nguyên.`
 
-**Embedded** (Claude wrote the prose itself, or another skill calls humanizer-vi as its last step). Return only the final text. No report, no `Đã sửa:`. A call from `review` or `analyze` is always embedded, even when they name a file: return the text and never write any file; the calling command decides what to do with it.
+**Embedded** (Claude wrote the prose itself, or another skill calls humanizer-vi as its last step). Return only the final text. No report, no `Đã sửa:`. A call from `review` or `analyze` is embedded for writing: never write any file, even when they name one; the calling command shows your result and writes only after the author says yes. It shows each rewrite in the pasted-text shape (rewrite, then `Đã sửa:`).
 
 Every mode: output NFC.
 
