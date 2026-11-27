@@ -13,3 +13,4 @@ description: Use when writing, editing or reviewing Vietnamese user interface te
 - [references/thuat-ngu.md](references/thuat-ngu.md)
 - [references/mau-noi-dung.md](references/mau-noi-dung.md)
 - [examples/truoc-va-sau.md](examples/truoc-va-sau.md)
+- [references/tiep-can.md](references/tiep-can.md)
