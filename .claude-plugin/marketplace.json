@@ -1,0 +1,12 @@
+{
+  "name": "viet-writing",
+  "description": "Vietnamese UX writing for AI agents: natural UI copy, AI-tell removal, a shared voice, and review/analyze commands.",
+  "owner": { "name": "Duy Pham" },
+  "plugins": [
+    {
+      "name": "viet-writing",
+      "source": "./",
+      "description": "Vietnamese UX writing for AI agents: natural UI copy, AI-tell removal, a shared voice, and review/analyze commands."
+    }
+  ]
+}

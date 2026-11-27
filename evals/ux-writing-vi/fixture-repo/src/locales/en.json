@@ -1,0 +1,16 @@
+{
+  "auth": {
+    "login": "Log in",
+    "loginError": "An error occurred. Please try again later.",
+    "passwordHint": "Password must be at least 8 characters"
+  },
+  "cart": {
+    "empty": "Your cart is empty",
+    "remove": "Are you sure you want to remove this item?",
+    "removeConfirm": "OK"
+  },
+  "order": {
+    "placed": "Your order has been placed successfully",
+    "locationPermission": "Allow location access"
+  }
+}

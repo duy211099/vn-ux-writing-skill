@@ -1,6 +1,7 @@
 """Build a shareable zip of the skill folder.
 
-Usage: python3 scripts/package_skill.py ux-writing-vi dist/ux-writing-vi.zip
+Usage: python3 scripts/package_skill.py skills/ux-writing-vi dist/ux-writing-vi.zip
+       python3 scripts/package_skill.py --all skills dist
 """
 
 import sys
@@ -30,16 +31,26 @@ def package_skill(skill_dir: Path, out_path: Path) -> Path:
     return out_path
 
 
+def package_all(skills_root: Path, out_dir: Path) -> list[Path]:
+    skills_root, out_dir = Path(skills_root), Path(out_dir)
+    dirs = sorted(d for d in skills_root.iterdir() if (d / "SKILL.md").is_file()) if skills_root.is_dir() else []
+    return [package_skill(d, out_dir / f"{d.name}.zip") for d in dirs]
+
+
 def main(argv: list[str]) -> int:
-    if len(argv) != 2:
-        print("usage: package_skill.py <skill_dir> <out.zip>", file=sys.stderr)
-        return 2
     try:
-        out = package_skill(Path(argv[0]), Path(argv[1]))
+        if len(argv) == 3 and argv[0] == "--all":
+            outs = package_all(Path(argv[1]), Path(argv[2]))
+        elif len(argv) == 2 and argv[0] != "--all":
+            outs = [package_skill(Path(argv[0]), Path(argv[1]))]
+        else:
+            print("usage: package_skill.py <skill_dir> <out.zip> | --all <skills_root> <out_dir>", file=sys.stderr)
+            return 2
     except ValueError as e:
         print(e, file=sys.stderr)
         return 1
-    print(out)
+    for o in outs:
+        print(o)
     return 0
 
 

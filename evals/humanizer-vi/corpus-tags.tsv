@@ -1,0 +1,273 @@
+tell	sample	quote
+1-format	blog-03-opus	bold label on every bullet (Bắt đầu thế nào?)
+1-format	blog-04-sonnet	bold labels, Bước 2
+1-format	blog-04-sonnet	bold labels, Bước 3
+1-format	blog-04-sonnet	bold labels, Bước 5
+1-format	blog-04-sonnet	bold labels, Những lỗi
+1-format	blog-07-sonnet-bare	bold labels, 50/30/20 list
+1-format	blog-07-sonnet-bare	bold labels, §6 list
+1-format	blog-07-sonnet-bare	**luôn có một khoản dành cho tương lai** (bold in prose)
+1-format	blog-07-sonnet-bare	**ngay khi nhận lương, chuyển tiền…** (bold in prose)
+1-format	blog-07-sonnet-bare	**Quỹ khẩn cấp** (bold in prose)
+1-format	blog-08-sonnet-bare	# Phở Hà Nội: Hồn Cốt Của Ẩm Thực Thủ Đô (title case)
+1-format	blog-08-sonnet-bare	bold labels, nước dùng list
+1-format	blog-08-sonnet-bare	bold labels, các loại phở
+1-format	blog-08-sonnet-bare	bold labels, nghệ thuật thưởng thức
+1-format	blog-09-haiku-bare	bold labels, Bắt đầu như thế nào?
+1-format	blog-10-opus-bare	✅ at start of every tip
+1-format	blog-10-opus-bare	📍💡🎫⚠️ line-start callouts
+1-format	blog-10-opus-bare	bold labels, Trong phố cổ
+1-format	blog-10-opus-bare	bold labels, Ra khỏi phố cổ
+1-format	blog-10-opus-bare	bold labels, Ăn gì
+1-format	blog-10-opus-bare	**Đô thị cổ Hội An** (bold in prose)
+1-format	blog-10-opus-bare	**thành phố Đà Nẵng** (bold in prose)
+1-format	blog-10-opus-bare	**đêm 14 âm lịch** (bold in prose)
+1-format	blog-10-opus-bare	**xe đạp và đôi chân** (bold in prose)
+1-format	email-04-sonnet	bold label on each paragraph
+1-format	email-10-opus-bare	bold labels, Tóm tắt dự án
+1-format	facebook-03-opus	emoji at line start, block 1
+1-format	facebook-03-opus	emoji at line start, block 2
+1-format	facebook-03-opus	🌸 **MỪNG 20/10 – GIẢM 30%…** 🌸
+1-format	facebook-04-sonnet	emoji at line start ✅
+1-format	facebook-04-sonnet	emoji at line start ❌
+1-format	facebook-04-sonnet	emoji at line start 📍📦🚚
+1-format	facebook-04-sonnet	📚 **MỘT QUYỂN SÁCH CŨ…**
+1-format	facebook-07-sonnet-bare	🔥 **MÙA ĐÔNG ĐẾN RỒI – LẨU NÓNG HỔI ĐÃ SẴN SÀNG!** 🔥
+1-format	facebook-07-sonnet-bare	emoji at line start, menu
+1-format	facebook-07-sonnet-bare	✅ ưu đãi
+1-format	facebook-07-sonnet-bare	📍📞⏰ contact block
+1-format	facebook-09-haiku-bare	📚✨ **HỘI SÁCH CUỐI TUẦN – GIẢM GIÁ CỰC SỐC** ✨📚
+1-format	facebook-09-haiku-bare	🗓📍🕘 block
+1-format	facebook-09-haiku-bare	📖🔥💰🎟 block
+1-format	facebook-09-haiku-bare	✍️🎨☕ block
+1-format	facebook-10-opus-bare	🌅 **KHỞI ĐẦU NGÀY MỚI CÙNG YOGA BUỔI SÁNG** 🧘‍♀️
+1-format	facebook-10-opus-bare	🌿🧠💪❤️ block
+1-format	facebook-10-opus-bare	📅👩‍🏫🙆 block
+1-format	facebook-10-opus-bare	✅ ưu đãi
+1-format	facebook-10-opus-bare	📍📞💬 block
+1-format	gioi-thieu-san-pham-04-sonnet	bold labels, Những điểm chính
+1-format	gioi-thieu-san-pham-05-haiku	bold labels, numbered chapters
+1-format	gioi-thieu-san-pham-07-sonnet-bare	Máy Lọc Không Khí Gia Đình … Lọc Bụi Mịn PM2.5, Khử Mùi, Diệt Khuẩn (title case)
+1-format	gioi-thieu-san-pham-07-sonnet-bare	## 🌿 MÁY LỌC KHÔNG KHÍ … (emoji + caps)
+1-format	gioi-thieu-san-pham-07-sonnet-bare	emoji on every ### heading ✅🔧📱📋📦💡🛡️
+1-format	gioi-thieu-san-pham-07-sonnet-bare	bold labels, Điểm nổi bật
+1-format	gioi-thieu-san-pham-07-sonnet-bare	bold labels, Công nghệ lọc
+1-format	gioi-thieu-san-pham-08-sonnet-bare	✅ at start of every reason
+1-format	gioi-thieu-san-pham-08-sonnet-bare	bold labels, Hương vị
+1-format	gioi-thieu-san-pham-08-sonnet-bare	bold labels, Quy cách
+1-format	gioi-thieu-san-pham-08-sonnet-bare	**rang mộc** (bold in prose)
+1-format	gioi-thieu-san-pham-08-sonnet-bare	**không pha trộn bắp, đậu nành…** (bold in prose)
+1-format	gioi-thieu-san-pham-08-sonnet-bare	**Đặt hàng ngay hôm nay** (bold in prose)
+1-format	gioi-thieu-san-pham-09-haiku-bare	bold labels, Điểm nổi bật
+1-format	gioi-thieu-san-pham-09-haiku-bare	bold labels, Thông tin sản phẩm
+1-format	gioi-thieu-san-pham-10-opus-bare	# Dịch Vụ Dọn Nhà Theo Giờ: Sạch Bóng Không Gian, Thảnh Thơi Cuộc Sống (title case)
+1-format	gioi-thieu-san-pham-10-opus-bare	bold labels, Vì sao nên chọn chúng tôi?
+1-format	gioi-thieu-san-pham-10-opus-bare	**Dịch vụ dọn nhà theo giờ** (bold in prose)
+2-inflate	blog-03-opus	giúp giảm căng thẳng rõ rệt
+2-inflate	blog-08-sonnet-bare	Hồn Cốt Của Ẩm Thực Thủ Đô
+2-inflate	blog-08-sonnet-bare	Nguồn gốc của một biểu tượng
+2-inflate	blog-08-sonnet-bare	một phần không thể thiếu trong nhịp sống thủ đô
+2-inflate	blog-08-sonnet-bare	sức hút bền bỉ qua hàng thế hệ
+2-inflate	blog-09-haiku-bare	mang lại giá trị lâu dài nhất
+2-inflate	blog-09-haiku-bare	Mỗi cuốn sách là một kho tri thức…
+2-inflate	blog-09-haiku-bare	mà ít thói quen nào sánh được
+2-inflate	blog-09-haiku-bare	một nền tảng vững chắc cho tư duy và cuộc sống của bạn
+2-inflate	blog-10-opus-bare	xe đạp và đôi chân là phương tiện lý tưởng nhất
+2-inflate	email-05-haiku	ý kiến của anh/chị có ý nghĩa rất lớn với chúng tôi
+2-inflate	facebook-02-haiku	Hôm nay là một cột mốc đáng nhớ của cả câu lạc bộ
+2-inflate	facebook-03-opus	một buổi thật thư giãn, chăm sóc bản thân cho trọn vẹn
+2-inflate	facebook-08-sonnet-bare	một ngày thật đặc biệt và trọn vẹn
+2-inflate	facebook-08-sonnet-bare	những khoảnh khắc không thể nào quên
+2-inflate	facebook-08-sonnet-bare	là món quà quý giá nhất
+2-inflate	facebook-09-haiku-bare	GIẢM GIÁ CỰC SỐC
+2-inflate	facebook-09-haiku-bare	một không gian đọc sách tuyệt vời
+2-inflate	facebook-09-haiku-bare	giá ưu đãi chưa từng có
+2-inflate	facebook-09-haiku-bare	một năm mới tràn đầy tri thức
+2-inflate	gioi-thieu-san-pham-02-haiku	quản lý tài chính thông minh hơn
+2-inflate	gioi-thieu-san-pham-07-sonnet-bare	Hơi thở trong lành cho cả gia đình – Bảo vệ sức khỏe từ không gian sống
+2-inflate	gioi-thieu-san-pham-07-sonnet-bare	Vận hành siêu êm
+2-inflate	gioi-thieu-san-pham-07-sonnet-bare	Cảm biến bụi thông minh
+2-inflate	gioi-thieu-san-pham-07-sonnet-bare	để đạt hiệu quả tối ưu
+2-inflate	gioi-thieu-san-pham-07-sonnet-bare	Hỗ trợ tư vấn và kỹ thuật tận tình
+2-inflate	gioi-thieu-san-pham-08-sonnet-bare	**Đậm đà nguyên bản – Thuần khiết từ đất đỏ bazan Tây Nguyên**
+2-inflate	gioi-thieu-san-pham-08-sonnet-bare	những hạt Robusta chất lượng bậc nhất
+2-inflate	gioi-thieu-san-pham-08-sonnet-bare	hương vị mộc mạc, mạnh mẽ của vùng đất đại ngàn
+2-inflate	gioi-thieu-san-pham-08-sonnet-bare	chuẩn vị người sành cà phê
+2-inflate	gioi-thieu-san-pham-10-opus-bare	Sạch Bóng Không Gian, Thảnh Thơi Cuộc Sống
+2-inflate	gioi-thieu-san-pham-10-opus-bare	Đội ngũ nhân viên chuyên nghiệp
+2-inflate	gioi-thieu-san-pham-10-opus-bare	tận tâm, đáng tin cậy… được đào tạo bài bản
+2-inflate	gioi-thieu-san-pham-10-opus-bare	chúng tôi đều phục vụ chu đáo
+3-closer	blog-02-haiku	Bạn bắt đầu từ hôm nay với 5 phút là đã đi trước…
+3-closer	blog-03-opus	hãy xỏ giày và đi một vòng quanh khu nhà. Vậy là được rồi.
+3-closer	blog-04-sonnet	Bắt đầu từ một chậu thôi, rồi bạn sẽ tự biết nên trồng thêm gì.
+3-closer	blog-07-sonnet-bare	## Kết luận + recap
+3-closer	blog-07-sonnet-bare	Sau vài năm, bạn sẽ cảm ơn chính mình vì quyết định hôm nay.
+3-closer	blog-07-sonnet-bare	**Bạn đã áp dụng cách nào rồi? Chia sẻ… ở phần bình luận nhé!**
+3-closer	blog-08-sonnet-bare	## Lời kết … Bạn sẽ hiểu vì sao người Hà Nội luôn tự hào…
+3-closer	blog-09-haiku-bare	## Lời kết … nền tảng vững chắc
+3-closer	blog-09-haiku-bare	Vậy hôm nay, bạn đã đọc bao nhiêu trang rồi?
+3-closer	blog-10-opus-bare	Hãy để Hội An tự kể câu chuyện của mình.
+3-closer	blog-10-opus-bare	*Chúc bạn có một chuyến đi thật đáng nhớ! 🏮*
+3-closer	email-01-sonnet	Chúng tôi sẵn sàng hỗ trợ bạn.
+3-closer	email-02-haiku	em rất sẵn sàng trao đổi thêm.
+3-closer	email-03-opus	Một lần nữa, cảm ơn anh/chị đã đến và cùng trao đổi.
+3-closer	email-04-sonnet	Một lần nữa, chúng tôi xin lỗi anh/chị
+3-closer	email-07-sonnet-bare	Trân trọng cảm ơn và kính chúc Quý khách một ngày tốt lành!
+3-closer	email-08-sonnet-bare	Một lần nữa, xin chúc mừng anh/chị…
+3-closer	email-10-opus-bare	Mọi góp ý đều rất quý giá đối với em và nhóm dự án.
+3-closer	facebook-04-sonnet	Cảm ơn bạn đã đọc tới đây. 💛
+3-closer	facebook-07-sonnet-bare	👉 Tag ngay hội bạn thân/gia đình…
+3-closer	facebook-09-haiku-bare	📌 Đừng bỏ lỡ cơ hội…
+3-closer	facebook-09-haiku-bare	👉 Tag bạn bè cùng đi đọc sách nào! 💛
+3-closer	facebook-10-opus-bare	nhanh tay kẻo lỡ!
+3-closer	facebook-10-opus-bare	👇 Tag ngay người bạn muốn cùng…
+3-closer	gioi-thieu-san-pham-02-haiku	Bắt đầu quản lý tài chính thông minh hơn ngay hôm nay.
+3-closer	gioi-thieu-san-pham-08-sonnet-bare	☕ Đặt hàng ngay hôm nay để thưởng thức…
+3-closer	gioi-thieu-san-pham-10-opus-bare	**Một ngôi nhà sạch là khởi đầu cho một cuộc sống khỏe mạnh và hạnh phúc.**
+3-closer	gioi-thieu-san-pham-10-opus-bare	👉 Đặt lịch ngay hôm nay…
+4-triad	blog-02-haiku	Chỉ cần đều đặn, đúng việc và đủ kiên nhẫn.
+4-triad	blog-05-haiku	đi chậm, ăn nhiều, và một chút tiếc nuối
+4-triad	blog-05-haiku	yên hơn Nha Trang, ít người hơn Đà Nẵng, và đồ ăn thì rất đáng tiền
+4-triad	blog-05-haiku	nhịp sống dễ chịu, biển đẹp và đồ ăn ngon
+4-triad	blog-08-sonnet-bare	một bát nước trong, vài lát thịt bò, sợi bánh mềm mượt, và cả một thế kỷ ký ức
+4-triad	blog-08-sonnet-bare	là bữa sáng quen thuộc, là món ăn khuya…, là thứ để nhớ về khi xa quê
+4-triad	blog-09-haiku-bare	thay đổi cách bạn suy nghĩ, làm việc và sống
+4-triad	blog-09-haiku-bare	nghiên cứu, trải nghiệm và suy ngẫm
+4-triad	blog-09-haiku-bare	học nhanh hơn, có góc nhìn đa chiều hơn và dễ thích nghi
+4-triad	blog-09-haiku-bare	đời sống, suy nghĩ và cảm xúc
+4-triad	blog-10-opus-bare	Có thể vì…, vì…, hay chỉ vì một tô cao lầu…
+4-triad	blog-10-opus-bare	ngồi một góc quán…, đạp xe…, hay đứng lặng bên sông…
+4-triad	email-08-sonnet-bare	kinh nghiệm, kỹ năng cũng như tinh thần nhiệt huyết
+4-triad	facebook-02-haiku	đã kiên trì, đã động viên nhau và đã cùng nhau trưởng thành
+4-triad	facebook-02-haiku	Có những buổi mưa tầm tã, có những buổi nắng cháy da, có những hôm…
+4-triad	facebook-02-haiku	bao nhiêu buổi chạy, bao nhiêu giải đấu, bao nhiêu cung đường mới…
+4-triad	facebook-02-haiku	Cảm ơn… Cảm ơn… Và cảm ơn…
+4-triad	facebook-08-sonnet-bare	đến chung vui, chúc phúc và tạo nên những khoảnh khắc…
+4-triad	facebook-08-sonnet-bare	Những lời chúc, nụ cười và cái ôm
+4-triad	gioi-thieu-san-pham-05-haiku	Làm việc nhanh hơn, ít sai hơn, về đúng giờ
+4-triad	gioi-thieu-san-pham-07-sonnet-bare	Lọc Bụi Mịn PM2.5, Khử Mùi, Diệt Khuẩn
+4-triad	gioi-thieu-san-pham-08-sonnet-bare	đất đỏ bazan màu mỡ, khí hậu mát mẻ và độ cao lý tưởng
+4-triad	gioi-thieu-san-pham-09-haiku-bare	Màu sắc tươi tắn, dưỡng môi mềm mượt, 100% thành phần thuần chay
+4-triad	gioi-thieu-san-pham-09-haiku-bare	màu sắc rực rỡ, lên màu chuẩn và độ bám màu bền suốt nhiều giờ
+4-triad	gioi-thieu-san-pham-10-opus-bare	Công việc bận rộn, thời gian eo hẹp, và việc nhà cứ chất chồng
+4-triad	gioi-thieu-san-pham-10-opus-bare	giải pháp linh hoạt, tiện lợi và tiết kiệm
+4-triad	gioi-thieu-san-pham-10-opus-bare	sạch sẽ, gọn gàng, thơm tho
+5-chatbot	blog-08-sonnet-bare	*(Lưu ý: bạn nên kiểm tra giờ mở cửa…)*
+5-chatbot	blog-08-sonnet-bare	Nếu bạn muốn, tôi có thể điều chỉnh… tối ưu SEO…
+5-chatbot	blog-10-opus-bare	Bạn có muốn mình chỉnh giọng văn…?
+5-chatbot	email-07-sonnet-bare	Nếu bạn cho mình biết thời gian cụ thể…
+5-chatbot	email-08-sonnet-bare	Nếu bạn cho tôi biết tên công ty…
+5-chatbot	email-09-haiku-bare	**Gợi ý điều chỉnh theo mức độ quá hạn:** …
+5-chatbot	email-09-haiku-bare	Nếu anh/chị cho tôi biết mức độ quá hạn…
+5-chatbot	email-10-opus-bare	Bạn có muốn mình điều chỉnh giọng văn…?
+5-chatbot	facebook-07-sonnet-bare	💡 **Mẹo:** Bạn cho mình biết tên quán…
+5-chatbot	facebook-08-sonnet-bare	Dưới đây là vài phiên bản để bạn chọn tùy phong cách nhé:
+5-chatbot	facebook-08-sonnet-bare	**Phiên bản 1 – Chân thành, ấm áp** … (three versions)
+5-chatbot	facebook-08-sonnet-bare	Nếu bạn muốn, mình có thể chỉnh lại…
+5-chatbot	facebook-09-haiku-bare	**Bài đăng Facebook:**
+5-chatbot	facebook-09-haiku-bare	Bạn chỉ cần thay các nội dung trong ngoặc vuông…
+5-chatbot	facebook-10-opus-bare	💡 **Gợi ý:** Đăng kèm ảnh/video…
+5-chatbot	facebook-10-opus-bare	Bạn có muốn mình viết thêm phiên bản…?
+5-chatbot	gioi-thieu-san-pham-02-haiku	[Nút: Tải ứng dụng miễn phí] [Nút: Xem bảng giá]
+5-chatbot	gioi-thieu-san-pham-04-sonnet	*(Thông số trong ngoặc vuông cần thay bằng số liệu thật…)*
+5-chatbot	gioi-thieu-san-pham-07-sonnet-bare	Dưới đây là bản mô tả sản phẩm mẫu. Bạn thay các thông số…
+5-chatbot	gioi-thieu-san-pham-07-sonnet-bare	**Tiêu đề sản phẩm (gợi ý):**
+5-chatbot	gioi-thieu-san-pham-07-sonnet-bare	**Gợi ý từ khóa SEO:** …
+5-chatbot	gioi-thieu-san-pham-07-sonnet-bare	Nếu bạn cho mình biết thương hiệu…, mình sẽ viết lại…
+5-chatbot	gioi-thieu-san-pham-08-sonnet-bare	Nếu bạn cho mình biết thêm tên thương hiệu…
+5-chatbot	gioi-thieu-san-pham-09-haiku-bare	*(Vui lòng cập nhật danh sách thành phần…)*
+5-chatbot	gioi-thieu-san-pham-09-haiku-bare	*Ghi chú cho đội ngũ: …*
+5-chatbot	gioi-thieu-san-pham-10-opus-bare	Bạn có thể gửi thêm tên thương hiệu… để tôi điều chỉnh
+6-contrast	blog-02-haiku	chứ không phải ở mình kém kiên trì
+6-contrast	blog-02-haiku	Bạn không cần hiểu từng chữ, chỉ cần hiểu ý chính
+6-contrast	blog-02-haiku	không cần một khoảng thời gian hoàn hảo. Chỉ cần đều đặn
+6-contrast	blog-03-opus	Thật ra, chỉ cần đi bộ đều đặn mỗi ngày
+6-contrast	blog-03-opus	Bạn không cần đi đến mức thở dốc, chỉ cần nhanh hơn
+6-contrast	blog-03-opus	Không cần đắt, chỉ cần vừa chân
+6-contrast	blog-03-opus	Bạn không cần đợi đến thứ Hai hay đầu tháng mới bắt đầu
+6-contrast	blog-07-sonnet-bare	Bạn không cần kiêng hoàn toàn. Chỉ cần ăn ngoài có chủ đích
+6-contrast	blog-07-sonnet-bare	Tiết kiệm không có nghĩa là keo kiệt với mọi thứ.
+6-contrast	blog-07-sonnet-bare	Tiết kiệm không đòi hỏi bạn phải sống khắc khổ. Chỉ cần…
+6-contrast	blog-08-sonnet-bare	Có những món ăn không chỉ để no bụng, mà còn kể một câu chuyện…
+6-contrast	blog-08-sonnet-bare	vị ngọt đến từ xương, không phải từ bột ngọt hay đường
+6-contrast	blog-08-sonnet-bare	không cầu kỳ, không phô trương, nhưng chính sự giản dị…
+6-contrast	blog-09-haiku-bare	Bạn không cần phải đọc hàng giờ mỗi ngày. Hãy thử…
+6-contrast	blog-09-haiku-bare	không mang lại kết quả ngay lập tức, nhưng sau vài tháng…
+6-contrast	blog-10-opus-bare	Hội An không phải một "bảo tàng chết".
+6-contrast	blog-10-opus-bare	Hội An không ồn ào hay hối hả. Thành phố này đẹp nhất khi…
+6-contrast	email-04-sonnet	Đó là lỗi của chúng tôi…, không phải lỗi của anh/chị
+6-contrast	facebook-04-sonnet	Bạn không cần mua mới, chỉ cần chọn ra vài quyển
+6-contrast	facebook-05-haiku	không phải ngồi chép bài cả buổi
+6-contrast	gioi-thieu-san-pham-05-haiku	Không cần kiến thức lập trình… Chỉ cần biết dùng máy tính
+7-transl	blog-02-haiku	Nếu công việc của bạn là viết email
+7-transl	blog-07-sonnet-bare	Chia sẻ kinh nghiệm của bạn
+7-transl	blog-09-haiku-bare	Điều này giống như một buổi tập luyện cho não bộ.
+7-transl	email-04-sonnet	Chúng tôi xin lỗi anh/chị vì sự chậm trễ này
+7-transl	email-07-sonnet-bare	Để hạn chế tối đa sự bất tiện
+7-transl	email-07-sonnet-bare	xin lỗi về sự bất tiện này và rất mong nhận được sự thông cảm
+7-transl	email-07-sonnet-bare	Dữ liệu của Quý khách vẫn được đảm bảo an toàn
+7-transl	email-08-sonnet-bare	chúng tôi rất vui mừng thông báo rằng
+7-transl	email-08-sonnet-bare	anh/chị sẽ là một bổ sung giá trị cho đội ngũ
+7-transl	email-08-sonnet-bare	Nếu có bất kỳ thắc mắc nào
+7-transl	email-09-haiku-bare	Nếu có bất kỳ vướng mắc nào về hóa đơn
+7-transl	gioi-thieu-san-pham-02-haiku	Ví Xanh được tạo ra để giải quyết
+7-transl	gioi-thieu-san-pham-02-haiku	Ví Xanh được thiết kế đơn giản
+7-transl	gioi-thieu-san-pham-02-haiku	một cách nhanh gọn
+7-transl	gioi-thieu-san-pham-02-haiku	Dữ liệu của bạn được mã hóa
+7-transl	gioi-thieu-san-pham-02-haiku	khoản chi đầu tiên của bạn
+7-transl	gioi-thieu-san-pham-05-haiku	Khóa học này được thiết kế để
+7-transl	gioi-thieu-san-pham-05-haiku	Tùy thời gian của bạn
+8-opener	blog-02-haiku	Mình từng nghĩ muốn học tiếng Anh thì phải có vài tiếng rảnh…
+8-opener	blog-03-opus	Nhiều người nghĩ muốn khỏe thì phải đăng ký phòng gym…
+8-opener	blog-06-opus	Nhiều công ty nhỏ vẫn làm kế toán theo một kiểu quen thuộc.
+8-opener	blog-06-opus	Dưới đây là những thay đổi doanh nghiệp nhỏ thấy rõ nhất
+8-opener	blog-07-sonnet-bare	Dưới đây là 7 cách thực tế để bạn bắt đầu tiết kiệm
+8-opener	blog-08-sonnet-bare	Có những món ăn không chỉ để no bụng…
+8-opener	blog-09-haiku-bare	Bạn có bao giờ nghĩ rằng chỉ 20 phút mỗi ngày…?
+8-opener	blog-09-haiku-bare	Dưới đây là những lợi ích cụ thể…
+8-opener	blog-10-opus-bare	Có những nơi bạn đến một lần rồi thôi. Hội An thì khác
+8-opener	blog-10-opus-bare	bài viết này sẽ giúp chuyến đi trọn vẹn hơn
+8-opener	email-07-sonnet-bare	Lời đầu tiên, [Tên công ty] xin chân thành cảm ơn Quý khách…
+8-opener	facebook-05-haiku	Hè này, con bạn có muốn vừa chơi vừa học tiếng Anh không?
+8-opener	facebook-07-sonnet-bare	Trời se lạnh, còn gì tuyệt hơn quây quần bên nồi lẩu…?
+8-opener	facebook-10-opus-bare	Bạn có thường thức dậy với cơ thể mệt mỏi…? 😩
+8-opener	gioi-thieu-san-pham-02-haiku	Bạn có bao giờ cuối tháng mở ví…?
+8-opener	gioi-thieu-san-pham-05-haiku	Bạn có bao giờ mất cả buổi chiều…?
+8-opener	gioi-thieu-san-pham-10-opus-bare	Công việc bận rộn, thời gian eo hẹp, và việc nhà cứ chất chồng mỗi ngày?
+9-markdown	email-01-sonnet	**Tiêu đề: …**
+9-markdown	email-03-opus	**Tiêu đề:**, **[Tên hội thảo]**
+9-markdown	email-04-sonnet	**Chuyện gì đã xảy ra:** …
+9-markdown	email-05-haiku	**Chương trình dự kiến:**
+9-markdown	email-06-opus	**Thời gian nghỉ:** …
+9-markdown	email-07-sonnet-bare	**Tiêu đề:** …, **Thời gian:** …
+9-markdown	email-08-sonnet-bare	**Nhân viên Marketing**, **trúng tuyển** …
+9-markdown	email-09-haiku-bare	**Tiêu đề:**, **[Số hóa đơn]** …
+9-markdown	email-10-opus-bare	**Tiêu đề:**, **[Tên dự án]** …
+9-markdown	facebook-03-opus	**MỪNG 20/10…**, **giảm 30% tất cả dịch vụ**
+9-markdown	facebook-04-sonnet	**sách cũ**, **Chúng mình nhận:** …
+9-markdown	facebook-07-sonnet-bare	**MENU LẨU MÙA ĐÔNG MỚI** …
+9-markdown	facebook-08-sonnet-bare	**Phiên bản 1 – Chân thành, ấm áp** (version labels pasted with the post)
+9-markdown	facebook-09-haiku-bare	**ƯU ĐÃI ĐẶC BIỆT:** …
+9-markdown	facebook-10-opus-bare	**LỚP YOGA BUỔI SÁNG**, **MIỄN PHÍ** …
+10-mangden	blog-07-sonnet-bare	thường mang lại lợi nhuận tốt nhất
+10-mangden	blog-09-haiku-bare	mang lại giá trị lâu dài nhất
+10-mangden	blog-09-haiku-bare	việc đọc sách đều đặn có thể mang lại
+10-mangden	blog-09-haiku-bare	không mang lại kết quả ngay lập tức
+10-mangden	facebook-09-haiku-bare	[Tên nhà sách] mang đến cho bạn
+10-mangden	gioi-thieu-san-pham-09-haiku-bare	Son môi [Tên thương hiệu] mang đến màu sắc rực rỡ
+10-mangden	gioi-thieu-san-pham-10-opus-bare	mang đến giải pháp linh hoạt
+11-pivot	blog-06-opus	Phần mềm kế toán trên đám mây giải quyết khá gọn những chuyện như vậy.
+11-pivot	facebook-10-opus-bare	Hãy để [Tên phòng gym] giúp bạn thay đổi điều đó!
+11-pivot	gioi-thieu-san-pham-02-haiku	Ví Xanh được tạo ra để giải quyết đúng việc đó.
+11-pivot	gioi-thieu-san-pham-05-haiku	Khóa học này được thiết kế để giải quyết đúng những việc đó.
+11-pivot	gioi-thieu-san-pham-10-opus-bare	Hãy để chúng tôi lo phần đó
+12-vague	blog-08-sonnet-bare	Người sành phở thường nói: …
+12-vague	blog-09-haiku-bare	Nghiên cứu cho thấy đọc sách có thể làm giảm…
+12-vague	blog-09-haiku-bare	Các nghiên cứu về sức khỏe thần kinh cho thấy…
+12-vague	blog-09-haiku-bare	Nhiều người thành đạt chia sẻ rằng…
+13-rhythm	blog-02-haiku	Thứ nhất… Thứ năm: five paragraphs, same imperative–reason–payoff shape
+13-rhythm	blog-09-haiku-bare	seven sections, 'Đọc … giúp bạn …' frame repeated
+13-rhythm	facebook-02-haiku	paragraphs built from repeated frames (Có những…, Cảm ơn…)
+14-sino	email-07-sonnet-bare	chúng tôi sẽ tiến hành bảo trì định kỳ hệ thống
+14-sino	email-07-sonnet-bare	Nhằm nâng cao chất lượng và đảm bảo hệ thống vận hành ổn định
+14-sino	email-07-sonnet-bare	ngay sau khi quá trình bảo trì hoàn tất

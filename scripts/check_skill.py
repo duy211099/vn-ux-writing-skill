@@ -1,6 +1,7 @@
-"""Mechanical checks for the ux-writing-vi skill folder.
+"""Mechanical checks for skill folders.
 
 Usage: python3 scripts/check_skill.py <skill_dir>
+       python3 scripts/check_skill.py --all [root]
 """
 
 import re
@@ -14,6 +15,10 @@ NAME_RE = re.compile(r"^[a-z0-9-]+$")
 LINK_RE = re.compile(r"\]\(([^)\s]+)\)")
 PLACEHOLDER_RE = re.compile(r"\b(TBD|TODO)\b")
 INDEXED_DIRS = ("references", "templates", "examples")
+# (source of truth, copy that must stay byte-identical), relative to the repo root.
+SYNCED_FILES: list[tuple[str, str]] = [
+    ("skills/style-vi/templates/giong-van.md", "skills/ux-writing-vi/templates/giong-van.md"),
+]
 
 
 def _frontmatter(text: str) -> dict[str, str] | None:
@@ -84,11 +89,50 @@ def check_skill(skill_dir: Path) -> list[str]:
     return errors
 
 
+def skill_dirs(root: Path) -> list[Path]:
+    """Every directory under root/skills/ that contains a SKILL.md, sorted."""
+    skills = Path(root) / "skills"
+    if not skills.is_dir():
+        return []
+    return sorted(d for d in skills.iterdir() if (d / "SKILL.md").is_file())
+
+
+def _check_synced(root: Path) -> list[str]:
+    errors = []
+    for source, copy in SYNCED_FILES:
+        src, dst = Path(root) / source, Path(root) / copy
+        if not src.is_file() and not dst.is_file():
+            continue
+        if not src.is_file():
+            errors.append(f"{source}: missing (source of {copy})")
+        elif not dst.is_file():
+            errors.append(f"{copy}: missing (copy of {source})")
+        elif src.read_bytes() != dst.read_bytes():
+            errors.append(f"{copy} differs from {source}")
+    return errors
+
+
+def check_repo(root: Path) -> list[str]:
+    """Run check_skill on every skill under root/skills/, then repo-wide checks."""
+    errors: list[str] = _check_synced(root)
+    for d in skill_dirs(root):
+        prefix = f"skills/{d.name}"
+        errors += [f"{prefix}/{e}" for e in check_skill(d)]
+        fm = _frontmatter((d / "SKILL.md").read_text(encoding="utf-8")) or {}
+        name = fm.get("name", "")
+        if name and name != d.name:
+            errors.append(f"{prefix}: front matter name '{name}' does not match folder")
+    return errors
+
+
 def main(argv: list[str]) -> int:
-    if len(argv) != 1:
-        print("usage: check_skill.py <skill_dir>", file=sys.stderr)
+    if argv and argv[0] == "--all" and len(argv) <= 2:
+        errors = check_repo(Path(argv[1]) if len(argv) == 2 else Path("."))
+    elif len(argv) == 1 and argv[0] != "--all":
+        errors = check_skill(Path(argv[0]))
+    else:
+        print("usage: check_skill.py <skill_dir> | --all [root]", file=sys.stderr)
         return 2
-    errors = check_skill(Path(argv[0]))
     for e in errors:
         print(e)
     return 1 if errors else 0
