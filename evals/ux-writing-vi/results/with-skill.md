@@ -90,3 +90,11 @@ The A-01 run with the marginal notice (x3) was ruled a miss: criterion 3 needs a
 | A-03 (regression guard) | PASS | "Xác nhận" → "Thanh toán {total}" (verb + object); only that string changed in Checkout.jsx; voice file created with the notice. |
 
 A-01 after the fix: 3 / 3 clean. A-03: 1 / 1.
+
+### A-01 with `style-vi` available (final review, 2026-11-27)
+
+The plugin path, untested until now: `ux-writing-vi` Mode A hands voice-file creation to `style-vi` when it is available, and both skills print a one-line notice. The fix: `style-vi`'s notice is the only one, placed once as the last line of the reply. One run, model sonnet, fresh runner told both skills are installed and to read them as the plugin would, fresh git copy of `fixture-repo/`.
+
+| Case | Result | Output / notes |
+|---|---|---|
+| A-01 (both skills) | PASS | `docs/giong-van.md` created from the `style-vi` template (bạn; app does not refer to itself, uses its name if needed; *xóa*; prose section filled: Bếp Nhà, xen kẽ, trò chuyện); no `docs/ux-voice.md`. `order.reorder` = "Reorder" / "Đặt lại"; only the two locale files changed besides the new voice file. Exactly one notice, as the last line: "Đã tạo docs/giong-van.md: gọi người dùng là "bạn", bài viết dài xưng "Bếp Nhà", câu xen kẽ, giọng trò chuyện (ứng dụng đặt món ăn nhà làm). Sửa file này nếu muốn đổi." No questions before the task; weak nearby strings listed with an offer to review. |

@@ -37,3 +37,13 @@ The review found two gaps. First, nothing told the skill to fill an unset `## V�
 | S-05 (new) | PASS | Filled `Người viết tự xưng: Bếp Nhà`, `Độ dài câu: xen kẽ`, `Mức cá nhân: trò chuyện`, `Tránh dùng: <seed list>`; `Đoạn văn mẫu` left as a placeholder; UI lines untouched; no other file. Reply: "Đã thêm giọng văn dài vào docs/giong-van.md: xưng "Bếp Nhà", câu xen kẽ, giọng trò chuyện (giao đồ ăn). Sửa file này nếu muốn đổi." |
 
 S-01, S-02 and S-04 were not re-run. Their paths (Job 1 and Job 2, and the old-file rule) are unchanged except that S-02's case is now routed explicitly through Job 1b.
+
+## Final review fixes (2026-11-27)
+
+The final review narrowed when other skills call `style-vi` (only skills about to write new text; `humanizer-vi`, `review` and `analyze` only read the voice file) and said the calling skill places the one-line notice at the end of its own reply. S-01, S-02 and S-04 were re-run with the fixed skill: model sonnet, one fresh runner per case, each in a fresh git copy of the fixture with the case's seed committed.
+
+| Case | Result | Output / notes |
+|---|---|---|
+| S-01 | PASS | Only `docs/giong-van.md` created (untracked, nothing else changed). Lĩnh vực giao đồ ăn; *bạn* or no pronoun; *xóa, hòa*; prose: `Người viết tự xưng: Bếp Nhà`, `Độ dài câu: xen kẽ`, `Mức cá nhân: trò chuyện`, seed `Tránh dùng`; `Đoạn văn mẫu` left as placeholder. Reply, one line: "Đã tạo docs/giong-van.md: gọi người dùng là "bạn", bài viết dài xưng "Bếp Nhà", câu xen kẽ, giọng trò chuyện (giao đồ ăn). Sửa file này nếu muốn đổi." No questions. |
+| S-02 | PASS | Job 1b: `## Văn bản dài` appended to `docs/ux-voice.md` (18 lines added, none removed; Bếp Nhà, xen kẽ, trò chuyện, seed list). No `docs/giong-van.md`, nothing moved, UI fields untouched. Reply, one line: "Đã thêm giọng văn dài vào docs/ux-voice.md: xưng "Bếp Nhà", câu xen kẽ, giọng trò chuyện (giao đồ ăn). Sửa file này nếu muốn đổi." |
+| S-04 | PASS | Four lines: "Theo docs/giong-van.md (giao đồ ăn, Bếp Nhà):" + UI line + prose line + "Sửa file đó để đổi." `git status` clean. |
