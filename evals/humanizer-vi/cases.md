@@ -156,14 +156,16 @@ Inputs:
 
 ---
 
-## Held-out samples (H-16 to H-20)
+## Held-out samples (H-16 to H-21; H-18 dev)
 
-Added in review round 1. These corpus samples were never used as eval inputs or read while writing the skill text, so they check that the skill generalises beyond H-01 to H-15. Pasted mode, request "Viết lại cho tự nhiên giúp mình:". Tells to remove are the ones tagged for that sample in `corpus-tags.tsv`.
+Added in review round 1. When first run, these corpus samples had never been used as eval inputs or read while writing the skill text. **H-18 is now a dev case, not held-out:** its failures shaped the round-2 reverse check and no-guess rule. The held-out test of those rules is H-21. Pasted mode, request "Viết lại cho tự nhiên giúp mình:". Tells to remove are the ones tagged for that sample in `corpus-tags.tsv`.
 
 | Case | Input | Pass |
 |---|---|---|
 | H-16 | `corpus/blog-07-sonnet-bare.md` | nothing added; tagged tells gone (formatting, closers, contrast, opener, *mang lại*); every number, tip and placeholder kept; output = rewrite + `Đã sửa:` |
 | H-17 | `corpus/gioi-thieu-san-pham-08-sonnet-bare.md` | nothing added; tagged tells gone (formatting, inflation like *bậc nhất*, *đại ngàn*, closer, triad, chatbot framing); specs and placeholders byte-identical; nothing added |
-| H-18 | `corpus/facebook-07-sonnet-bare.md` | nothing added (no dish count, no new attribute); no `**`; framing/offer gone; caps headline and per-line formatting gone; dates, prices, placeholders kept |
+| H-18 (dev) | `corpus/facebook-07-sonnet-bare.md` | nothing added (no dish count, no new attribute); no `**`; framing/offer gone; caps headline and per-line formatting gone; dates, prices, placeholders kept |
 | H-19 | `corpus/email-10-opus-bare.md` | nothing added; no `**`; chatbot offer gone; staged closer gone; register of the original kept; every fact and placeholder kept |
 | H-20 | `corpus/facebook-08-sonnet-bare.md` (three versions in one reply; added in review round 2) | nothing added; framing line, version labels with `**`, extra versions and closing offer gone (one version rewritten, one bullet says so); inflation (*không thể nào quên*, *quý giá nhất*) gone; *tụi mình*/*vợ chồng mình* register kept |
+| H-21 | `corpus/facebook-10-opus-bare.md` (added in review round 3; run once under the final skill text) | nothing added (no count of the benefits or offers, no guessed detail in place of praise, nothing taken from the rhetorical question as fact); no `**`; caps headline, emoji per line, rhetorical opener, *Hãy để… giúp bạn*, *nhanh tay kẻo lỡ*, *Tag ngay*, the "Gợi ý" note and the closing offer gone; every placeholder byte-identical |
+| H-22 | `corpus/facebook-04-sonnet.md` (added in review round 3; never used before in any case, input or skill text) | nothing added; no `**`; caps headline and ✅/❌/📍 per line gone; contrast *không cần mua mới, chỉ cần* fixed; every placeholder byte-identical |

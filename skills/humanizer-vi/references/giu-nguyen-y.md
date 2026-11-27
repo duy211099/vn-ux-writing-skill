@@ -45,11 +45,11 @@ Sau khi so bản gốc với bản mới, so ngược lại: đọc từng câu 
 
 *3 gói* là số tự đếm (danh sách có thể chưa đủ), *dùng thử miễn phí* là đặc điểm bài gốc không nói. Chi tiết nằm trong câu hỏi tu từ (*Bạn có muốn tự tay làm một chiếc bánh?*) cũng không phải dữ kiện về sản phẩm: đừng biến nó thành câu khẳng định (*Lớp dạy làm bánh kem*).
 
-Bỏ lời khen chung chung thì giữ phần chữ gốc còn lại hoặc bỏ hẳn, đừng thay bằng một đặc điểm cụ thể đoán từ tên món hay từ ngữ cảnh:
+Bỏ lời khen chung chung thì giữ phần chữ gốc còn lại hoặc bỏ hẳn, đừng thay bằng một chi tiết cụ thể tự đoán (thời gian, số lượng, cách làm):
 
-> **Trước:** Bánh mì bơ tỏi: giòn rụm, thơm nức, chuẩn vị.
-> **Sai:** Bánh mì bơ tỏi: giòn, thơm mùi tỏi phi.
-> **Đúng:** Bánh mì bơ tỏi: giòn, thơm.
+> **Trước:** Tiệm sửa điện thoại Minh Phát phục vụ nhanh chóng, chuyên nghiệp, tận tâm.
+> **Sai:** Tiệm sửa điện thoại Minh Phát sửa xong trong 30 phút, có bảo hành.
+> **Đúng:** Tiệm sửa điện thoại Minh Phát sửa nhanh.
 
 ## Khi không chắc
 

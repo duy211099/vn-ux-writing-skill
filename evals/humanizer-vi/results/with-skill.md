@@ -2,7 +2,7 @@
 
 Run: 2026-11-27. Model: sonnet, one fresh subagent per case (H-05 is three runs), told to read `skills/humanizer-vi/SKILL.md` first and follow it, Skill tool off. Same inputs and setup as the baseline ([baseline.md](baseline.md)): pasted-mode messages in an empty temp dir, file mode in a temp git repo (H-10, H-11) or a plain dir (H-13). H-14 was given `ux-writing-vi` and `humanizer-vi` (descriptions and paths) as the available skills.
 
-**Summary:** first GREEN run 11 / 14 (baseline: 6 / 14). After one refactor, the three failures and two spot checks were rerun: **14 / 14**. The cases that moved from FAIL to PASS are exactly the baseline gaps: human text returned unchanged (H-05, H-12), formal register kept (H-04), placeholders and front matter byte-identical (H-02, H-10), no overwrite outside git (H-13), and a fixed output shape (rewrite, then `Đã sửa:`, nothing else).
+**Summary (current, after review round 3):** baseline 6 / 14 on H-01 to H-14. First GREEN run 11 / 14; after the round-0 refactor and reruns, 14 / 14 as originally scored. Review round 2 added a *nothing added* criterion, and under it H-06's earlier runs fail (*một chiếc cốc*). H-06 was rerun after the round-2 skill change and passes, so **H-01 to H-14 stand at 14 / 14 on their latest runs**; 11 of them have not been rerun since round 0 or 1 (see the sections below). Round-1 additions: H-15 PASS; held-out H-16, H-17, H-19 PASS; **H-18 FAIL in round 1** (added *Menu có 5 vị*, *thơm mùi lá é*). H-18 then became a **dev case**: it failed once more and passed twice after the round-2 rules. Round 2 added held-out H-20 (PASS). Round 3 adds held-out H-21 and H-22 (results at the end). The cases that moved from FAIL to PASS against the baseline are the baseline gaps: human text returned unchanged (H-05, H-12), formal register kept (H-04), placeholders and front matter byte-identical (H-02, H-10), no overwrite when git can't restore the file (H-13, H-15), and a fixed output shape (rewrite, then `Đã sửa:`, nothing else).
 
 | Case | Baseline | With skill | Output / notes |
 |---|---|---|---|
@@ -84,3 +84,16 @@ Skill changes:
 | H-06 (rerun) | reverse check only | PASS | No *chiếc cốc* claim any more. All 14 facts kept, quote word for word. |
 
 H-20 and the H-06 rerun used the skill before the one-sentence no-guess rule was added. That rule only narrows what may be written, so I did not rerun them.
+
+## Review round 3 (held-out check of the round-2 rules)
+
+The no-guess example in the skill was a reskin of the H-18 input line, so I replaced it with a different kind of guess: vague praise of a service turned into an invented duration (*Tiệm sửa điện thoại… nhanh chóng, chuyên nghiệp, tận tâm* → *sửa nhanh*, not *sửa xong trong 30 phút, có bảo hành*). The example is in SKILL.md step 4 and in `giu-nguyen-y.md` § Kiểm ngược. H-18 is now marked as a **dev case** in `cases.md`.
+
+Runs under the final skill text (fresh sonnet runners; nothing was changed after these runs):
+
+| Case | Result | Notes |
+|---|---|---|
+| H-21 held-out Facebook (`facebook-10-opus-bare`) | PASS | Nothing added: the four benefits merged into prose with no count; offers kept as listed; *Tặng thảm tập/bình nước xinh xắn* kept as written; nothing from the rhetorical question stated as fact. `**`, caps, emoji per line, the rhetorical opener, *Hãy để… giúp bạn thay đổi điều đó*, *nhanh tay kẻo lỡ*, *Tag ngay*, the "Gợi ý" block and the closing offer all gone. All 13 placeholders byte-identical. |
+| H-22 held-out Facebook (`facebook-04-sonnet`) | PASS | Nothing added; `**`, the caps headline and ✅/❌/📍/📦/🚚 per line gone; *Bạn không cần mua mới, chỉ cần…* → *Bạn chọn ra vài quyển còn đọc được là đủ*; closer and repeated thanks cut; all placeholders and both lists intact. |
+
+**Caveat on H-21:** `facebook-10-opus-bare` is not fully unused. It was the source of `inputs/h11-nfd.md` (H-11, file mode, NFD), and H-11's round-0 failure (rhetorical opener kept) fed the round-0 opener rule. It was never used to shape the round-2 reverse check or the no-guess rule. Because of this overlap, I also ran H-22, which no case, input or skill text has ever used.
