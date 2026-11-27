@@ -77,3 +77,16 @@ Run: 2026-11-27, after the skill moved to `skills/ux-writing-vi/` and the voice 
 | B-12 | PASS | PASS | Flags *quý khách* / *bạn* / *mình*, unifies on *bạn*, drops the "mình" self-reference. |
 
 No Mode B reply mentioned the voice file. The Mode A runs read `docs/giong-van.md` first (all created it where none existed).
+
+### A-01 miss: fix and reruns (same day)
+
+The A-01 run with the marginal notice (x3) was ruled a miss: criterion 3 needs a notice to the user saying how to change the choices. Over five runs that made 2 imperfect (first run, x3). Fix in `skills/ux-writing-vi/SKILL.md`, Mode A step 1: the one-line notice is now marked **Required**, ends the reply, names `docs/giong-van.md` as the thing to edit, and must be written as text for the user, not a note to the caller (the example line is unchanged).
+
+| Case | Result | Notes |
+|---|---|---|
+| A-01 (fix run 1) | PASS | "Đặt lại"; voice file; notice ending "Sửa file này nếu muốn đổi". |
+| A-01 (fix run 2) | PASS | "Đặt lại"; voice file; notice with "Sửa file này nếu muốn đổi". |
+| A-01 (fix run 3) | PASS | "Đặt lại đơn"; voice file; notice with "Sửa file này nếu muốn đổi". |
+| A-03 (regression guard) | PASS | "Xác nhận" → "Thanh toán {total}" (verb + object); only that string changed in Checkout.jsx; voice file created with the notice. |
+
+A-01 after the fix: 3 / 3 clean. A-03: 1 / 1.
