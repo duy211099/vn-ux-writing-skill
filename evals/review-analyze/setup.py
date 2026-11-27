@@ -5,6 +5,10 @@ Usage: python3 setup.py <case> <dest>
   R-03a             fixture-mixed copied with no git at all
   R-03b             fixture-mixed in a fresh `git init` with no commits
   R-04              fixture-big, git init + commit
+  R-06              fixture-mixed; branch `feature` commits the R-01 `cart.empty`
+                    change and the opening paragraph; then `main` moves on
+                    (a `profile.saved` change in src/account/locales/vi.json and
+                    the `## Lời kết` paragraph); `feature` is checked out, clean
 
 R-01 change: `cart.empty` in src/locales/vi.json (staged) and two
 paragraphs of docs/blog/ra-mat.md (left unstaged).
@@ -65,6 +69,40 @@ def apply_r01(dest: Path) -> None:
     post.write_text("\n".join(lines), encoding="utf-8")
 
 
+ACCOUNT_OLD = '"saved": "Thông tin của quý khách đã được cập nhật thành công"'
+ACCOUNT_NEW = '"saved": "Đã cập nhật thông tin tài khoản"'
+GIT_ID = ["-c", "user.name=Eval", "-c", "user.email=eval@example.com"]
+
+
+def commit_all(dest: Path, msg: str) -> None:
+    git(dest, "add", "-A")
+    git(dest, *GIT_ID, "commit", "-q", "-m", msg)
+
+
+def setup_r06(dest: Path) -> None:
+    init_commit(dest)
+    git(dest, "checkout", "-q", "-b", "feature")
+    vi = dest / "src/locales/vi.json"
+    vi.write_text(vi.read_text(encoding="utf-8").replace(CART_OLD, CART_NEW), encoding="utf-8")
+    post = dest / "docs/blog/ra-mat.md"
+    text = post.read_text(encoding="utf-8")
+    assert P1_OLD in text
+    post.write_text(text.replace(P1_OLD, P1_NEW), encoding="utf-8")
+    commit_all(dest, "Feature: launch copy")
+
+    git(dest, "checkout", "-q", "main")
+    acc = dest / "src/account/locales/vi.json"
+    text = acc.read_text(encoding="utf-8")
+    assert ACCOUNT_OLD in text
+    acc.write_text(text.replace(ACCOUNT_OLD, ACCOUNT_NEW), encoding="utf-8")
+    lines = post.read_text(encoding="utf-8").split("\n")
+    i = next(k for k, line in enumerate(lines) if line.startswith(P2_OLD_START))
+    lines[i] = "Phở Hà Nội ngon nhất vào buổi sáng, khi nồi nước dùng vừa mở."
+    post.write_text("\n".join(lines), encoding="utf-8")
+    commit_all(dest, "Main: account copy and closing")
+    git(dest, "checkout", "-q", "feature")
+
+
 def main(case: str, dest: str) -> None:
     out = Path(dest)
     if out.exists():
@@ -72,6 +110,9 @@ def main(case: str, dest: str) -> None:
     src = HERE / ("fixture-big" if case == "R-04" else "fixture-mixed")
     shutil.copytree(src, out)
     if case == "R-03a":
+        return
+    if case == "R-06":
+        setup_r06(out)
         return
     if case == "R-03b":
         git(out, "init", "-q", "-b", "main")

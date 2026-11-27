@@ -34,3 +34,12 @@ Fix in `skills/analyze/SKILL.md` §4: many keys with the same fix take one line 
 ## Change to `humanizer-vi`
 
 `skills/humanizer-vi/SKILL.md` said a call from `review` or `analyze` is embedded and returns "only the final text… No report, no `Đã sửa:`", which contradicts the commands' output (rewrite + `Đã sửa:`). The line now says such a call never writes a file and its result is shown in the pasted-text shape. The GREEN runs above used the changed line.
+
+## Review fix round 1 (2026-11-27)
+
+The review found that `review <branch>` diffed against the tip of the branch, so commits added to that branch after branching would show up reversed, as "added" text. `skills/review/SKILL.md` now diffs against `git merge-base <arg> HEAD`, with a red-flag row. New case R-06 (`main` moves on after `feature` branches). Wording fixes in the same round: `humanizer-vi` lists review/analyze as an explicit exception to embedded mode; `analyze` names `Bỏ qua vì quá lớn:` in its output parts and limits a "one problem everywhere" fix to files in scope; both commands say their voice line overrides `ux-writing-vi` Mode B's "never mention the voice file". Fresh runners, fresh temp repos.
+
+| Case | Result | Output / notes |
+|---|---|---|
+| R-06 (`/viet-writing:review main`) | PASS | Voice line; `cart.empty` → "Chưa có món nào trong giỏ. Thêm món để đặt hàng." with reason; the opening paragraph rewritten (facts kept) with 3 `Đã sửa:` bullets; offer line. Nothing from `src/account/locales/vi.json`, nothing about `## Lời kết` (both differ from the tip of `main` but are not this branch's change). Repo clean, still on `feature`. |
+| R-01 (re-run, no argument) | PASS | Same shape as the GREEN run: voice line, one `cart.empty` line, two paragraph rewrites with `Đã sửa:` (3 and 2 bullets), all six facts kept, offer line. Repo unchanged (`MM` state as set up). |

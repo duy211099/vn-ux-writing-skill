@@ -49,12 +49,12 @@ Keep the reply readable, however big the repo:
 
 Your reply is exactly these parts, in this order, in Vietnamese:
 
-1. **One voice line.** `Giọng: theo docs/giong-van.md (gọi "bạn", dấu kiểu xóa).` or `Giọng: chưa có file giọng văn, dùng mặc định cho ứng dụng gọi xe (gọi "bạn", dấu kiểu xóa theo đa số chuỗi).`
+1. **One voice line** (this command's rule; it overrides `ux-writing-vi` Mode B's "never mention the voice file"). `Giọng: theo docs/giong-van.md (gọi "bạn", dấu kiểu xóa).` or `Giọng: chưa có file giọng văn, dùng mặc định cho ứng dụng gọi xe (gọi "bạn", dấu kiểu xóa theo đa số chuỗi).`
 2. **`Tổng quan`**: one line per file, worst first: `src/i18n/vi.json — 120 chuỗi, 14 cần sửa`, `docs/gioi-thieu.md — 9 đoạn, 6 có dấu hiệu văn AI`. Then `Lỗi lặp lại:` with 3–5 bullets, each a problem, how often, and where: `- Lẫn xưng hô: "bạn" ở src/i18n/vi.json, "quý khách" ở src/driver/vi.json (6 chuỗi)`. Then `Nặng nhất:` the 1–3 worst files.
 3. **Details for the worst files.** The file path on its own line, then:
    - UI strings: `key: "trước" → "sau" — lý do`, one per line, the reason in Vietnamese.
    - Prose: the rewritten paragraph, a blank line, `Đã sửa:` and 1–6 bullets, in `humanizer-vi`'s pasted-text shape.
-4. **`Chưa rà chi tiết:`** the files, or the keys, that were counted but not rewritten. **`Bỏ qua:`** one line naming the skipped folders and files (`node_modules/, tests/fixtures/, package-lock.json`).
+4. **`Chưa rà chi tiết:`** the files, or the keys, that were counted but not rewritten. **`Bỏ qua:`** one line naming the skipped folders and files (`node_modules/, tests/fixtures/, package-lock.json`). **`Bỏ qua vì quá lớn:`** the files too large to read, only if there are any.
 5. **The offer, as the last line,** naming one real file and one real problem from this repo: `Mình sửa tiếp src/driver/vi.json, hay sửa lẫn xưng hô trên mọi file (đổi về "bạn")?`
 
 Nothing else: no intro, no tables of every string, no code-bug notes, no advice on generator scripts or build setup, no questions about voice.
@@ -65,7 +65,7 @@ Until the author answers yes to the offer (*ok*, *sửa đi*, *sửa file đó*,
 
 When they say yes:
 
-- Do exactly the scope they chose: one file (every problem in it, as shown or in the same style), or one problem across every file that has it, and nothing else.
+- Do exactly the scope they chose: one file (every problem in it, as shown or in the same style), or one problem across every file in scope (not skipped) that has it, and nothing else.
 - Strings you already showed are written exactly as shown. For the rest, follow the same rules and list each change in the reply as `key: "trước" → "sau"`.
 - Write NFC; check that JSON and YAML still parse. Don't stage or commit.
 - End with one line saying what was written.

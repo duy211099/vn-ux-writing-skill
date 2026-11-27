@@ -65,3 +65,11 @@ The R-01 change (applied by `setup.py`): `cart.empty` in `src/locales/vi.json` b
   - nothing else changed: no other key, paragraph or file; the staged/unstaged state is not committed
   - files are valid (JSON still parses) and NFC
   - a short reply (one or two lines) saying what was written
+
+## R-06 review against a branch that moved on
+- context: `setup.py R-06`. From the initial commit on `main`, branch `feature` commits the R-01 `cart.empty` change and the new opening paragraph of `docs/blog/ra-mat.md`. Then `main` gets its own commit: `profile.saved` in `src/account/locales/vi.json` becomes "Đã cập nhật thông tin tài khoản" and the `## Lời kết` paragraph becomes a plain one-line sentence. `feature` is checked out, working tree clean. `git diff main` shows four changed spots; `git diff $(git merge-base main HEAD)` shows only the branch's two.
+- input: `/viet-writing:review main`
+- pass:
+  - only the branch's own changes are reported: `cart.empty` (`Trước → Sau`) and the opening paragraph (rewrite + `Đã sửa:`, facts kept)
+  - nothing from `src/account/locales/vi.json` and nothing about the `## Lời kết` paragraph (diffing against the tip of `main` would show the old *quý khách* string and the old AI-written closing as "added" text)
+  - voice line, offer to apply, no file modified

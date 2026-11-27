@@ -9,7 +9,7 @@ disable-model-invocation: true
 
 The author ran `/viet-writing:review` to check what they just changed. Find the Vietnamese text in the lines they added or changed, apply `ux-writing-vi`'s rules to UI strings and `humanizer-vi`'s loop to prose, and show the proposed fixes. **Change nothing until the author says yes.**
 
-Argument: `$ARGUMENTS`. Empty → compare with `HEAD`. Otherwise it is a branch or commit to compare with.
+Argument: `$ARGUMENTS`. Empty → compare with `HEAD`. Otherwise it is a branch or commit, and you compare with the commit where the current branch split from it: `git merge-base <arg> HEAD`. Commits added to `<arg>` after that point are not this change.
 
 ## 1. Check that there is something to compare
 
@@ -23,7 +23,7 @@ Run these in order. Each stop is one line of output and nothing else: no review 
 
 ## 2. Collect the changed lines
 
-- **Tracked files:** `git diff <base> -U0` where `<base>` is `HEAD` or the argument. This one command covers staged and unstaged changes together. Never use `git diff` alone (unstaged only) or `git diff --cached` alone (staged only): each misses half the change.
+- **Tracked files:** `git diff <base> -U0` where `<base>` is `HEAD`, or with an argument `base=$(git merge-base <arg> HEAD)`, never the argument itself (its tip includes work that is not part of this change). This one command covers staged and unstaged changes together. Never use `git diff` alone (unstaged only) or `git diff --cached` alone (staged only): each misses half the change.
 - **Untracked files:** `git ls-files --others --exclude-standard`. Every line in them is new.
 - Drop lockfiles, `node_modules/`, `vendor/`, build output, binaries and minified files.
 - Keep only added or changed lines that contain Vietnamese. Deleted lines are not reviewed.
@@ -55,7 +55,7 @@ Read `docs/giong-van.md`, or `docs/ux-voice.md` if only that exists. If neither 
 
 Your reply is exactly these parts, in this order, in Vietnamese:
 
-1. **One voice line.** `Giọng: theo docs/giong-van.md (gọi "bạn", dấu kiểu xóa).` or, with no voice file, `Giọng: chưa có file giọng văn, dùng mặc định cho ứng dụng gọi xe (gọi "bạn", dấu kiểu xóa).`
+1. **One voice line** (this command's rule; it overrides `ux-writing-vi` Mode B's "never mention the voice file"). `Giọng: theo docs/giong-van.md (gọi "bạn", dấu kiểu xóa).` or, with no voice file, `Giọng: chưa có file giọng văn, dùng mặc định cho ứng dụng gọi xe (gọi "bạn", dấu kiểu xóa).`
 2. **UI strings, grouped by file.** The file path on its own line, then one line per changed string, key first:
 
    ```
@@ -94,7 +94,8 @@ When they say yes:
 | You catch yourself… | Instead |
 |---|---|
 | Reviewing a key or paragraph the diff didn't touch, or adding "ngoài phạm vi thay đổi…" | The diff is the scope. Leave it out entirely. |
-| Using `git diff --cached` or plain `git diff` only | `git diff HEAD` (or the argument) plus untracked files. |
+| Using `git diff --cached` or plain `git diff` only | `git diff HEAD` (or the merge-base) plus untracked files. |
+| `git diff main` when the argument is `main` | `git diff $(git merge-base main HEAD)`: the tip of `main` has commits this branch never touched. |
 | Listing problems in a paragraph instead of rewriting it | Rewrite it, then `Đã sửa:`. |
 | Writing *2 tuần*, *miễn phí*, *ứng dụng số 1* that the text didn't say | Added facts are errors. Use only what the text says. |
 | "Repo chưa có commit, mình rà tất cả file luôn" | One line, offer `/viet-writing:analyze`, stop. |
