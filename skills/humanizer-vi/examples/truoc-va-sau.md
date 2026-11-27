@@ -1,6 +1,6 @@
 # Trước và sau
 
-Ví dụ viết lại trọn vẹn, mỗi ví dụ theo đúng dạng trả lời khi người dùng dán văn bản: bản viết lại trước, rồi `Đã sửa:`. Mọi văn bản ở đây viết mới cho tài liệu này. Mỗi gạch đầu dòng là một dấu hiệu đã sửa: bài chỉ có hai dấu hiệu thì hai gạch (ví dụ 4 và 7), không thêm cho đủ ba. Bản *Sau* chỉ dùng thông tin có trong bản *Trước*.
+Ví dụ viết lại trọn vẹn, mỗi ví dụ theo đúng dạng trả lời khi người dùng dán văn bản: bản viết lại trước, rồi `Đã sửa:`. Dòng in nghiêng *Ghi chú cho người đọc* sau một số ví dụ chỉ để giải thích, không phải một phần của câu trả lời. Mọi văn bản ở đây viết mới cho tài liệu này. Mỗi gạch đầu dòng là một dấu hiệu đã sửa: bài chỉ có hai dấu hiệu thì hai gạch (ví dụ 4 và 7), không thêm cho đủ ba. Bản *Sau* chỉ dùng thông tin có trong bản *Trước*.
 
 ## 1. Blog cá nhân
 
@@ -29,7 +29,7 @@ Ví dụ viết lại trọn vẹn, mỗi ví dụ theo đúng dạng trả lờ
 - Câu kết dàn dựng: bỏ mục *Lời kết* và *Hãy bắt đầu… ngay hôm nay!*
 - Tiêu đề viết hoa từng chữ và phụ đề *Hành Trình Thay Đổi Bản Thân*.
 
-Giữ: tháng 3, 3 km, hồ Thiền Quang, chuyện đi thang máy. Chi tiết cái thang máy là phần người nhất của bài.
+*Ghi chú cho người đọc, không nằm trong câu trả lời:* giữ tháng 3, 3 km, hồ Thiền Quang, chuyện đi thang máy. Chi tiết cái thang máy là phần người nhất của bài.
 
 ## 2. Blog kỹ thuật
 
@@ -47,7 +47,7 @@ Giữ: tháng 3, 3 km, hồ Thiền Quang, chuyện đi thang máy. Chi tiết c
 - Bộ ba *thông minh, tiết kiệm và hiệu quả* và *một cách*: bỏ.
 - *Điều này* mở câu → *nhờ vậy*.
 
-Giữ nguyên `loading="lazy"`, *3,2 MB*, *900 KB*.
+*Ghi chú cho người đọc, không nằm trong câu trả lời:* giữ nguyên `loading="lazy"`, *3,2 MB*, *900 KB*.
 
 ## 3. Giới thiệu sản phẩm
 
@@ -75,7 +75,7 @@ Giữ nguyên `loading="lazy"`, *3,2 MB*, *900 KB*.
 - Nêu vấn đề rồi *Hãy để Gốm Sen giải quyết*: bỏ màn dựng, giữ ý *không mùi nhựa*.
 - *mang đến trải nghiệm… hoàn hảo*, bộ ba *bền bỉ và sang trọng*: bỏ, vì bài không có chi tiết nào chứng minh. *An toàn* là một lời cam kết nên giữ.
 
-Giữ: 1,2 lít, khoảng 4 phút, gốm tráng men, `[xx]` đúng từng ký tự.
+*Ghi chú cho người đọc, không nằm trong câu trả lời:* giữ 1,2 lít, khoảng 4 phút, gốm tráng men, `[xx]` đúng từng ký tự.
 
 ## 4. Giới thiệu dịch vụ, theo file giọng văn
 
@@ -90,7 +90,7 @@ Giữ: 1,2 lít, khoảng 4 phút, gốm tráng men, `[xx]` đúng từng ký t�
 > Mình sửa máy giặt tận nhà ở Quận 7 và Nhà Bè. Thợ đến trong vòng 2 giờ. Phí kiểm tra 50.000đ, sửa thì không tính phí này.
 
 Đã sửa:
-- Xưng hô theo `docs/giong-van.md`: *chúng tôi* → *mình*.
+- Xưng hô theo giọng của dự án: *chúng tôi* → *mình*.
 - *cung cấp dịch vụ*, *đội ngũ kỹ thuật viên chuyên nghiệp của chúng tôi*: nói thẳng việc làm.
 
 ## 5. Bài Facebook
@@ -119,7 +119,7 @@ Giữ: 1,2 lít, khoảng 4 phút, gốm tráng men, `[xx]` đúng từng ký t�
 - Định dạng theo luật: tiêu đề chữ hoa, emoji ở mọi dòng.
 - Câu kết mồi tương tác *Tag ngay hội bạn thân*.
 
-Giữ giọng *cả nhà* và hai emoji: đó là giọng của tiệm, không phải dấu hiệu.
+*Ghi chú cho người đọc, không nằm trong câu trả lời:* giữ giọng *cả nhà* và hai emoji, đó là giọng của tiệm, không phải dấu hiệu.
 
 ## 6. Email trang trọng
 
@@ -151,7 +151,7 @@ Giữ giọng *cả nhà* và hai emoji: đó là giọng của tiệm, không p
 - Công thức *sự bất tiện… sự thông cảm* → một câu xin lỗi.
 - `**` trong email.
 
-Giữ *Kính gửi*, *Quý phụ huynh*, *Trân trọng*: thư gửi phụ huynh cần giọng trang trọng.
+*Ghi chú cho người đọc, không nằm trong câu trả lời:* giữ *Kính gửi*, *Quý phụ huynh*, *Trân trọng*, vì thư gửi phụ huynh cần giọng trang trọng.
 
 ## 7. Email công việc ngắn
 
@@ -185,7 +185,7 @@ Giữ *Kính gửi*, *Quý phụ huynh*, *Trân trọng*: thư gửi phụ huynh
 
 Trả lời: chép lại đoạn gốc, rồi một dòng `Không thấy dấu hiệu văn AI nên mình giữ nguyên.`
 
-Viết thường, *hum qua*, *mn*, *nha*, *luôn á*, *:))*, *free* là giọng người viết.
+*Ghi chú cho người đọc, không nằm trong câu trả lời:* viết thường, *hum qua*, *mn*, *nha*, *luôn á*, *:))*, *free* là giọng người viết.
 
 ## 9. Giữ nguyên: văn trang trọng
 
@@ -197,4 +197,4 @@ Viết thường, *hum qua*, *mn*, *nha*, *luôn á*, *:))*, *free* là giọng 
 
 Trả lời: chép lại đoạn gốc, rồi một dòng `Không thấy dấu hiệu văn AI nên mình giữ nguyên.`
 
-*Theo một số tài liệu*, *khoảng* là rào đón đúng mức trong văn thông tin, không phải dấu hiệu.
+*Ghi chú cho người đọc, không nằm trong câu trả lời:* *theo một số tài liệu*, *khoảng* là rào đón đúng mức trong văn thông tin, không phải dấu hiệu.

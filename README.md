@@ -104,7 +104,7 @@ Muốn rà lại chữ có sẵn thì dán chữ, gửi ảnh chụp màn hình,
 
 ### Sửa văn bản dài cho tự nhiên
 
-Dán đoạn văn hoặc chỉ vào file, rồi nhờ "viết lại cho tự nhiên", "nghe như AI quá". `humanizer-vi` trả về bản đã sửa và một danh sách ngắn những gì đã đổi. Tên, số liệu, ngày tháng, giá tiền, đường dẫn giữ nguyên. Khi agent tự viết một đoạn tiếng Việt dài (README, bài blog, email), skill này chạy ở bước cuối để bạn khỏi phải nhắc.
+Dán đoạn văn hoặc chỉ vào file, rồi nhờ "viết lại cho tự nhiên", "nghe như AI quá". `humanizer-vi` trả về bản đã sửa và một danh sách ngắn những gì đã đổi. Tên, số liệu, ngày tháng, giá tiền, đường dẫn giữ nguyên. Skill chạy khi bạn nhờ, khi bạn chỉ vào một file, khi bạn chạy `/viet-writing:review` hoặc `/viet-writing:analyze`, hoặc khi một skill khác gọi tới ở bước cuối. Văn bản agent tự viết chưa được rà tự động: muốn rà thì nhờ một câu hoặc chạy lệnh.
 
 ### Rà soát bằng lệnh
 
@@ -117,7 +117,7 @@ Dán đoạn văn hoặc chỉ vào file, rồi nhờ "viết lại cho tự nhi
 
 Cả hai lệnh tách chữ giao diện khỏi văn bản dài và dùng đúng quy tắc cho từng loại. `analyze` còn kiểm tra cả repo có thống nhất không: xưng hô, thuật ngữ, kiểu dấu thanh. Hai lệnh chỉ đề xuất, **không sửa file nào cho đến khi bạn đồng ý**.
 
-Hai lệnh này cần cài bằng plugin (Cách 1), vì chúng gọi `ux-writing-vi` và `humanizer-vi` để rà chữ. Plugin cài cả ba cùng lúc.
+Hai lệnh này cần cài bằng plugin (Cách 1), vì chúng gọi `ux-writing-vi` và `humanizer-vi` để rà chữ. Plugin cài cùng lúc ba skill `ux-writing-vi`, `humanizer-vi`, `style-vi` và hai lệnh này.
 
 ### File giọng văn `docs/giong-van.md`
 

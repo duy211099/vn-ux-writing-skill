@@ -16,22 +16,23 @@ Framework adapted from the UX Writing Skill by Christopher Greer (MIT). Language
 
 ## Mode A: writing strings in a repo
 
-1. **Read the voice file**: `docs/giong-van.md`, or `docs/ux-voice.md` if only that one exists (use it where it is; never move or rename it unasked). If neither exists, create `docs/giong-van.md` before writing any string. If the `style-vi` skill is available, use it to create the file; otherwise:
+1. **Read the voice file**: `docs/giong-van.md`, or `docs/ux-voice.md` if only that one exists (use it where it is; never move or rename it unasked). If neither exists, create `docs/giong-van.md` before writing any string. If the `style-vi` skill is available, use it to create the file, and its one-line notice is the notice: write it once, as the last line of your reply, never a second notice of your own. Otherwise:
    - Copy [templates/giong-van.md](templates/giong-van.md). Leave its `## Văn bản dài` section as the template's `[ví dụ: …]` placeholders; it is for prose, not UI strings.
    - Guess the domain from the project name, `package.json`, README and existing screens. Set pronoun and register from the domain table in [references/xung-ho-va-giong-dieu.md](references/xung-ho-va-giong-dieu.md).
    - If existing Vietnamese strings already use one pronoun (*quý khách*, *anh/chị*, *bạn*) or one tone-mark style (*xóa* vs *xoá*), record that instead of the default.
-   - **Required:** end your reply with a one-line notice to the user that says what you chose and that they change it by editing `docs/giong-van.md`. Write it as text for the user, not as a note to yourself or the caller. Example: `Đã tạo docs/giong-van.md: gọi người dùng là "bạn", giọng thân thiện (ứng dụng giao đồ ăn). Sửa file này nếu muốn đổi.` Don't ask first.
+   - **Required** (when you created the file yourself): end your reply with a one-line notice to the user that says what you chose and that they change it by editing `docs/giong-van.md`. Write it as text for the user, not as a note to yourself or the caller. Example: `Đã tạo docs/giong-van.md: gọi người dùng là "bạn", giọng thân thiện (ứng dụng giao đồ ăn). Sửa file này nếu muốn đổi.` Don't ask first.
 2. **Identify the element** (button, error, empty state, dialog…) and apply its pattern from [references/mau-noi-dung.md](references/mau-noi-dung.md).
 3. **Write the Vietnamese from intent.** When the source is an English string, work out what the user needs to know and do, then write it as Vietnamese copy. Don't translate word by word, and don't call the result a translation. Check it against [references/loi-dich-may-moc.md](references/loi-dich-may-moc.md).
 4. **Keep it consistent**: terms from [references/thuat-ngu.md](references/thuat-ngu.md) and from existing strings; the voice file's pronoun, particles and tone-mark style; formats from [references/dinh-dang.md](references/dinh-dang.md).
 5. **Errors and limits always get a next step**, even when the English source has none. English "File too large" → `Tệp quá lớn. Chọn tệp dưới 20 MB.`
 6. **Stay in scope.** Change only the strings the task needs. If you notice weak existing Vietnamese strings nearby (in the same locale file or component), list them in one or two lines at the end and offer a review. Don't rewrite them unasked.
 7. **Don't explain obvious choices.** The user is coding. Mention a copy decision only when it's non-obvious (for example, you added a next step the English lacked).
+8. **A request to change the pronoun or tone** (for example, switch to *quý khách*) is a voice change: update the voice file first (with `style-vi`'s Job 3 if it is available), then the strings.
 
 ## Mode B: reviewing copy
 
 1. **Extract every string** from the text, screenshot, page (fetch the URL) or files: titles, labels, placeholders, buttons, links, errors, helper text.
-2. If you are in the user's app repo, read `docs/giong-van.md` (or `docs/ux-voice.md` if only that exists) and follow it. If not, infer the domain from the content and apply the domain defaults. Say which voice you used in one line. Don't end by asking which pronoun the user prefers. **Never mention the voice file in a review** — not to create it, offer it, or explain why you didn't. It belongs to Mode A.
+2. If you are in the user's app repo, read `docs/giong-van.md` (or `docs/ux-voice.md` if only that exists) and follow it. If not, infer the domain from the content and apply the domain defaults. Say which voice you used in one line, describing the voice (pronoun, register), not the file. Don't end by asking which pronoun the user prefers. **Never mention the voice file in a review** — not to create it, offer it, or explain why you didn't. It belongs to Mode A.
 3. **Start the answer with the rewrites in this exact shape**, one line per changed string, with the reason in Vietnamese — even for a single string, and before any other notes:
 
    ```

@@ -18,7 +18,7 @@ Grow this repo from one skill (`ux-writing-vi`) into a single plugin with severa
 **Why:** the author has no one to write or check their Vietnamese text. They do ask an AI model to check it, but they have to remember to ask every time, for every piece, and that is the part that wears them down. **They want a one-command check they run when they need it:** one command for what they just changed, one for all the text in the repo. (Fully automatic checking was discussed and set aside for now.) It also has to be one repo, because they don't want to maintain several.
 
 **Success looks like:**
-- Whenever Claude writes Vietnamese prose (blog post, product intro, README, email), the result already reads like a Vietnamese person wrote it, and the author didn't have to ask.
+- When the author asks for a check (by name, on a file, or with `/viet-writing:review` or `/viet-writing:analyze`), Vietnamese prose Claude wrote comes back reading like a Vietnamese person wrote it. Checking Claude's own prose automatically, without being asked, is set aside for now.
 - When the author pastes Vietnamese text from anywhere and asks for a check, they get a cleaned-up version plus a short list of what changed.
 - The app copy and the prose share one voice (pronoun, tone, words to avoid), recorded in one file per project.
 - One install gets all the skills, and one `git pull` updates them.
@@ -115,7 +115,7 @@ Takes Vietnamese prose, marks the signs that an AI wrote it, rewrites them away,
 |---|---|---|
 | Pasted text | User gives text in chat | Final rewrite first. Then `Đã sửa:` with 3–6 bullets in Vietnamese, each naming one tell and one short example from the text. If no tells: say so in one line and return the text unchanged. |
 | File | User names a file | Read the whole file from disk. Change prose only; keep code blocks, inline code, front matter, links, paths unchanged. Write the final text to the file. Report in one line how many sections were reviewed and the main tells fixed. |
-| Embedded | Claude wrote the prose itself, or another skill calls it | Return only the final text. No report. |
+| Embedded | Another skill calls it as its last step | Return only the final text. No report. Never writes files itself; the calling skill writes. |
 
 The pasted-text output is simpler than the English humanizer's three-part output (first draft, surviving tells, final). My call: the author wants clean text, not process.
 
@@ -187,7 +187,7 @@ Skill text language follows `ux-writing-vi`: instructions in English, Vietnamese
 
 #### 3.2 `style-vi` skill
 
-- **Triggers:** user asks about the project's voice or wants to change it (*giọng văn*, *xưng hô*, *đổi sang quý khách*); another skill needs the voice file and none exists.
+- **Triggers:** user asks about the project's voice or wants to change it (*giọng văn*, *xưng hô*, *đổi sang quý khách*); another skill is about to write new Vietnamese text and needs the voice file, and none exists. Skills that only read it (`humanizer-vi`, `review`, `analyze`) never trigger it.
 - **Creates** the voice file the first time, using the same rules as `ux-writing-vi` today: guess domain from the project, pick defaults from the domain table, follow existing strings if they're consistent, state the choice in one line, don't ask first. The prose section gets defaults by domain too (e.g. fintech: *chúng tôi*, neutral, short sentences; indie tool: *mình*, has opinions).
 - **Answers** "what's our voice?" by summarising the file in a few lines.
 - **Updates** the file when the user changes their mind, and lists strings elsewhere that now disagree (doesn't rewrite them unasked).

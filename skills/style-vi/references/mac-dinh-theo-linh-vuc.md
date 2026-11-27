@@ -31,11 +31,11 @@ Mặc định chỉ dùng khi dự án chưa có lựa chọn rõ ràng.
 
 ## Ví dụ văn bản dài theo hàng
 
-✅ (fintech, *chúng tôi*, ngắn, trung tính) Từ ngày 1/12, phí chuyển tiền liên ngân hàng là 0đ. Chúng tôi áp dụng cho mọi tài khoản, không cần đăng ký.
+✅ (fintech, *chúng tôi*, ngắn, trung tính) Từ ngày 1/12, phí chuyển tiền liên ngân hàng là 0 VND. Chúng tôi áp dụng cho mọi tài khoản, không cần đăng ký.
 ❌ (fintech) Mình vui lắm khi báo tin này nè: chuyển tiền giờ miễn phí luôn!
 
-✅ (giao đồ ăn, tên sản phẩm, xen kẽ, trò chuyện) Tháng này Bếp Nhà có thêm 40 đầu bếp ở Gò Vấp. Phần lớn nấu món miền Trung, nên ai thèm bún bò thì có thêm lựa chọn.
-❌ (giao đồ ăn) Bên cạnh đó, Bếp Nhà không chỉ mang lại bữa ăn ngon mà còn mang lại trải nghiệm vô cùng tuyệt vời.
+✅ (giao đồ ăn, tên sản phẩm, xen kẽ, trò chuyện) Tháng này Mâm Cơm có thêm 40 đầu bếp ở Gò Vấp. Phần lớn nấu món miền Trung, nên ai thèm bún bò thì có thêm lựa chọn.
+❌ (giao đồ ăn) Bên cạnh đó, Mâm Cơm không chỉ mang lại bữa ăn ngon mà còn mang lại trải nghiệm vô cùng tuyệt vời.
 
 ✅ (công cụ indie, *mình*, xen kẽ, có quan điểm) Mình bỏ tính năng đồng bộ đám mây. Nó làm app chậm, mà gần như không ai dùng.
 ❌ (công cụ indie) Chúng tôi xin trân trọng thông báo về việc điều chỉnh tính năng đồng bộ.

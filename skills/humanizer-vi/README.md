@@ -18,7 +18,7 @@ Skill tìm những dấu hiệu cho thấy một đoạn văn do AI viết rồi
 
 **Khi bạn chỉ vào một file.** File đã commit và chưa sửa gì thì skill ghi đè luôn (git giữ bản cũ). File chưa có trong git hoặc đang có thay đổi chưa commit thì skill cho xem bản sửa trước, bạn đồng ý mới ghi.
 
-**Khi agent tự viết.** Sau khi agent viết một đoạn tiếng Việt dài, hoặc khi skill khác gọi tới, skill chạy ở bước cuối và chỉ trả về bản sạch, không kèm báo cáo.
+**Khi skill khác gọi tới.** Skill chạy ở bước cuối và chỉ trả về bản sạch, không kèm báo cáo. Văn bản agent tự viết chưa được rà tự động: muốn rà thì nhờ một câu, chỉ vào file, hoặc chạy `/viet-writing:review`, `/viet-writing:analyze`.
 
 Những gì người thật hay viết thì giữ: *nha*, *nè*, teencode, chữ không dấu, câu lủng củng trong bài cá nhân, giọng trang trọng *Kính gửi*, *Quý khách*.
 

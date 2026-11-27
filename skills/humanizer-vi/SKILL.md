@@ -1,6 +1,6 @@
 ---
 name: humanizer-vi
-description: Use when Vietnamese prose — a blog post, product or service intro, Facebook post, email, README or docs page — should sound natural instead of AI-written; when the user pastes Vietnamese text or names a file and asks "viết lại cho tự nhiên", "nghe như AI", "sửa giọng văn", "đọc cứng quá", "humanize"; when review or analyze hands over Vietnamese prose; when another skill calls humanizer-vi as its last step; or when Claude has just written Vietnamese prose longer than about a paragraph. Not for UI strings (buttons, errors, dialogs, locale files such as vi.json — those belong to ux-writing-vi), code, commit messages, or chat replies to the user.
+description: Use when Vietnamese prose — a blog post, product or service intro, Facebook post, email, README or docs page — should sound natural instead of AI-written; when the user pastes Vietnamese text or names a file and asks "viết lại cho tự nhiên", "nghe như AI", "sửa giọng văn", "đọc cứng quá", "humanize"; when review or analyze hands over Vietnamese prose; or when another skill calls humanizer-vi as its last step. Not for UI strings (buttons, errors, dialogs, locale files such as vi.json — those belong to ux-writing-vi), code, commit messages, or chat replies to the user.
 ---
 
 # Vietnamese humanizer
@@ -66,14 +66,14 @@ If the text has no tells, reply with the text unchanged, then one line: `Không 
 1. Read the whole file from disk, even if you wrote it this session.
 2. Change prose only. Front matter (the `---` block, including `title:`), fenced code blocks, inline code, link targets, HTML, paths and data stay byte-identical. Link text is prose.
 3. Check whether git can undo the overwrite:
-   - **Tracked and clean:** both `git -C <folder> ls-files --error-unmatch <file>` and `git -C <folder> diff --quiet HEAD -- <file>` succeed. Overwrite the file without asking (git is the undo). Reply with one line, then `Đã sửa:` (bullets as in pasted mode):
+   - **Tracked and clean:** both `git -C <folder> ls-files --error-unmatch -- <name>` and `git -C <folder> diff --quiet HEAD -- <name>` succeed, where `<folder>` is the file's folder and `<name>` is the file name relative to it. Overwrite the file without asking (git is the undo). Reply with one line, then `Đã sửa:` (bullets as in pasted mode):
      `Đã rà 4 phần trong content/posts/ten-bai.md, sửa chủ yếu mở bài dàn dựng, thổi phồng và câu kết.`
      Don't paste the file back into the chat.
    - **Anything else** (no git repo, an untracked or ignored file, or a file with uncommitted changes): git cannot undo the overwrite, so do not write. Show the full rewrite, then `Đã sửa:`, then ask in one line: `<file> chưa có bản lưu trong git nên mình chưa ghi đè. Ghi đè file không?` Write only after the user says yes.
 4. Write the file as Unicode NFC, even if it was NFD on disk. If an exact-match edit fails because the file is NFD, rewrite the whole file instead.
 5. No tells: leave the file untouched and reply `Không thấy dấu hiệu văn AI trong <file>, mình giữ nguyên.`
 
-**Embedded** (Claude wrote the prose itself, or another skill calls humanizer-vi as its last step). Return only the final text. No report, no `Đã sửa:`.
+**Embedded** (another skill calls humanizer-vi as its last step). Return only the final text. No report, no `Đã sửa:`. When that skill is writing a file, run the loop on its text before the file is written and hand the text back; never write any file yourself.
 
 **Called by `review` or `analyze`** (an exception to embedded): return each rewrite followed by its `Đã sửa:` bullets, in the pasted-text shape, for the command to show. Never write any file, even when they name one; the command writes only after the author says yes.
 

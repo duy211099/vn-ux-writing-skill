@@ -1,6 +1,6 @@
 ---
 name: style-vi
-description: Use when the user asks about, sets up or changes the voice of a Vietnamese project — giọng văn, xưng hô, cách gọi người dùng, cách tự xưng, "đổi sang quý khách", "giọng văn của app là gì", setting a voice before writing a Vietnamese blog, docs or UI text — or when another skill needs the project voice file (docs/giong-van.md or docs/ux-voice.md) and none exists or its prose section (## Văn bản dài) is unset.
+description: Use when the user asks about, sets up or changes the voice of a Vietnamese project — giọng văn, xưng hô, cách gọi người dùng, cách tự xưng, "đổi sang quý khách", "giọng văn của app là gì", setting a voice before writing a Vietnamese blog, docs or UI text — or when another skill is about to write new Vietnamese UI text or prose and needs the project voice file (docs/giong-van.md or docs/ux-voice.md), and none exists or its prose section (## Văn bản dài) is unset. Not when humanizer-vi, review or analyze only read the voice file: they never create or change it.
 ---
 
 # Vietnamese project voice
@@ -18,7 +18,7 @@ The user is usually a solo developer with no writing background. **Decide for th
 
 ## Job 1 — create the file
 
-Run this when no voice file exists and the user asks to set up a voice, asks about the voice, or another skill needs the file.
+Run this when no voice file exists and the user asks to set up a voice, asks about the voice, or a skill that is about to write new Vietnamese text needs the file.
 
 1. Copy [templates/giong-van.md](templates/giong-van.md) to `docs/giong-van.md`.
 2. Guess the domain from the project name, `package.json` (`name`, `description`), README and existing screens. Take the whole row for that domain from [references/mac-dinh-theo-linh-vuc.md](references/mac-dinh-theo-linh-vuc.md): UI pronoun, register, particles, and the prose fields.
@@ -33,7 +33,7 @@ Run this when no voice file exists and the user asks to set up a voice, asks abo
 
 ## Job 1b — fill the prose section of an existing file
 
-Run this when a voice file exists but `## Văn bản dài` is missing or every field in it is still a placeholder (usually because `ux-writing-vi` created the file for UI strings only), and the user asks to set up a voice, asks for long-form writing, or another skill needs the prose voice.
+Run this when a voice file exists but `## Văn bản dài` is missing or every field in it is still a placeholder (usually because `ux-writing-vi` created the file for UI strings only), and the user asks to set up a voice, asks for long-form writing, or a skill that is about to write new prose needs the prose voice.
 
 1. If the section is missing, append it from [templates/giong-van.md](templates/giong-van.md), comments included, at the end of the file.
 2. Take the domain from the file's `Lĩnh vực` line (guess it as in Job 1 step 2 if that is empty) and fill `Người viết tự xưng`, `Độ dài câu`, `Mức cá nhân` from its row in [references/mac-dinh-theo-linh-vuc.md](references/mac-dinh-theo-linh-vuc.md). Existing Vietnamese prose overrides the self-reference, as in Job 1 step 3. Set `Tránh dùng` to the seed list; leave `Đoạn văn mẫu` as its placeholder unless the user gave a sample.
@@ -80,7 +80,9 @@ If the prose section is all placeholders, write `- Văn bản dài: chưa chọn
 
 ## When another skill calls this one
 
-Another skill needs the voice file and none exists (for example `ux-writing-vi` before writing strings): run Job 1. It needs the prose voice and the section is missing or all placeholders (for example a blog skill or `humanizer-vi`): run Job 1b. Give the job's one-line reply and hand back. Don't answer questions or summarise.
+Only a skill that is about to write new Vietnamese text calls this one. It needs the voice file and none exists (for example `ux-writing-vi` before writing strings): run Job 1. It is about to write long-form prose and the section is missing or all placeholders (for example a future blog skill): run Job 1b. Give the job's one-line reply once and hand back; the calling skill places that line at the end of its own reply and adds no second notice. Don't answer questions or summarise.
+
+`humanizer-vi`, `review` and `analyze` only read the voice file. Never create or change it on their behalf: when they find none, they use the domain defaults.
 
 ## Common mistakes
 

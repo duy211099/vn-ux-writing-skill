@@ -50,7 +50,7 @@ Keep the reply readable, however big the repo:
 Your reply is exactly these parts, in this order, in Vietnamese:
 
 1. **One voice line** (this command's rule; it overrides `ux-writing-vi` Mode B's "never mention the voice file"). `Giọng: theo docs/giong-van.md (gọi "bạn", dấu kiểu xóa).` or `Giọng: chưa có file giọng văn, dùng mặc định cho ứng dụng gọi xe (gọi "bạn", dấu kiểu xóa theo đa số chuỗi).`
-2. **`Tổng quan`**: one line per file, worst first: `src/i18n/vi.json — 120 chuỗi, 14 cần sửa`, `docs/gioi-thieu.md — 9 đoạn, 6 có dấu hiệu văn AI`. Then `Lỗi lặp lại:` with 3–5 bullets, each a problem, how often, and where: `- Lẫn xưng hô: "bạn" ở src/i18n/vi.json, "quý khách" ở src/driver/vi.json (6 chuỗi)`. Then `Nặng nhất:` the 1–3 worst files.
+2. **`Tổng quan`**: one line per file, worst first, at most 10 files, then `và N file khác` for the rest: `src/i18n/vi.json — 120 chuỗi, 14 cần sửa`, `docs/gioi-thieu.md — 9 đoạn, 6 có dấu hiệu văn AI`. Then `Lỗi lặp lại:` with 3–5 bullets, each a problem, how often, and where: `- Lẫn xưng hô: "bạn" ở src/i18n/vi.json, "quý khách" ở src/driver/vi.json (6 chuỗi)`. Then `Nặng nhất:` the 1–3 worst files.
 3. **Details for the worst files.** The file path on its own line, then:
    - UI strings: `key: "trước" → "sau" — lý do`, one per line, the reason in Vietnamese.
    - Prose: the rewritten paragraph, a blank line, `Đã sửa:` and 1–6 bullets, in `humanizer-vi`'s pasted-text shape.

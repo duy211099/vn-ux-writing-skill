@@ -35,7 +35,7 @@ Run these in order. Each stop is one line of output and nothing else: no review 
 |---|---|---|
 | A value in a locale file (`vi.json`, `vi.yml`, `vi.ts`, `*_vi.arb`, `values-vi/strings.xml`, `vi.lproj/*`, `vi.po`) | UI string | `ux-writing-vi`, Mode B |
 | A Vietnamese string literal or JSX text in component code | UI string | `ux-writing-vi`, Mode B |
-| A paragraph, list item or heading in `.md`, `.mdx`, `.html`, `.txt` (README, docs, blog) | Prose | `humanizer-vi` loop |
+| A paragraph, list item or heading in `.md`, `.mdx`, `.html`, `.txt`, `.rst` (README, docs, blog) | Prose | `humanizer-vi` loop |
 | Code comments, commit messages, test data | — | Skip |
 
 For prose, the unit is the **whole paragraph** that contains a changed line: read the file around the diff to get it. Unchanged paragraphs next to it are context, not material.
@@ -73,7 +73,8 @@ Your reply is exactly these parts, in this order, in Vietnamese:
    - Thổi phồng: bỏ "trải nghiệm di chuyển tuyệt vời"
    ```
 
-4. **The offer, as the last line:** `Áp dụng các thay đổi này vào file không?`
+4. **Size limit.** If more than about 30 changed strings or paragraphs need fixing, keep the reply readable: strings with the same fix take one line (`trip.rated1, trip.rated2… (18 khóa): "…" → "…" — lý do`), rewrite in detail only the worst ones, and name the rest, with their count, under `Chưa rà chi tiết:`. Never cut silently.
+5. **The offer, as the last line:** `Áp dụng các thay đổi này vào file không?`
 
 Nothing else: no intro, no summary of the diff, no diff blocks, no notes on unchanged lines, no "kiểm tra trước khi đăng" list, no questions about voice. If nothing in the change needs fixing, reply with the voice line and `Phần chữ tiếng Việt vừa đổi đã ổn, không cần sửa.`
 
@@ -83,7 +84,7 @@ Until the author answers yes (*ok*, *áp dụng*, *được*, *yes*, *sửa đi*
 
 When they say yes:
 
-- Write exactly what you showed: each `Sau` string replaces its old value, each rewritten paragraph replaces the whole old paragraph. Nothing else in the file changes: no other key, paragraph, formatting or trailing newline.
+- Write exactly what you showed: each `Sau` string replaces its old value, each rewritten paragraph replaces the whole old paragraph. Nothing else in the file changes: no other key, paragraph, formatting or trailing newline. Items you only named under `Chưa rà chi tiết:` are written only if the author asks for them; then follow the same rules and list each change as `key: "trước" → "sau"`.
 - If they say yes to part of it (*chỉ sửa vi.json*), write only that part.
 - Leave git alone: don't stage, unstage or commit. A file that was staged stays staged with your change unstaged on top.
 - Write NFC. Check that a JSON or YAML file still parses.
@@ -102,3 +103,4 @@ When they say yes:
 | Fixing the file "luôn cho nhanh" before the author answers | Show, offer, wait for yes. |
 | Asking which pronoun or tone the author prefers | Use the voice file or the defaults, say so in one line. |
 | Creating `docs/giong-van.md` because it's missing | Never. Say you used the defaults. |
+| Forty `Trước → Sau` lines for a big change | Group same-fix keys in one line; the rest under `Chưa rà chi tiết:`. |
