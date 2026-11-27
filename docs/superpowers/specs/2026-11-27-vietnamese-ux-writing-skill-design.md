@@ -134,7 +134,7 @@ ux-writing-vi/
 - Voice file at `docs/ux-voice.md`.
 - Explanations and README in Vietnamese; `SKILL.md` instructions may be in English or Vietnamese — builder's choice based on what makes Claude follow it most reliably, with all examples in Vietnamese.
 - Domain-based default register (formal for banking/government/health, friendly for consumer apps).
-- Tone-mark placement (*xoá* vs *xóa*): follow the repo's existing style; otherwise default to the newer style (*xóa*, *hòa*) that most current apps use.
+- Tone-mark placement (*xoá* vs *xóa*): follow the repo's existing style; otherwise default to the traditional placement (*xóa*, *hòa*), which most current apps use. (Corrected 2026-11-27: earlier draft mislabeled this as the "newer" style.)
 - Mode A touches only in-scope strings; it mentions other weak strings without rewriting them.
 - This spec replaces the plan in `vietnamese-ux-writing-sources.md` where they differ: no paywalled books, no screenshots of real apps as source material. Every example is written fresh.
 

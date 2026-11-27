@@ -4,7 +4,7 @@ Each case is run twice with a fresh subagent: once without the skill (baseline, 
 
 Fixtures:
 - `fixture-repo/` — *Bếp Nhà*, a consumer food-ordering app (React + react-i18next). `vi.json` contains several weak, literally translated strings. No `docs/ux-voice.md`.
-- `fixture-repo-formal/` — *An Khang Bank*, a banking app. Its existing `vi.json` uses *quý khách* and the old tone-mark style (*xoá*).
+- `fixture-repo-formal/` — *An Khang Bank*, a banking app. Its existing `vi.json` uses *quý khách* and the newer tone-mark placement (*xoá*).
 - `inputs/` — files for Mode B cases.
 
 ---
@@ -78,7 +78,7 @@ Fixtures:
 - context: fixture-repo-formal; task "Add a 'Delete card' button: key `card.delete` in both locale files, and a confirm-dialog title `card.deleteTitle`."
 - input: the task above
 - pass:
-  - the vi values use *xoá* (old style, as the repo does), not *xóa*
+  - the vi values use *xoá* (as the repo does), not *xóa*
   - the dialog title names the action, and the button names the action
 
 ---

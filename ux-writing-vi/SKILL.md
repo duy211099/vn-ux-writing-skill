@@ -1,0 +1,11 @@
+---
+name: ux-writing-vi
+description: Use when writing, editing or reviewing Vietnamese user interface text.
+---
+
+# Vietnamese UX writing
+
+## References
+
+- [references/dinh-dang.md](references/dinh-dang.md)
+- [references/xung-ho-va-giong-dieu.md](references/xung-ho-va-giong-dieu.md)

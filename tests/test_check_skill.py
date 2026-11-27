@@ -1,3 +1,5 @@
+import contextlib
+import io
 import tempfile
 import unicodedata
 import unittest
@@ -75,8 +77,9 @@ class CheckSkillTest(unittest.TestCase):
         bad = self.root / "bad"
         bad.mkdir()
         make_skill(bad, VALID_SKILL.replace("name: ux-writing-vi\n", ""))
-        self.assertEqual(main([str(valid)]), 0)
-        self.assertEqual(main([str(bad)]), 1)
+        with contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(main([str(valid)]), 0)
+            self.assertEqual(main([str(bad)]), 1)
 
 
 if __name__ == "__main__":

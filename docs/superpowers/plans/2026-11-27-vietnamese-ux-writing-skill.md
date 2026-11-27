@@ -18,7 +18,7 @@
 - `SKILL.md` under ~200 lines (checker enforces ≤ 200).
 - Skill `name: ux-writing-vi`. File names are Vietnamese without diacritics, exactly as in the spec's structure.
 - Defaults: user addressed as *bạn*; the app avoids referring to itself (*chúng tôi* only for formal/finance); register neutral-friendly; *nhé* sparingly; no *nha*/*ạ* in UI; *vui lòng* only formal/apologetic; formal defaults (possibly *quý khách*) for banking/government/health.
-- Tone marks: follow the repo's existing style; otherwise use the newer style (*xóa*, *hòa*).
+- Tone marks: follow the repo's existing style; otherwise use the traditional placement (*xóa*, *hòa*), the most common in apps.
 - Voice file path in user repos: `docs/ux-voice.md`.
 - Mode A triggers on repos with a Vietnamese locale (`vi.json`, `app_vi.arb`, `vi.lproj`, …) or Vietnamese UI text; English-source keys get Vietnamese written fresh from the intent, not literally translated.
 - Mode A only changes strings in scope; it mentions other weak strings and offers a review.
@@ -116,7 +116,7 @@ Required cases (write the rest of the content yourself):
 - A-05 the fixture variant where existing `vi.json` strings consistently use *quý khách* → new strings use *quý khách*.
 - A-06 placeholders/plurals (above).
 - A-07 nearby weak strings exist → only the in-scope string changes, and the others are mentioned.
-- A-08 repo uses old-style *xoá* → new strings use *xoá*.
+- A-08 repo uses *xoá* placement → new strings use *xoá*.
 - B-01…B-06 pasted weak strings covering: a vague error ("Đã xảy ra lỗi"), "Bạn có chắc chắn muốn…không?", stacked *vui lòng*, a generic "OK" button, an empty state with no next step, a permission request with no benefit.
 - B-07 the input is NFD text → the output is NFC.
 - B-08 tight-space button where the English source is "Save" → output ≤ 3 words.
