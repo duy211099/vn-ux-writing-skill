@@ -31,8 +31,8 @@ Framework adapted from the UX Writing Skill by Christopher Greer (MIT). Language
 ## Mode B: reviewing copy
 
 1. **Extract every string** from the text, screenshot, page (fetch the URL) or files: titles, labels, placeholders, buttons, links, errors, helper text.
-2. If a repo is available, read `docs/ux-voice.md` and follow it. If not, infer the domain from the content and apply the domain defaults. Say which voice you used in one line. Don't end by asking which pronoun the user prefers.
-3. **Answer in this shape**, one line per changed string, with the reason in Vietnamese:
+2. If you are in the user's app repo, read `docs/ux-voice.md` and follow it. If not, infer the domain from the content and apply the domain defaults. Say which voice you used in one line. Don't end by asking which pronoun the user prefers. **Never mention `docs/ux-voice.md` in a review** — not to create it, offer it, or explain why you didn't. It belongs to Mode A.
+3. **Start the answer with the rewrites in this exact shape**, one line per changed string, with the reason in Vietnamese — even for a single string, and before any other notes:
 
    ```
    Trước → Sau — lý do
@@ -84,7 +84,7 @@ Also: use the domain's own words ("món" in a food app, not "sản phẩm"), no 
 
 - **Placeholders are byte-for-byte.** Keep `{{count}}`, `{name}`, `%s`, `%1$d`, `<b>…</b>` exactly. Vietnamese has no plural forms: one sentence works for every count. For i18next, the `_other` key is enough for `vi`; if the project keeps `_one` too, give it the same text.
 - **Output NFC.** Normalize any Vietnamese you write or rewrite to Unicode NFC, even if the input was decomposed (NFD).
-- **Tone marks** follow the repo (*xóa* or *xoá*); the default is *xóa*. Never mix the two.
+- **Tone marks** follow the repo (*xóa* or *xoá*); the default is *xóa*. The style applies to every word, not just the one you saw: a *xoá* repo also writes *huỷ*, *hoà*, *thuỷ*. Never mix the two.
 - **Number, date and currency formats**: `1.526`, `4,5`, `14:30`, `27/11/2026`, `100.000đ` (banking: `100.000 VND`). See [references/dinh-dang.md](references/dinh-dang.md).
 - **Accessibility**: descriptive link text, no abbreviations a screen reader will spell out, don't rely on colour alone. See [references/tiep-can.md](references/tiep-can.md).
 

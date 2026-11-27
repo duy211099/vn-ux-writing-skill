@@ -52,7 +52,7 @@ Quy tắc trình bày chữ, số, ngày giờ và tiền trong giao diện ti�
 - Vị trí dấu thanh có hai kiểu: kiểu truyền thống (*xóa, hòa, thủy*) và kiểu mới (*xoá, hoà, thuỷ*). Cả hai đều đúng.
   - Nếu repo đã dùng một kiểu, **theo kiểu của repo**.
   - Nếu chưa có, dùng kiểu truyền thống (*xóa, hòa*) vì phổ biến nhất trong ứng dụng hiện nay.
-  - Không trộn hai kiểu trong cùng một ứng dụng.
+  - Không trộn hai kiểu trong cùng một ứng dụng. Kiểu áp dụng cho mọi từ có *oa, oe, uy*, không chỉ từ đã thấy: repo dùng *xoá* thì cũng viết *huỷ, hoà, khoẻ, thuỷ*; repo dùng *xóa* thì viết *hủy, hòa, khỏe, thủy*.
 - Không bỏ dấu tiếng Việt trong giao diện, kể cả trong nút ngắn hay thông báo đẩy.
 
 | ✅ | ❌ |
