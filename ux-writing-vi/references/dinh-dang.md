@@ -8,12 +8,12 @@ Quy tắc trình bày chữ, số, ngày giờ và tiền trong giao diện ti�
 - Ngày dạng chữ: "27 tháng 11, 2026" hoặc "Thứ Sáu, 27/11/2026". Tên tháng viết thường ("tháng 11"), tên thứ viết hoa ("Thứ Sáu").
 - Giờ: 24 giờ, dấu hai chấm: `14:30`. Không dùng AM/PM.
 - Thời gian tương đối khi gần: "Vừa xong", "5 phút trước", "Hôm qua, 20:15".
-- Khoảng thời gian: "30–45 phút" (gạch nối ngắn, không cách) hoặc "từ 30 đến 45 phút". Không viết tắt "mins", "p".
+- Khoảng thời gian: "2–3 ngày" (gạch nối ngắn, không cách) hoặc "từ 2 đến 3 ngày". Không viết tắt "mins", "p", "h".
 
 | ✅ | ❌ |
 |---|---|
 | Giao lúc 14:30, 05/03/2026 | Giao lúc 2:30 PM, 3/5/2026 |
-| Dự kiến giao trong 30–45 phút | ETA 30-45 mins |
+| Giao trong 2–3 ngày | Ship 2-3 days |
 
 ## Số và tiền tệ
 

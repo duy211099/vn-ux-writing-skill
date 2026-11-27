@@ -13,14 +13,14 @@ Người dùng skill thường không có kinh nghiệm viết UX. **Đừng h�
 | Mức trang trọng | Trung tính, thân thiện | Như một nhân viên lịch sự nói chuyện với khách trẻ: rõ ràng, không suồng sã, không hành chính. |
 | Trợ từ | Xem phần Trợ từ | *nhé* dùng thưa; không *nha*, *ạ* trong giao diện. |
 
-✅ Chưa lưu được ảnh. Ảnh lớn hơn 5 MB, hãy chọn ảnh nhỏ hơn.
-❌ Chúng tôi rất tiếc! Hệ thống của chúng tôi không thể lưu ảnh của bạn.
+✅ Chưa tải được video. Video dài hơn 3 phút, hãy cắt ngắn rồi tải lại.
+❌ Chúng tôi rất tiếc! Hệ thống của chúng tôi không thể tải video của bạn.
 
 ✅ Đã gửi mã đến 0912 345 678.
 ❌ Mình đã gửi mã cho bạn rồi nha!
 
-✅ Chào mừng đến với Bếp Nhà
-❌ Chào mừng bạn đến với ứng dụng của chúng tôi!
+✅ Chào mừng đến với Phòng Khám An Tâm
+❌ Chào mừng bạn đến với dịch vụ của chúng tôi!
 
 ## Chọn theo lĩnh vực
 
@@ -36,8 +36,8 @@ Khi tạo file giọng văn lần đầu, đoán lĩnh vực từ tên dự án,
 
 Không chắc lĩnh vực nào: dùng mặc định (*bạn*, trung tính thân thiện).
 
-✅ (ngân hàng) Mã OTP đã hết hạn. Chọn "Gửi lại mã" để nhận mã mới.
-❌ (ngân hàng) Mã hết hạn rồi, bạn lấy mã mới nhé!
+✅ (ngân hàng) Số dư không đủ để thanh toán. Nạp thêm tiền hoặc chọn tài khoản khác.
+❌ (ngân hàng) Hết tiền rồi, bạn nạp thêm nhé!
 
 ✅ (giao đồ ăn) Món đang được chuẩn bị, khoảng 20 phút nữa sẽ giao đến bạn.
 ❌ (giao đồ ăn) Quý khách vui lòng chờ trong giây lát.
@@ -67,5 +67,5 @@ Trước khi áp mặc định, đọc các chuỗi tiếng Việt đã có (fil
 - Nếu đang trộn nhiều cách gọi, chọn cách chiếm đa số, ghi vào file giọng văn, và báo người dùng một dòng về các chuỗi lệch.
 - Cách viết dấu thanh (*xóa* hay *xoá*) cũng theo repo. Xem [định dạng](dinh-dang.md#unicode-và-dấu-thanh).
 
-✅ (repo dùng *quý khách*) Quý khách đã dùng hết hạn mức chuyển tiền hôm nay. Hạn mức sẽ được làm mới lúc 00:00.
-❌ (repo dùng *quý khách*) Bạn đã chuyển quá hạn mức hôm nay.
+✅ (repo dùng *quý khách*) Quý khách cần xác thực khuôn mặt để chuyển khoản trên 10 triệu đồng.
+❌ (repo dùng *quý khách*) Bạn cần quét mặt để chuyển khoản trên 10 triệu nhé.
