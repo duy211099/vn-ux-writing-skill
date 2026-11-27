@@ -38,7 +38,7 @@ I read every sample. "Occ." counts each occurrence. "Samples" is how many of the
 | 6 | Contrast staging: *không cần X, chỉ cần Y*, *X, không phải Y*, *không chỉ… mà còn* | 21 | 10 | 11 (6) | 10 (4) | starting list; new form |
 | 7 | Translated syntax: *sự bất tiện/sự thông cảm*, *rất vui mừng thông báo rằng*, *Nếu có bất kỳ thắc mắc nào*, *được thiết kế để*, *của bạn* that could be dropped, *Điều này* opener | 18 | 9 | 9 (4) | 9 (5) | starting list |
 | 8 | Staged openers: rhetorical question, *Dưới đây là…*, "Có những X…" aphorism, "many people think X", *Lời đầu tiên* | 17 | 14 | 7 (6) | 10 (8) | starting list; new forms |
-| 9 | Markdown `**` in Facebook posts and emails | 14 | 14 | 7 (7) | 7 (7) | **new** |
+| 9 | Markdown `**` in Facebook posts and emails | 15 | 15 | 7 (7) | 8 (8) | **new** |
 | 10 | Stock verb *mang đến / mang lại* | 7 | 5 | 0 | 7 (5) | **new** |
 | 11 | Problem → "we'll handle it" pivot (*giải quyết đúng việc đó*, *Hãy để chúng tôi lo*) | 5 | 5 | 3 (3) | 2 (2) | **new** |
 | 12 | Vague authority: *Nghiên cứu cho thấy…*, *Nhiều người thành đạt chia sẻ…*, *Người sành phở thường nói* | 4 | 2 | 0 | 4 (2) | **new** |
@@ -54,10 +54,10 @@ I read every sample. "Occ." counts each occurrence. "Samples" is how many of the
 | Subagent Sonnet | 21 | — | 3 / 8 |
 | Subagent Opus | 19 | — | 3 / 8 |
 | **Subagent, all** | **79** | **≈ 9.6** | 6 / 24 |
-| Bare Sonnet | 93 | — | 0 / 8 |
+| Bare Sonnet | 94 | — | 0 / 8 |
 | Bare Haiku | 48 | — | 0 / 4 |
 | Bare Opus | 51 | — | 0 / 4 |
-| **Bare, all** | **192** | **≈ 23.7** | 0 / 16 |
+| **Bare, all** | **193** | **≈ 23.8** | 0 / 16 |
 
 The route matters more than the model. With the Claude Code system prompt, all three models write fairly plain Vietnamese. Bare, all three produce about 2.5 times as many tells per word. Every bare sample has tells, and the heaviest is 23 in one blog post (blog-09-haiku-bare). Formatting, inflation, chatbot framing and closers account for most of the gap.
 
@@ -109,7 +109,7 @@ The route matters more than the model. With the Claude Code system prompt, all t
 - *"Có những nơi bạn đến một lần rồi thôi. Hội An thì khác…"* (blog-10-opus-bare)
 - *"Nhiều người nghĩ muốn khỏe thì phải đăng ký phòng gym… Thật ra, chỉ cần đi bộ đều đặn…"* (blog-03-opus)
 
-**9. Markdown in channels that don't render it.** Facebook and most email clients show `**` as literal asterisks. 9 of 10 emails and 5 of 10 Facebook posts have them.
+**9. Markdown in channels that don't render it.** Facebook and most email clients show `**` as literal asterisks. 9 of 10 emails and 6 of 10 Facebook posts have them, including all 8 bare Facebook and email replies. Only facebook-01, -02, -05, -06 and email-02 have none. In facebook-08-sonnet-bare the `**` sit only on the version labels (`**Phiên bản 1 – Chân thành, ấm áp**`), but they still count, because they come along when the reply is pasted.
 - `**Tiêu đề:** Thông báo trúng tuyển vị trí Nhân viên Marketing` (email-08-sonnet-bare)
 - `Chúng mình đang nhận **sách cũ** để gửi lên…` (facebook-04-sonnet)
 - `quán chính thức ra mắt **MENU LẨU MÙA ĐÔNG MỚI**` (facebook-07-sonnet-bare)
@@ -145,10 +145,11 @@ The route matters more than the model. With the Claude Code system prompt, all t
 - **Triads:** concrete lists of real items do not count (*phòng ngủ, phòng khách, phòng làm việc*; *gia đình, bạn bè, đồng nghiệp*), nor do product spec lists or tasting notes. Evaluative or rhythmic triples and repeated frames do count.
 - **Inflation:** *rất* is mostly ordinary (*rất hợp*, *rất ít công ty*). Spec numbers (*lọc 99,97%*) do not count. Claims larger than the content supports do count, including slogan subtitles.
 - **Translated syntax:** *của bạn* counts only where it can be dropped without loss. *sự + noun* counts only in apology or thanks formulas (*sự bất tiện*, *sự chậm trễ*, *sự thông cảm*), not in ordinary nouns (*sự cố*, *sự kiện*) or literary uses (*chính sự giản dị ấy*). *Thay mặt [công ty]…* is a normal Vietnamese business opener and does not count.
-- **Formatting:** bold section headings in a blog or product page are normal web formatting. The tell is a bold label on *every* item, an emoji on every line or heading, Title Case, or bold phrases inside running prose. In Facebook and email, `**` is counted under row 9 instead.
+- **Formatting:** bold section headings in a blog or product page are normal web formatting. The tell is a bold label on *every* item, an emoji on every line or heading, Title Case, or bold phrases inside running prose. In Facebook and email, `**` is counted under row 9 instead, once per sample. Any `**` anywhere in a Facebook or email reply counts, including on framing lines, because a user pasting the reply carries them along.
 - **Closers:** a call to action that is the point of the genre (register, the hotline) does not count. A generic moral, pep line, engagement bait, urgency line, or repeated thank-you or apology does count.
 - **Same rhythm:** counted only when the same frame opens three or more sentences or paragraphs in a row.
 - **Chatbot leftovers:** each distinct framing line, note or offer counts once.
+- **Vague authority:** counted once per citation of an unnamed source offered as evidence for a claim: *nghiên cứu cho thấy*, *các nghiên cứu… cho thấy*, *chuyên gia cho rằng*, *nhiều người thành đạt chia sẻ*, *người sành X thường nói*. A sentence that only reports a common experience, without invoking anyone's authority, does not count (blog-03-opus: *"Nhiều người thấy mình suy nghĩ thông suốt hơn sau một vòng đi bộ"*), and neither does a "many people think X" setup (counted as an opener). Recount after review: 4 hits in 2 samples, unchanged. blog-09-haiku-bare's *"Các nghiên cứu về sức khỏe thần kinh cho thấy…"* was already one of the 4, alongside *"Nghiên cứu cho thấy…"*, *"Nhiều người thành đạt chia sẻ rằng…"* (both blog-09) and *"Người sành phở thường nói"* (blog-08-sonnet-bare). The *nghiên cứu* in *"đúc kết từ nhiều năm nghiên cứu, trải nghiệm…"* is not a citation.
 - Square-bracket placeholders (`[Tên quán]`, present in most samples) are not counted. The writer is meant to fill them, and the humanizer must leave them alone.
 - The bare set was tagged after the subagent set. The *sự + noun* rule surfaced while tagging it, so I re-checked the subagent set and added one hit (email-04-sonnet, *"sự chậm trễ này"*).
 
@@ -158,6 +159,54 @@ The route matters more than the model. With the Claude Code system prompt, all t
 2. **Update the examples.** Inflation should describe claims larger than the content (*chưa từng có*, *bậc nhất*, *đại ngàn*), not just a word list. Closers should include *Lời kết* + moral, "Tag ngay…" and *ngay hôm nay*. Contrast should lead with *không cần X, chỉ cần Y*. Openers should include the "Có những X…" aphorism and *Dưới đây là*.
 3. **Add four patterns.** Markdown in Facebook and email; *mang đến / mang lại*; the problem → "we'll handle it" pivot; vague authority (*Nghiên cứu cho thấy*). The last has only 4 hits in 2 samples and is the weakest of the four.
 4. **Chatbot leftovers are common in pasted chat output** (14 of 16 bare replies). The skill should strip the framing and offers but never touch `[placeholders]`.
+
+## Appendix: tags per sample
+
+Each cell is the number of occurrences of that tell in that sample (· = none). The columns follow the row numbers of the Results table: 1 formatting, 2 inflation, 3 closers, 4 triads, 5 chatbot leftovers, 6 contrast, 7 translated syntax, 8 openers, 9 Markdown in FB/email, 10 *mang đến/mang lại*, 11 pivot, 12 vague authority, 13 same rhythm, 14 Sino-Vietnamese stacking. Linking-word padding is 0 everywhere and is omitted. Every occurrence, with the quoted text, is in `corpus-tags.tsv` (columns: tell, sample, quote). Summing that file by tell and by sample reproduces every count in this document.
+
+| Sample | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | Total |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| blog-01-sonnet | · | · | · | · | · | · | · | · | · | · | · | · | · | · | 0 |
+| blog-02-haiku | · | · | 1 | 1 | · | 3 | 1 | 1 | · | · | · | · | 1 | · | 8 |
+| blog-03-opus | 1 | 1 | 1 | · | · | 4 | · | 1 | · | · | · | · | · | · | 8 |
+| blog-04-sonnet | 4 | · | 1 | · | · | · | · | · | · | · | · | · | · | · | 5 |
+| blog-05-haiku | · | · | · | 3 | · | · | · | · | · | · | · | · | · | · | 3 |
+| blog-06-opus | · | · | · | · | · | · | · | 2 | · | · | 1 | · | · | · | 3 |
+| blog-07-sonnet-bare | 5 | · | 3 | · | · | 3 | 1 | 1 | · | 1 | · | · | · | · | 14 |
+| blog-08-sonnet-bare | 4 | 4 | 1 | 2 | 2 | 3 | · | 1 | · | · | · | 1 | · | · | 18 |
+| blog-09-haiku-bare | 1 | 4 | 2 | 4 | · | 2 | 1 | 2 | · | 3 | · | 3 | 1 | · | 23 |
+| blog-10-opus-bare | 9 | 1 | 2 | 2 | 1 | 2 | · | 2 | · | · | · | · | · | · | 19 |
+| email-01-sonnet | · | · | 1 | · | · | · | · | · | 1 | · | · | · | · | · | 2 |
+| email-02-haiku | · | · | 1 | · | · | · | · | · | · | · | · | · | · | · | 1 |
+| email-03-opus | · | · | 1 | · | · | · | · | · | 1 | · | · | · | · | · | 2 |
+| email-04-sonnet | 1 | · | 1 | · | · | 1 | 1 | · | 1 | · | · | · | · | · | 5 |
+| email-05-haiku | · | 1 | · | · | · | · | · | · | 1 | · | · | · | · | · | 2 |
+| email-06-opus | · | · | · | · | · | · | · | · | 1 | · | · | · | · | · | 1 |
+| email-07-sonnet-bare | · | · | 1 | · | 1 | · | 3 | 1 | 1 | · | · | · | · | 3 | 10 |
+| email-08-sonnet-bare | · | · | 1 | 1 | 1 | · | 3 | · | 1 | · | · | · | · | · | 7 |
+| email-09-haiku-bare | · | · | · | · | 2 | · | 1 | · | 1 | · | · | · | · | · | 4 |
+| email-10-opus-bare | 1 | · | 1 | · | 1 | · | · | · | 1 | · | · | · | · | · | 4 |
+| facebook-01-sonnet | · | · | · | · | · | · | · | · | · | · | · | · | · | · | 0 |
+| facebook-02-haiku | · | 1 | · | 4 | · | · | · | · | · | · | · | · | 1 | · | 6 |
+| facebook-03-opus | 3 | 1 | · | · | · | · | · | · | 1 | · | · | · | · | · | 5 |
+| facebook-04-sonnet | 4 | · | 1 | · | · | 1 | · | · | 1 | · | · | · | · | · | 7 |
+| facebook-05-haiku | · | · | · | · | · | 1 | · | 1 | · | · | · | · | · | · | 2 |
+| facebook-06-opus | · | · | · | · | · | · | · | · | · | · | · | · | · | · | 0 |
+| facebook-07-sonnet-bare | 4 | · | 1 | · | 1 | · | · | 1 | 1 | · | · | · | · | · | 8 |
+| facebook-08-sonnet-bare | · | 3 | · | 2 | 3 | · | · | · | 1 | · | · | · | · | · | 9 |
+| facebook-09-haiku-bare | 4 | 4 | 2 | · | 2 | · | · | · | 1 | 1 | · | · | · | · | 14 |
+| facebook-10-opus-bare | 5 | · | 2 | · | 2 | · | · | 1 | 1 | · | 1 | · | · | · | 12 |
+| gioi-thieu-san-pham-01-sonnet | · | · | · | · | · | · | · | · | · | · | · | · | · | · | 0 |
+| gioi-thieu-san-pham-02-haiku | · | 1 | 1 | · | 1 | · | 5 | 1 | · | · | 1 | · | · | · | 10 |
+| gioi-thieu-san-pham-03-opus | · | · | · | · | · | · | · | · | · | · | · | · | · | · | 0 |
+| gioi-thieu-san-pham-04-sonnet | 1 | · | · | · | 1 | · | · | · | · | · | · | · | · | · | 2 |
+| gioi-thieu-san-pham-05-haiku | 1 | · | · | 1 | · | 1 | 2 | 1 | · | · | 1 | · | · | · | 7 |
+| gioi-thieu-san-pham-06-opus | · | · | · | · | · | · | · | · | · | · | · | · | · | · | 0 |
+| gioi-thieu-san-pham-07-sonnet-bare | 5 | 5 | · | 1 | 4 | · | · | · | · | · | · | · | · | · | 15 |
+| gioi-thieu-san-pham-08-sonnet-bare | 6 | 4 | 1 | 1 | 1 | · | · | · | · | · | · | · | · | · | 13 |
+| gioi-thieu-san-pham-09-haiku-bare | 2 | · | · | 2 | 2 | · | · | · | · | 1 | · | · | · | · | 7 |
+| gioi-thieu-san-pham-10-opus-bare | 3 | 4 | 2 | 3 | 1 | · | · | 1 | · | 1 | 1 | · | · | · | 16 |
+| **Total** | 64 | 34 | 28 | 27 | 26 | 21 | 18 | 17 | 15 | 7 | 5 | 4 | 3 | 3 | 272 |
 
 ## Limits
 
