@@ -26,11 +26,17 @@ Trước → Sau — lý do
 **Claude Code**
 
 ```bash
-git clone <địa chỉ repo này>
-ln -s "$PWD/<thư mục repo>/ux-writing-vi" ~/.claude/skills/ux-writing-vi
+npx skills add duy211099/vn-ux-writing-skill@ux-writing-vi -g -y
 ```
 
-Hoặc tải file `ux-writing-vi.zip` và giải nén vào `~/.claude/skills/`.
+Hoặc cài thủ công:
+
+```bash
+git clone https://github.com/duy211099/vn-ux-writing-skill.git
+ln -s "$PWD/vn-ux-writing-skill/ux-writing-vi" ~/.claude/skills/ux-writing-vi
+```
+
+Hướng dẫn đầy đủ: https://github.com/duy211099/vn-ux-writing-skill#cài-đặt
 
 **Agent khác** (Codex, Cursor…): giải nén vào thư mục skills của agent đó, thường là `~/.agents/skills/`.
 
