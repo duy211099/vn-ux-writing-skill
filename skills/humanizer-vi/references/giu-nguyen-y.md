@@ -35,6 +35,22 @@ Thêm cũng là đổi ý. Không thêm:
 
 Câu chung chung mà không có chi tiết để thay thì viết lại đơn giản hơn hoặc bỏ. Đừng đoán chi tiết.
 
+## Kiểm ngược
+
+Sau khi so bản gốc với bản mới, so ngược lại: đọc từng câu của bản mới, và mỗi con số, số đếm, đặc điểm, nguyên nhân phải có trong bản gốc đúng ở dạng đó. Tự đếm hay tự cộng từ một danh sách cũng là thêm dữ kiện.
+
+> **Trước:** Ứng dụng có các gói: Cơ bản, Gia đình, Doanh nghiệp. Gói nào cũng tuyệt vời và đáng đồng tiền!
+> **Sai:** Ứng dụng có 3 gói, gói nào cũng dùng thử miễn phí được.
+> **Đúng:** Ứng dụng có các gói Cơ bản, Gia đình và Doanh nghiệp.
+
+*3 gói* là số tự đếm (danh sách có thể chưa đủ), *dùng thử miễn phí* là đặc điểm bài gốc không nói. Chi tiết nằm trong câu hỏi tu từ (*Bạn có muốn tự tay làm một chiếc bánh?*) cũng không phải dữ kiện về sản phẩm: đừng biến nó thành câu khẳng định (*Lớp dạy làm bánh kem*).
+
+Bỏ lời khen chung chung thì giữ phần chữ gốc còn lại hoặc bỏ hẳn, đừng thay bằng một đặc điểm cụ thể đoán từ tên món hay từ ngữ cảnh:
+
+> **Trước:** Bánh mì bơ tỏi: giòn rụm, thơm nức, chuẩn vị.
+> **Sai:** Bánh mì bơ tỏi: giòn, thơm mùi tỏi phi.
+> **Đúng:** Bánh mì bơ tỏi: giòn, thơm.
+
 ## Khi không chắc
 
 Nếu không biết một câu có phải dữ kiện hay không, giữ nó. Nếu một lời khẳng định có vẻ sai (ngày không khớp thứ, *mùa hè* trong bài đăng tháng 12), giữ nguyên trong bản viết lại và nói một dòng trong `Đã sửa:` để người viết tự quyết. Không tự sửa dữ kiện.

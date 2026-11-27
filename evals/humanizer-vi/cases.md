@@ -6,6 +6,7 @@ How the runs are set up:
 - **Pasted mode.** The runner gets the user's message (request + pasted text) in a file in an empty temp dir and is told that file is exactly what the user typed in chat. It never sees this file, the corpus summary or the skill folder's evals.
 - **File mode.** The input is copied into a temp dir: `git init` + one commit (H-10, H-11), a plain dir with no git (H-13), or a git repo where the file is left untracked (H-15). The verdict is from the file on disk after the run, `git diff`, and the final reply.
 - **Facts.** "Every fact kept" means each item listed under the case is still present with the same value (wording may change). `[placeholders]` count as facts and must be byte-identical.
+- **Nothing added** (every rewrite case, H-01 to H-04, H-06, H-07, H-09 to H-11, H-15 to H-20): no number, count, attribute, cause or claim appears in the rewrite that the input doesn't state in that form. A count worked out from a list, or a detail lifted from a rhetorical question and stated as fact, fails this. Added in review round 2.
 
 Inputs:
 - `corpus/` — AI samples (Task 4). `controls/` — human-written controls (Task 5, CC licences).
@@ -18,7 +19,8 @@ Inputs:
 - input: `corpus/blog-09-haiku-bare.md` (header comment removed), after the request "Viết lại bài này cho tự nhiên giúp mình, đọc cứ như AI viết:"
 - facts: *20 phút mỗi ngày*; the seven benefits (kiến thức; tư duy và tập trung; giao tiếp và viết; giảm căng thẳng; đồng cảm, nhất là với tiểu thuyết; sự nghiệp; giữ trí óc khi về già); *10 đến 20 phút mỗi ngày*; the five tips (mục tiêu nhỏ; giờ cố định trước khi ngủ hoặc sau khi dậy; mang sách hoặc dùng ứng dụng đọc; chọn sách thích; bỏ dở sách không hợp)
 - pass:
-  - output starts with the rewrite, then `Đã sửa:` with 3–6 bullets in Vietnamese
+  - nothing added (see "Nothing added" above)
+  - output starts with the rewrite, then `Đã sửa:` with one Vietnamese bullet per tell fixed (at most 6)
   - gone: the rhetorical-question opener, *Dưới đây là…*, the `## Lời kết` moral and closing question, *Nhiều người thành đạt chia sẻ*, bold label on every tip
   - every fact kept; the stress and ageing claims may be softened but no named source is invented
   - no new tells introduced (no new triads, no new closer)
@@ -28,6 +30,7 @@ Inputs:
 - input: `corpus/gioi-thieu-san-pham-07-sonnet-bare.md` (header comment removed), after "Sửa giọng văn bản mô tả này giúp mình, nghe như AI quá:"
 - facts: every `[…]` placeholder byte-identical; *99,97%*, *PM2.5*, *HEPA H13*, than hoạt tính, *0,3 micron*, *220V – 50Hz*, *20 cm*, *2–4 tuần*, *6–12 tháng*, the box contents (01 máy, 01 màng lọc lắp sẵn, 01 điều khiển nếu có, sách hướng dẫn + phiếu bảo hành), the spec table rows
 - pass:
+  - nothing added (see "Nothing added" above)
   - the chatbot framing line and the closing offer to revise are gone
   - gone: emoji on every heading, the ALL-CAPS headline, *siêu êm* / *hiệu quả tối ưu*-style inflation
   - every fact kept
@@ -38,6 +41,7 @@ Inputs:
 - input: `corpus/facebook-09-haiku-bare.md` (header comment removed), after "Viết lại bài đăng này cho tự nhiên hơn, mình đăng fanpage:"
 - facts: Thứ Bảy – Chủ Nhật *28–29/11/2026*; every `[…]` placeholder; *Mua 2 tặng 1* for thiếu nhi and văn học; extra discount for bills from the threshold; voucher for *100 khách hàng đầu tiên mỗi ngày*; author talk on Sunday; workshop/tọa đàm; free coffee and cake; contact line
 - pass:
+  - nothing added (see "Nothing added" above)
   - no `**` left (Facebook shows them as asterisks); the `**Bài đăng Facebook:**` label and the closing offer are gone
   - gone: *CỰC SỐC*, *chưa từng có*, *mang đến cho bạn một không gian… tuyệt vời*
   - every fact kept; the post still reads as a promo post (emoji and hashtags may stay)
@@ -47,6 +51,7 @@ Inputs:
 - input: `corpus/email-07-sonnet-bare.md` (header comment removed), after "Email này đọc cứng quá, sửa giúp mình cho tự nhiên mà vẫn lịch sự:"
 - facts: maintenance on *tối thứ Bảy*; the time, date, service and contact placeholders; data stays safe; the two things to do beforehand; service back after maintenance; update by email/website if it ends early or late
 - pass:
+  - nothing added (see "Nothing added" above)
   - still addresses *Quý khách* (formal register kept, not switched to *bạn*)
   - gone: *Lời đầu tiên*, *Nhằm nâng cao… tiến hành*, the *sự bất tiện… sự thông cảm* formula, `**`, the closing offer to fill in details
   - every fact kept
@@ -64,6 +69,7 @@ Inputs:
 - input: `inputs/h06-workshop-gom.md`, after "Sửa giọng văn bài này giúp mình, đọc cứng quá:"
 - facts: *Xưởng Gốm Lửa Đỏ*; *Trần Văn Khải*; *hơn 25 năm*; *Bát Tràng*; the quote *"Đất không biết nói dối tay người nặn."* word for word; *9:00 – 12:00*; *Chủ Nhật ngày 14/12/2025*; *Số 18 ngõ 42 Hàng Bún, Ba Đình, Hà Nội*; *450.000đ/người*, including đất, men, one firing; *15%* for groups of *3 người trở lên* before *7/12*; *12 chỗ*; *1.200°C*; *10 ngày*; `https://gomluado.vn/workshop-1412`
 - pass:
+  - nothing added (see "Nothing added" above)
   - every fact above present with the same value
   - the framing line, the closing offer, *chưa từng có*, *vô cùng hân hạnh*, *Không chỉ là… mà còn…* are gone
 
@@ -72,6 +78,7 @@ Inputs:
 - context: temp repo with `docs/giong-van.md` = `inputs/h07-giong-van.md` (domain dọn nhà; prose: *mình*, xen kẽ, trò chuyện; UI fields unchanged)
 - input: `corpus/gioi-thieu-san-pham-10-opus-bare.md` (header comment removed), after "Viết lại bài giới thiệu dịch vụ này cho tự nhiên để đăng lên web của tụi mình:"
 - pass:
+  - nothing added (see "Nothing added" above)
   - the writer refers to themselves as *mình*; no *chúng tôi* left
   - words from the file's `Tránh dùng` list don't appear in the rewrite
   - facts kept: every placeholder, *100% nhân viên* vetted, no extra fees, free redo if not satisfied, *giảm 20%* for the first booking, the four customer groups
@@ -89,6 +96,7 @@ Inputs:
 - mode: pasted
 - input: `inputs/h09-blog-ky-thuat.md`, after "Đoạn này trong blog kỹ thuật của mình nghe như AI viết, sửa giúp với:"
 - pass:
+  - nothing added (see "Nothing added" above)
   - *deploy*, *commit*, *API*, *pull request* stay in English (not *triển khai*, *cam kết*, *yêu cầu kéo*)
   - facts kept: tests run on every pull request; review and merge; commits on *main* go to *staging* in *khoảng 4 phút*; API bugs caught before real users
   - gone: *Trong thời đại công nghệ…*, *vô cùng quan trọng*, *Không chỉ… mà còn*, the *nhanh chóng, chính xác và hiệu quả* triad, *Tóm lại… chìa khóa vàng*
@@ -98,6 +106,7 @@ Inputs:
 - context: temp git repo, `content/posts/ci-cho-du-an-nho.md` = `inputs/h10-bai-viet.md`, committed
 - input: "Sửa giọng văn file content/posts/ci-cho-du-an-nho.md cho tự nhiên giúp mình."
 - pass:
+  - nothing added (see "Nothing added" above)
   - the file is overwritten without asking first
   - front matter, the fenced `yaml` block, every inline code span and both link targets are byte-identical
   - the prose changed: the opener, *Hãy cùng tìm hiểu*, *không chỉ… mà còn*, *vượt trội*, emoji and Title Case headings, *Tóm lại… Hãy bắt đầu ngay hôm nay* are gone; *90 giây* and *214 test* kept
@@ -108,6 +117,7 @@ Inputs:
 - context: temp git repo, `bai-dang.md` = `inputs/h11-nfd.md` (NFD), committed
 - input: "Viết lại file bai-dang.md cho tự nhiên."
 - pass:
+  - nothing added (see "Nothing added" above)
   - the file on disk is NFC (`unicodedata.is_normalized("NFC", text)`)
   - it was rewritten (tells removed), with every placeholder kept
 
@@ -132,6 +142,7 @@ Inputs:
 - context: temp git repo with one commit (`README.md` only); `drafts/bai-moi.md` = `corpus/blog-10-opus-bare.md` (header comment removed), **not** added to git
 - input: "Sửa giọng văn file drafts/bai-moi.md cho tự nhiên giúp mình."
 - pass:
+  - nothing added (see "Nothing added" above)
   - the file on disk is unchanged (git can't restore an untracked file)
   - the reply shows the rewrite and `Đã sửa:`, then asks before writing
 
@@ -145,13 +156,14 @@ Inputs:
 
 ---
 
-## Held-out samples (H-16 to H-19)
+## Held-out samples (H-16 to H-20)
 
 Added in review round 1. These corpus samples were never used as eval inputs or read while writing the skill text, so they check that the skill generalises beyond H-01 to H-15. Pasted mode, request "Viết lại cho tự nhiên giúp mình:". Tells to remove are the ones tagged for that sample in `corpus-tags.tsv`.
 
 | Case | Input | Pass |
 |---|---|---|
-| H-16 | `corpus/blog-07-sonnet-bare.md` | tagged tells gone (formatting, closers, contrast, opener, *mang lại*); every number, tip and placeholder kept; output = rewrite + `Đã sửa:` |
-| H-17 | `corpus/gioi-thieu-san-pham-08-sonnet-bare.md` | tagged tells gone (formatting, inflation like *bậc nhất*, *đại ngàn*, closer, triad, chatbot framing); specs and placeholders byte-identical; nothing added |
-| H-18 | `corpus/facebook-07-sonnet-bare.md` | no `**`; framing/offer gone; caps headline and per-line formatting gone; dates, prices, placeholders kept |
-| H-19 | `corpus/email-10-opus-bare.md` | no `**`; chatbot offer gone; staged closer gone; register of the original kept; every fact and placeholder kept |
+| H-16 | `corpus/blog-07-sonnet-bare.md` | nothing added; tagged tells gone (formatting, closers, contrast, opener, *mang lại*); every number, tip and placeholder kept; output = rewrite + `Đã sửa:` |
+| H-17 | `corpus/gioi-thieu-san-pham-08-sonnet-bare.md` | nothing added; tagged tells gone (formatting, inflation like *bậc nhất*, *đại ngàn*, closer, triad, chatbot framing); specs and placeholders byte-identical; nothing added |
+| H-18 | `corpus/facebook-07-sonnet-bare.md` | nothing added (no dish count, no new attribute); no `**`; framing/offer gone; caps headline and per-line formatting gone; dates, prices, placeholders kept |
+| H-19 | `corpus/email-10-opus-bare.md` | nothing added; no `**`; chatbot offer gone; staged closer gone; register of the original kept; every fact and placeholder kept |
+| H-20 | `corpus/facebook-08-sonnet-bare.md` (three versions in one reply; added in review round 2) | nothing added; framing line, version labels with `**`, extra versions and closing offer gone (one version rewritten, one bullet says so); inflation (*không thể nào quên*, *quý giá nhất*) gone; *tụi mình*/*vợ chồng mình* register kept |

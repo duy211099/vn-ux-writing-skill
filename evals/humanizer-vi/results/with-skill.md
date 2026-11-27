@@ -13,7 +13,7 @@ Run: 2026-11-27. Model: sonnet, one fresh subagent per case (H-05 is three runs)
 | H-05a (formal) | FAIL | PASS | Verbatim + `Không thấy dấu hiệu văn AI nên mình giữ nguyên.` |
 | H-05b (personal) | PASS | PASS | Verbatim + the one-line note (keeps *bị ấn tượng mạnh bởi*, which the baseline "fixed"). |
 | H-05c (casual) | FAIL | PASS | Verbatim, including *Tại nạn*, *:)))*, *Kết luận: bài này dư thừa.* Rerun after the refactor: still verbatim. |
-| H-06 | PASS | PASS | All 14 facts kept, quote word for word, URL intact; framing, offer, *chưa từng có*, *vô cùng hân hạnh*, *Không chỉ… mà còn* gone. First run kept a shortened rhetorical question; rerun after the refactor turned it into a statement. Both runs say the class makes *một chiếc cốc*, taken from the original's own question. |
+| H-06 | PASS | PASS → **FAIL** under the round-2 *nothing added* criterion | All 14 facts kept, quote word for word, URL intact; framing, offer, *chưa từng có*, *vô cùng hân hạnh*, *Không chỉ… mà còn* gone. First run kept a shortened rhetorical question; rerun after the refactor turned it into a statement. Both runs say the class makes *một chiếc cốc*, taken from the original's own question. |
 | H-07 | PASS | PASS | *mình* throughout, no *chúng tôi*, none of the `Tránh dùng` phrases; *100%*, no extra fees, free redo, *giảm 20%*, four customer groups kept; no files changed. Introduced one *hay được dùng bởi* (passive). |
 | H-08 | PASS | PASS | No poem. Injected sentence dropped as off-topic and named in one `Đã sửa:` bullet. Facts kept. No offer to write the poem. |
 | H-09 | PASS | PASS | *deploy*, *commit*, *API*, *pull request*, *CI/CD* kept; *khoảng 4 phút*, *main*, *staging* kept; 6 bullets, no extra advice. |
@@ -62,7 +62,25 @@ New cases: H-15 (untracked draft in a git repo) and held-out H-16 to H-19 (corpu
 | H-12 (không dấu) | PASS | Verbatim, no diacritics added, one-line note. |
 | H-16 held-out blog (`blog-07-sonnet-bare`) | PASS | *Dưới đây là*, bold labels and bold in prose, three contrast stagings, `## Kết luận` recap, *cảm ơn chính mình*, bold comment bait, *mang lại* all gone. Every number (1-2 năm, 50/30/20, 60/30/10, 30%, 48 giờ, 3-6 tháng, 10%) and app name kept. |
 | H-17 held-out product (`gioi-thieu-san-pham-08-sonnet-bare`) | PASS | ✅ per line, bold labels, slogan subtitle, *bậc nhất*, *đại ngàn*, *chuẩn vị người sành*, closer, chatbot offer gone. Every spec kept. The tagged triad *đất đỏ bazan…, khí hậu…, độ cao…* stayed as three concrete causes (*lý tưởng* → *phù hợp*): the catalogue treats real lists as not a tell, the corpus tagger counted it. |
-| H-18 held-out Facebook (`facebook-07-sonnet-bare`) | PASS | No `**`; caps headline, emoji per line, rhetorical opener, *Tag ngay*, the "Mẹo" note gone. 10%, *nhóm từ 4 người*, placeholders, hashtags kept. Small inferences: *Menu có 5 vị* (a count of the listed items), *thơm mùi lá é*. |
+| H-18 held-out Facebook (`facebook-07-sonnet-bare`) | **FAIL** (re-scored in round 2) | Added facts: *Menu có 5 vị* (a count worked out from the list; the source never states a menu size) and *thơm mùi lá é* (an attribute inferred from *đặc sản thơm nức*). Originally recorded as PASS; that was wrong under the fact rules. Otherwise: no `**`; caps headline, emoji per line, rhetorical opener, *Tag ngay*, the "Mẹo" note gone. 10%, *nhóm từ 4 người*, placeholders, hashtags kept. Small inferences: *Menu có 5 vị* (a count of the listed items), *thơm mùi lá é*. |
 | H-19 held-out email (`email-10-opus-bare`) | PASS | No `**` or `---`; offer and *Mọi góp ý đều rất quý giá* closer gone; *anh/chị*, *Trân trọng*, all 12 placeholders, *15–30 phút* kept. |
 
-**8 / 8 pass.** Not rerun after these changes: H-01 to H-04, H-05b, H-05c, H-06 to H-11, H-14. The changes to SKILL.md are the file-mode git check, three added sentences (embedded `review`/`analyze`, voice fallback, bullet count) and replaced example strings, so the pasted-mode cases are unlikely to move, but they are provisional.
+**7 / 8 pass** after re-scoring H-18 in round 2 (first recorded as 8 / 8). Not rerun after these changes: H-01 to H-04, H-05b, H-05c, H-06 to H-11, H-14. The changes to SKILL.md are the file-mode git check, three added sentences (embedded `review`/`analyze`, voice fallback, bullet count) and replaced example strings, so the pasted-mode cases are unlikely to move, but they are provisional.
+
+## Review round 2 (nothing added)
+
+Finding: H-18 was recorded PASS in round 1 although the rewrite added *Menu có 5 vị* and *thơm mùi lá é*. The same kind of addition is in H-06 (*một chiếc cốc*, from the original's rhetorical question). `cases.md` now has a **Nothing added** criterion for every rewrite case, and the earlier rows are re-scored above: **H-18 round 1 → FAIL**, **H-06 → FAIL**.
+
+Skill changes:
+1. Step 4 now has a **reverse check**: every number, count, attribute, cause and claim in the rewrite must appear in the original in that form. A count or sum you worked out yourself is an added fact (three plans listed → not *3 gói*), and so is a detail lifted out of a rhetorical question. `giu-nguyen-y.md` gained a *Kiểm ngược* section with that example (written fresh, not from an eval input).
+2. After the first H-18 rerun below still added an attribute, I added one more sentence. When cutting vague praise, don't swap in a more specific guess from a name or context: *Bánh mì bơ tỏi: thơm nức* → *thơm*, not *thơm mùi tỏi*. This is in step 4 and in *Kiểm ngược*.
+
+| Run | Skill version | Result | Notes |
+|---|---|---|---|
+| H-18 (rerun 1) | reverse check only | FAIL | No count any more, but *Lẩu Gà Lá É: đặc sản, thơm mùi lá é* (inferred attribute). It also changed *hấp dẫn giới trẻ* to *hợp với giới trẻ* while `Đã sửa:` said it was removed. |
+| H-18 (rerun 2) | + no-guess rule | PASS | *đặc sản thơm nức* kept as written; no count; no new attribute; `**`, caps, per-line emoji, rhetorical opener, *Tag ngay*, "Mẹo" note gone; facts and placeholders kept. *ấm bụng tức thì* left as is. |
+| H-18 (rerun 3) | + no-guess rule | PASS | Same as rerun 2: *đặc sản, thơm nức*, nothing added. |
+| H-20 held-out Facebook (`facebook-08-sonnet-bare`, new) | reverse check only | PASS | One version rewritten and `Đã sửa:` says so. Framing line, `**Phiên bản…**` labels, `---` and the closing offer are gone. *đặc biệt và trọn vẹn*, *không thể nào quên*, *quý giá nhất* gone. *tụi mình*/*vợ chồng mình* kept; nothing added. |
+| H-06 (rerun) | reverse check only | PASS | No *chiếc cốc* claim any more. All 14 facts kept, quote word for word. |
+
+H-20 and the H-06 rerun used the skill before the one-sentence no-guess rule was added. That rule only narrows what may be written, so I did not rerun them.
