@@ -15,6 +15,10 @@ NAME_RE = re.compile(r"^[a-z0-9-]+$")
 LINK_RE = re.compile(r"\]\(([^)\s]+)\)")
 PLACEHOLDER_RE = re.compile(r"\b(TBD|TODO)\b")
 INDEXED_DIRS = ("references", "templates", "examples")
+# (source of truth, copy that must stay byte-identical), relative to the repo root.
+SYNCED_FILES: list[tuple[str, str]] = [
+    ("skills/style-vi/templates/giong-van.md", "skills/ux-writing-vi/templates/giong-van.md"),
+]
 
 
 def _frontmatter(text: str) -> dict[str, str] | None:
@@ -93,9 +97,24 @@ def skill_dirs(root: Path) -> list[Path]:
     return sorted(d for d in skills.iterdir() if (d / "SKILL.md").is_file())
 
 
+def _check_synced(root: Path) -> list[str]:
+    errors = []
+    for source, copy in SYNCED_FILES:
+        src, dst = Path(root) / source, Path(root) / copy
+        if not src.is_file() and not dst.is_file():
+            continue
+        if not src.is_file():
+            errors.append(f"{source}: missing (source of {copy})")
+        elif not dst.is_file():
+            errors.append(f"{copy}: missing (copy of {source})")
+        elif src.read_bytes() != dst.read_bytes():
+            errors.append(f"{copy} differs from {source}")
+    return errors
+
+
 def check_repo(root: Path) -> list[str]:
-    """Run check_skill on every skill under root/skills/. Extend with repo-wide checks here."""
-    errors: list[str] = []
+    """Run check_skill on every skill under root/skills/, then repo-wide checks."""
+    errors: list[str] = _check_synced(root)
     for d in skill_dirs(root):
         prefix = f"skills/{d.name}"
         errors += [f"{prefix}/{e}" for e in check_skill(d)]

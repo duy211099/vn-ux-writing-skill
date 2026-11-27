@@ -1,6 +1,6 @@
 # Giọng văn
 
-<!-- File này do skill ux-writing-vi tạo. Mọi chuỗi tiếng Việt trong ứng dụng sẽ theo các lựa chọn dưới đây. Sửa trực tiếp nếu muốn đổi; lần viết sau sẽ theo bản đã sửa. -->
+<!-- File này dùng chung cho mọi skill trong plugin viet-writing (ux-writing-vi, style-vi, humanizer-vi…). Mọi chữ tiếng Việt trong dự án, từ chuỗi giao diện đến bài viết dài, sẽ theo các lựa chọn dưới đây. Sửa trực tiếp nếu muốn đổi; lần viết sau sẽ theo bản đã sửa. -->
 
 Lĩnh vực: [ví dụ: giao đồ ăn]
 <!-- Đoán từ tên dự án, package.json, README. Quyết định mức trang trọng mặc định. -->
@@ -37,3 +37,21 @@ Trung tính, thân thiện
 ## Ví dụ trong ứng dụng
 
 <!-- Thêm 3–5 chuỗi tốt đã có trong ứng dụng để giữ giọng thống nhất. -->
+
+## Văn bản dài
+
+<!-- Blog, bài giới thiệu, email, bài đăng mạng xã hội, tài liệu hướng dẫn. Khác với giao diện: ở đây người viết được tự xưng. Ô nào còn dạng [ví dụ: …] là chưa chọn; khi mọi ô trong phần này còn như vậy, các skill coi như chưa có giọng văn dài và viết theo thể loại bài. -->
+
+Người viết tự xưng: [ví dụ: mình]
+<!-- Một trong: mình / tôi / chúng tôi / tên sản phẩm. -->
+
+Độ dài câu: [ví dụ: xen kẽ]
+<!-- Một trong: ngắn / xen kẽ (câu ngắn và câu dài đan nhau). -->
+
+Mức cá nhân: [ví dụ: có quan điểm]
+<!-- Một trong: trung tính / có quan điểm / trò chuyện. -->
+
+Tránh dùng: [ví dụ: bên cạnh đó, không chỉ… mà còn, hãy cùng, tóm lại, vô cùng]
+<!-- Từ và cụm từ làm bài viết nghe như máy viết. Thêm từ bạn không thích. -->
+
+Đoạn văn mẫu (không bắt buộc): [ví dụ: dán 1–2 đoạn văn bạn thích, của dự án hoặc của người khác]

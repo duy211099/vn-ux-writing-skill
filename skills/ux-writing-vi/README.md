@@ -8,7 +8,7 @@ Dành cho lập trình viên làm sản phẩm một mình, không có người 
 
 **Khi bạn đang code (tự động).** Mỗi khi agent thêm hoặc sửa chuỗi hiển thị trong repo có tiếng Việt (`vi.json`, `*_vi.arb`, `vi.lproj`, chữ viết thẳng trong component), skill:
 
-- tạo file `docs/ux-voice.md` lần đầu, ghi cách gọi người dùng (*bạn*, *quý khách*…), giọng điệu và thuật ngữ, rồi dùng lại cho mọi chuỗi sau;
+- tạo file `docs/giong-van.md` lần đầu, ghi cách gọi người dùng (*bạn*, *quý khách*…), giọng điệu và thuật ngữ, rồi dùng lại cho mọi chuỗi sau;
 - viết tiếng Việt từ ý của chuỗi tiếng Anh, không dịch từng chữ;
 - theo mẫu cho từng loại thành phần (lỗi luôn có bước tiếp theo, nút ghi rõ hành động…);
 - giữ nguyên biến như `{{count}}`, `%s`;
@@ -44,7 +44,7 @@ Kiểm tra: mở một repo có `vi.json` và nhờ agent thêm một nút mới
 
 ## File giọng văn
 
-Lần đầu chạy trong một repo, skill tạo `docs/ux-voice.md`. Mặc định:
+Lần đầu chạy trong một repo, skill tạo `docs/giong-van.md` (dùng chung với các skill khác trong plugin `viet-writing`; nếu repo đã có `docs/ux-voice.md` từ bản cũ, skill dùng luôn file đó, không đổi tên). Mặc định:
 
 - gọi người dùng là *bạn* (ngân hàng, bảo hiểm: *quý khách*), hoặc bỏ đại từ khi câu vẫn rõ;
 - ứng dụng không tự xưng "chúng tôi", "mình";
@@ -85,7 +85,7 @@ Góp ý và sửa lỗi: mở issue hoặc pull request, nhất là khi bạn th
 
 `ux-writing-vi` is an agent skill for writing and reviewing Vietnamese UI copy. It's built for solo developers who write their own app text. It works in two modes:
 
-- **While coding:** when the agent writes strings in a repo with a Vietnamese locale, the skill keeps one voice across the app through `docs/ux-voice.md`. It writes Vietnamese from the intent of English source strings rather than translating them word for word, and it applies a pattern for each element.
+- **While coding:** when the agent writes strings in a repo with a Vietnamese locale, the skill keeps one voice across the app through `docs/giong-van.md`. It writes Vietnamese from the intent of English source strings rather than translating them word for word, and it applies a pattern for each element.
 - **On request:** give it text, a screenshot or a URL, and it returns `Trước → Sau — lý do` rewrites.
 
 **Install for Claude Code:** symlink or copy `ux-writing-vi/` into `~/.claude/skills/`.

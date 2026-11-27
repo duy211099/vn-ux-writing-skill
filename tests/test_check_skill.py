@@ -108,6 +108,22 @@ class CheckRepoTest(unittest.TestCase):
         self.assertEqual(len(errors), 1, errors)
         self.assertIn("does not match folder", errors[0])
 
+    def test_synced_copy_must_match(self):
+        source = self.root / "skills/style-vi/templates/giong-van.md"
+        copy = self.root / "skills/ux-writing-vi/templates/giong-van.md"
+        for p in (source, copy):
+            p.parent.mkdir(parents=True)
+        source.write_text("# Giọng văn\nmới\n", encoding="utf-8")
+        copy.write_text("# Giọng văn\ncũ\n", encoding="utf-8")
+        errors = check_repo(self.root)
+        self.assertIn(
+            "skills/ux-writing-vi/templates/giong-van.md differs from "
+            "skills/style-vi/templates/giong-van.md",
+            errors,
+        )
+        copy.write_bytes(source.read_bytes())
+        self.assertEqual(check_repo(self.root), [])
+
     def test_real_repo_passes(self):
         self.assertEqual(check_repo(ROOT), [])
 

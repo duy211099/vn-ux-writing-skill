@@ -3,7 +3,7 @@
 Each case is run twice with a fresh subagent: once without the skill (baseline, `results/baseline.md`) and once with it (`results/with-skill.md`). Mode A cases run inside a fresh copy of the named fixture repo. A case passes only if every `pass` criterion holds.
 
 Fixtures:
-- `fixture-repo/` — *Bếp Nhà*, a consumer food-ordering app (React + react-i18next). `vi.json` contains several weak, literally translated strings. No `docs/ux-voice.md`.
+- `fixture-repo/` — *Bếp Nhà*, a consumer food-ordering app (React + react-i18next). `vi.json` contains several weak, literally translated strings. No voice file (`docs/giong-van.md` or `docs/ux-voice.md`).
 - `fixture-repo-formal/` — *An Khang Bank*, a banking app. Its existing `vi.json` uses *quý khách* and the newer tone-mark placement (*xoá*).
 - `inputs/` — files for Mode B cases.
 
@@ -14,7 +14,7 @@ Fixtures:
 - context: fixture-repo; task "Add a 'Reorder' button to past orders. Add the key `order.reorder` to en.json and vi.json."
 - input: the task above
 - pass:
-  - `docs/ux-voice.md` is created
+  - `docs/giong-van.md` is created (not `docs/ux-voice.md`)
   - the voice file records the user pronoun (*bạn*) and how the app refers to itself
   - the user is told what was chosen in about one line, and how to change it
   - no questions are asked before doing the task

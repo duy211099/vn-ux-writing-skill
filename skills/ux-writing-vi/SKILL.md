@@ -16,11 +16,11 @@ Framework adapted from the UX Writing Skill by Christopher Greer (MIT). Language
 
 ## Mode A: writing strings in a repo
 
-1. **Read the voice file** at `docs/ux-voice.md`. If it doesn't exist, create it before writing any string:
-   - Copy [templates/giong-van.md](templates/giong-van.md).
+1. **Read the voice file**: `docs/giong-van.md`, or `docs/ux-voice.md` if only that one exists (use it where it is; never move or rename it unasked). If neither exists, create `docs/giong-van.md` before writing any string. If the `style-vi` skill is available, use it to create the file; otherwise:
+   - Copy [templates/giong-van.md](templates/giong-van.md). Leave its `## Văn bản dài` section as the template's `[ví dụ: …]` placeholders; it is for prose, not UI strings.
    - Guess the domain from the project name, `package.json`, README and existing screens. Set pronoun and register from the domain table in [references/xung-ho-va-giong-dieu.md](references/xung-ho-va-giong-dieu.md).
    - If existing Vietnamese strings already use one pronoun (*quý khách*, *anh/chị*, *bạn*) or one tone-mark style (*xóa* vs *xoá*), record that instead of the default.
-   - Tell the user in one line what you chose and how to change it. Example: `Đã tạo docs/ux-voice.md: gọi người dùng là "bạn", giọng thân thiện (ứng dụng giao đồ ăn). Sửa file này nếu muốn đổi.` Don't ask first.
+   - Tell the user in one line what you chose and how to change it. Example: `Đã tạo docs/giong-van.md: gọi người dùng là "bạn", giọng thân thiện (ứng dụng giao đồ ăn). Sửa file này nếu muốn đổi.` Don't ask first.
 2. **Identify the element** (button, error, empty state, dialog…) and apply its pattern from [references/mau-noi-dung.md](references/mau-noi-dung.md).
 3. **Write the Vietnamese from intent.** When the source is an English string, work out what the user needs to know and do, then write it as Vietnamese copy. Don't translate word by word, and don't call the result a translation. Check it against [references/loi-dich-may-moc.md](references/loi-dich-may-moc.md).
 4. **Keep it consistent**: terms from [references/thuat-ngu.md](references/thuat-ngu.md) and from existing strings; the voice file's pronoun, particles and tone-mark style; formats from [references/dinh-dang.md](references/dinh-dang.md).
@@ -31,7 +31,7 @@ Framework adapted from the UX Writing Skill by Christopher Greer (MIT). Language
 ## Mode B: reviewing copy
 
 1. **Extract every string** from the text, screenshot, page (fetch the URL) or files: titles, labels, placeholders, buttons, links, errors, helper text.
-2. If you are in the user's app repo, read `docs/ux-voice.md` and follow it. If not, infer the domain from the content and apply the domain defaults. Say which voice you used in one line. Don't end by asking which pronoun the user prefers. **Never mention `docs/ux-voice.md` in a review** — not to create it, offer it, or explain why you didn't. It belongs to Mode A.
+2. If you are in the user's app repo, read `docs/giong-van.md` (or `docs/ux-voice.md` if only that exists) and follow it. If not, infer the domain from the content and apply the domain defaults. Say which voice you used in one line. Don't end by asking which pronoun the user prefers. **Never mention the voice file in a review** — not to create it, offer it, or explain why you didn't. It belongs to Mode A.
 3. **Start the answer with the rewrites in this exact shape**, one line per changed string, with the reason in Vietnamese — even for a single string, and before any other notes:
 
    ```
@@ -101,4 +101,4 @@ Also: use the domain's own words ("món" in a food app, not "sản phẩm"), no 
 | [references/dinh-dang.md](references/dinh-dang.md) | Dates, times, numbers, money, punctuation, capitalization, Unicode |
 | [references/tiep-can.md](references/tiep-can.md) | Alt text, link text, screen readers, form errors |
 | [examples/truoc-va-sau.md](examples/truoc-va-sau.md) | Calibrating a rewrite or showing the user examples |
-| [templates/giong-van.md](templates/giong-van.md) | Creating `docs/ux-voice.md` |
+| [templates/giong-van.md](templates/giong-van.md) | Creating `docs/giong-van.md` (when `style-vi` is not available) |

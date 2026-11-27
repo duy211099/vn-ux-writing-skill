@@ -1,6 +1,6 @@
 # Mẫu nội dung theo thành phần
 
-Mỗi thành phần giao diện có một việc riêng. Viết theo mẫu dưới đây, rồi chỉnh cho đúng giọng trong file giọng văn (`docs/ux-voice.md`). Các ví dụ dùng giọng mặc định (*bạn* hoặc bỏ đại từ, trung tính thân thiện).
+Mỗi thành phần giao diện có một việc riêng. Viết theo mẫu dưới đây, rồi chỉnh cho đúng giọng trong file giọng văn (`docs/giong-van.md`). Các ví dụ dùng giọng mặc định (*bạn* hoặc bỏ đại từ, trung tính thân thiện).
 
 Bốn tiêu chuẩn cho mọi chuỗi: **có mục đích** (giúp người dùng làm được việc), **ngắn gọn** (mỗi chữ có việc của nó), **tự nhiên** (như người nói, không như văn bản dịch), **rõ ràng** (một nghĩa, đúng sự thật).
 

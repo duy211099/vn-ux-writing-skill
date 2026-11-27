@@ -1,6 +1,6 @@
 # Xưng hô và giọng điệu
 
-Tiếng Anh chỉ có "you". Tiếng Việt buộc phải chọn cách gọi người dùng, cách ứng dụng tự xưng, và mức trang trọng. Chọn sai một lần thì cả ứng dụng nghe lạc giọng, nên quyết định này được ghi vào file giọng văn (`docs/ux-voice.md`) và dùng lại mọi nơi.
+Tiếng Anh chỉ có "you". Tiếng Việt buộc phải chọn cách gọi người dùng, cách ứng dụng tự xưng, và mức trang trọng. Chọn sai một lần thì cả ứng dụng nghe lạc giọng, nên quyết định này được ghi vào file giọng văn (`docs/giong-van.md`) và dùng lại mọi nơi.
 
 Người dùng skill thường không có kinh nghiệm viết UX. **Đừng hỏi họ chọn gì.** Hãy chọn theo mặc định bên dưới, báo lại một dòng, và để họ sửa nếu muốn.
 
