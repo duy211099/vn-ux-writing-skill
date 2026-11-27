@@ -6,7 +6,7 @@ Giọng văn nằm trong một file duy nhất: `docs/giong-van.md`. Mọi skill
 
 ## Skill làm gì
 
-**Tạo file giọng văn.** Lần đầu bạn hoặc một skill khác cần đến, skill đoán lĩnh vực của dự án từ tên, `package.json`, README và các màn hình có sẵn, rồi điền mặc định hợp với lĩnh vực đó. Nếu repo đã quen gọi người dùng là *quý khách* hay viết *xoá*, skill ghi theo cách đó. Skill không hỏi bạn chọn mà báo lại một dòng:
+**Tạo file giọng văn.** Lần đầu bạn hoặc một skill khác cần đến, skill đoán lĩnh vực của dự án từ tên, `package.json`, README và các màn hình có sẵn, rồi điền mặc định hợp với lĩnh vực đó. Nếu repo đã quen gọi người dùng là *quý khách* hay viết *xoá*, skill ghi theo cách đó. Skill tự chọn rồi báo lại một dòng:
 
 ```
 Đã tạo docs/giong-van.md: gọi người dùng là "bạn", bài viết dài xưng "Xe Nhanh", câu xen kẽ, giọng trò chuyện (ứng dụng gọi xe). Sửa file này nếu muốn đổi.

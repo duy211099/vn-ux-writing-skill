@@ -48,10 +48,9 @@ claude plugin install viet-writing --marketplace duy211099/vn-ux-writing-skill
 ```bash
 npx skills add duy211099/vn-ux-writing-skill --list                          # xem danh sách, không cài
 npx skills add duy211099/vn-ux-writing-skill --skill ux-writing-vi -g -y     # cài một skill
-npx skills add duy211099/vn-ux-writing-skill --skill '*' -g -y               # cài cả năm
 ```
 
-`-g` cài cho mọi dự án của bạn, `-y` bỏ qua bước hỏi xác nhận.
+`-g` cài cho mọi dự án của bạn, `-y` bỏ qua bước hỏi xác nhận. Cách này hợp với `ux-writing-vi`, `humanizer-vi`, `style-vi`. Hai lệnh `review` và `analyze` cần cài bằng plugin (Cách 1).
 
 ### Cách 3: Cài thủ công
 
@@ -118,7 +117,7 @@ Dán đoạn văn hoặc chỉ vào file, rồi nhờ "viết lại cho tự nhi
 
 Cả hai lệnh tách chữ giao diện khỏi văn bản dài và dùng đúng quy tắc cho từng loại. `analyze` còn kiểm tra cả repo có thống nhất không: xưng hô, thuật ngữ, kiểu dấu thanh. Hai lệnh chỉ đề xuất, **không sửa file nào cho đến khi bạn đồng ý**.
 
-Hai lệnh này cần cài bằng plugin (Cách 1). Chúng gọi `ux-writing-vi` và `humanizer-vi`, và tên `review`, `analyze` quá chung chung nếu cài lẻ.
+Hai lệnh này cần cài bằng plugin (Cách 1), vì chúng gọi `ux-writing-vi` và `humanizer-vi` để rà chữ. Plugin cài cả ba cùng lúc.
 
 ### File giọng văn `docs/giong-van.md`
 
@@ -188,7 +187,7 @@ Bộ đánh giá hành vi nằm trong `evals/<skill>/` (ví dụ `evals/ux-writi
 - Cấu trúc của `humanizer-vi` (đánh dấu → viết lại → soát dữ kiện → bản cuối) phỏng theo [humanizer](https://github.com/blader/humanizer) của Siqi Chen (MIT). Các mẫu và ví dụ tiếng Việt được viết mới.
 - Mọi ví dụ tiếng Việt trong skill được viết mới.
 
-Giấy phép MIT. Mỗi skill có file `LICENSE` riêng, ví dụ [skills/ux-writing-vi/LICENSE](skills/ux-writing-vi/LICENSE).
+Giấy phép MIT, xem [LICENSE](LICENSE). Mỗi skill cũng có file `LICENSE` riêng, ví dụ [skills/ux-writing-vi/LICENSE](skills/ux-writing-vi/LICENSE).
 
 **Ngoại lệ:** các văn bản đối chứng trong `evals/humanizer-vi/controls/` và file `evals/humanizer-vi/inputs/h12-khong-dau.md` lấy từ Wikipedia tiếng Việt, Tatoeba và văn bản luật. Phần lớn theo giấy phép CC BY-SA hoặc CC BY, không phải MIT. Xem `NOTICE.md` trong từng thư mục để biết giấy phép của từng file. Các file này chỉ dùng để đánh giá và không có trong gói skill.
 
