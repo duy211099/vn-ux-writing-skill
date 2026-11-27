@@ -1,6 +1,7 @@
-"""Mechanical checks for the ux-writing-vi skill folder.
+"""Mechanical checks for skill folders.
 
 Usage: python3 scripts/check_skill.py <skill_dir>
+       python3 scripts/check_skill.py --all [root]
 """
 
 import re
@@ -84,11 +85,35 @@ def check_skill(skill_dir: Path) -> list[str]:
     return errors
 
 
+def skill_dirs(root: Path) -> list[Path]:
+    """Every directory under root/skills/ that contains a SKILL.md, sorted."""
+    skills = Path(root) / "skills"
+    if not skills.is_dir():
+        return []
+    return sorted(d for d in skills.iterdir() if (d / "SKILL.md").is_file())
+
+
+def check_repo(root: Path) -> list[str]:
+    """Run check_skill on every skill under root/skills/. Extend with repo-wide checks here."""
+    errors: list[str] = []
+    for d in skill_dirs(root):
+        prefix = f"skills/{d.name}"
+        errors += [f"{prefix}/{e}" for e in check_skill(d)]
+        fm = _frontmatter((d / "SKILL.md").read_text(encoding="utf-8")) or {}
+        name = fm.get("name", "")
+        if name and name != d.name:
+            errors.append(f"{prefix}: front matter name '{name}' does not match folder")
+    return errors
+
+
 def main(argv: list[str]) -> int:
-    if len(argv) != 1:
-        print("usage: check_skill.py <skill_dir>", file=sys.stderr)
+    if argv and argv[0] == "--all" and len(argv) <= 2:
+        errors = check_repo(Path(argv[1]) if len(argv) == 2 else Path("."))
+    elif len(argv) == 1 and argv[0] != "--all":
+        errors = check_skill(Path(argv[0]))
+    else:
+        print("usage: check_skill.py <skill_dir> | --all [root]", file=sys.stderr)
         return 2
-    errors = check_skill(Path(argv[0]))
     for e in errors:
         print(e)
     return 1 if errors else 0

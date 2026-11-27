@@ -152,7 +152,7 @@ Fixtures:
 
 ## B-10 URL
 - mode: B
-- input: URL of `inputs/b10-onboarding.html`, served locally (`python3 -m http.server` in `evals/inputs`), "Review the copy on this page."
+- input: URL of `inputs/b10-onboarding.html`, served locally (`python3 -m http.server` in `evals/ux-writing-vi/inputs`), "Review the copy on this page."
 - pass:
   - "ứng dụng của chúng tôi" self-reference is removed or reduced
   - the empty state gives a next step

@@ -1,6 +1,6 @@
 # Results with the skill
 
-Run: 2026-11-27. Model: sonnet, one fresh subagent per case, told to read `ux-writing-vi/SKILL.md` first and follow it. Mode A cases ran in a fresh git copy of the fixture repo; the verdict is from the diff plus the final reply. Baseline results: [baseline.md](baseline.md).
+Run: 2026-11-27. Model: sonnet, one fresh subagent per case, told to read `skills/ux-writing-vi/SKILL.md` first and follow it. Mode A cases ran in a fresh git copy of the fixture repo; the verdict is from the diff plus the final reply. Baseline results: [baseline.md](baseline.md).
 
 **Summary:** 20 / 20 cases pass every criterion (baseline: 12 / 20). B-01, B-08 and B-10 passed before the final Mode B wording change and were not re-run after it, so treat those three as provisional. The gaps closed are exactly the ones found in the baseline: a persistent voice file, domain register, the `Trước → Sau` shape, next steps on errors, flagging weak neighbouring strings, and no app self-reference.
 

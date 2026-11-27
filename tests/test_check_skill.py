@@ -5,7 +5,9 @@ import unicodedata
 import unittest
 from pathlib import Path
 
-from scripts.check_skill import check_skill, main
+from scripts.check_skill import check_repo, check_skill, main
+
+ROOT = Path(__file__).resolve().parent.parent
 
 VALID_SKILL = """---
 name: ux-writing-vi
@@ -80,6 +82,34 @@ class CheckSkillTest(unittest.TestCase):
         with contextlib.redirect_stdout(io.StringIO()):
             self.assertEqual(main([str(valid)]), 0)
             self.assertEqual(main([str(bad)]), 1)
+
+
+class CheckRepoTest(unittest.TestCase):
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self._tmp.cleanup)
+        self.root = Path(self._tmp.name)
+
+    def _skill(self, folder: str, skill_md: str) -> None:
+        d = self.root / "skills" / folder
+        d.mkdir(parents=True)
+        make_skill(d, skill_md)
+
+    def test_check_repo_runs_every_skill(self):
+        self._skill("a", VALID_SKILL.replace("ux-writing-vi", "a"))
+        self._skill("b", "no front matter\n")
+        errors = check_repo(self.root)
+        self.assertIn("skills/b/SKILL.md: missing YAML front matter", errors)
+        self.assertFalse(any(e.startswith("skills/a") for e in errors), errors)
+
+    def test_check_repo_name_must_match_folder(self):
+        self._skill("a", VALID_SKILL.replace("ux-writing-vi", "b"))
+        errors = check_repo(self.root)
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("does not match folder", errors[0])
+
+    def test_real_repo_passes(self):
+        self.assertEqual(check_repo(ROOT), [])
 
 
 if __name__ == "__main__":
