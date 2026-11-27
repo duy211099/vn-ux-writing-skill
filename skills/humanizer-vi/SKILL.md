@@ -30,7 +30,7 @@ Human writing is uneven on purpose. These are the writer's register, so you keep
 2. **Decide.** No tells marked → stop. Return the text unchanged with the one-line note (see Output). Do not "lightly polish" it, fix typos, smooth sentences or add diacritics. Saying "đoạn này ổn" and then editing it anyway is the failure this step exists to stop.
 3. **Rewrite.** Fix each tell by stating the point directly. Reorder, merge or cut sentences as needed. Use only information already in the text: when a generic sentence has no detail behind it, make it plainer or cut it. Never guess a detail.
 4. **Check facts.** Walk the checklist in [references/giu-nguyen-y.md](references/giu-nguyen-y.md): names, numbers, dates (with the year), prices and their conditions, percentages, quotes word for word, links, sources, rankings, things that happen at the same time, hedges, guarantees, `[placeholders]`, English tech terms. **A lost, changed or added fact is an error.** Put it back.
-5. **Final.** Reread for tells that survive a rewrite: a new triad, a new closer, *mang lại*, `**` in a Facebook post or email. Fix them, then output.
+5. **Final.** Go back to the list from step 1 and find each tell in the rewrite. It must be gone, not reworded: *Bên dưới là* is still *Dưới đây là*, *xin lỗi vì sự bất tiện này* is still the apology formula, a shorter rhetorical question is still a staged opener, *Nhiều người thành đạt nói* is still vague authority. Then check for tells the rewrite added: a new triad, a new closer, *mang lại*, *được… bởi*, `**` in a Facebook post or email. Fix them. Every `Đã sửa:` bullet must be true of the final text.
 
 ## Never change
 
@@ -89,12 +89,12 @@ Ordered by how often they appeared in AI samples. Details, before/after pairs an
 | 4 | Forced triads, anaphora (*yếu*) | *nhanh chóng, tiện lợi và an toàn*; *là…, là…, là…* | Keep the one item with substance; real lists stay |
 | 5 | Chatbot leftovers | *Dưới đây là…*, *Bài đăng Facebook:*, several versions, notes to the user, offers to revise | Always cut; keep `[placeholders]` |
 | 6 | Contrast staging | *không cần X, chỉ cần Y*; *không chỉ… mà còn*; *X, không phải Y* | State the positive half |
-| 7 | Translated syntax (*yếu*, except apology formulas) | *sự bất tiện… sự thông cảm*, *rất vui mừng thông báo rằng*, *bất kỳ thắc mắc nào*, *được thiết kế để*, spare *của bạn*, *Điều này* opener | Say it the way a person would |
-| 8 | Staged openers | *Bạn có bao giờ…?*, *Có những… X thì khác*, *Trong thời đại…*, *Hãy cùng tìm hiểu*, *Lời đầu tiên* | Start with the point |
+| 7 | Translated syntax (*yếu*, except apology formulas) | *sự bất tiện… sự thông cảm*, *rất vui mừng thông báo rằng*, *bất kỳ thắc mắc nào*, *được thiết kế để*, spare *của bạn*, *Điều này* opener | Say it the way a person would; in an apology, name what actually happened (*xin lỗi vì dịch vụ bị gián đoạn*) |
+| 8 | Staged openers | *Bạn có bao giờ…?*, *Có những… X thì khác*, *Trong thời đại…*, *Hãy cùng tìm hiểu*, *Lời đầu tiên* | Start with the point as a statement; no opening rhetorical question, Facebook posts included |
 | 9 | Markdown in Facebook or email | `**…**`, `##` | Remove; these channels show the asterisks |
 | 10 | *mang đến / mang lại* (*yếu*) | *mang đến giải pháp*, *mang lại trải nghiệm* | Use the real verb |
 | 11 | Problem → "we'll handle it" | *Hãy để chúng tôi lo*, *ra đời để giải quyết đúng việc đó* | Say what the product does |
-| 12 | Vague authority | *Nghiên cứu cho thấy*, *chuyên gia cho rằng*, *nhiều người thành đạt chia sẻ* | Keep the claim at its real certainty; never invent a source |
+| 12 | Vague authority | *Nghiên cứu cho thấy*, *chuyên gia cho rằng*, *nhiều người thành đạt chia sẻ* | Delete the unnamed source; keep the claim at its real certainty (*có thể*); never invent a source |
 | 13 | Same-rhythm sentences (*yếu*) | Three or more sentences or sections on one frame | Vary length and subject |
 | 14 | Sino-Vietnamese verb stacking (*yếu*) | *tiến hành*, *thực hiện việc*, *nhằm nâng cao* | Main verb; keep the formal register |
 | 15 | Linking-word padding (*yếu*) | *Bên cạnh đó*, *Ngoài ra*, *Hơn thế nữa* opening sentence after sentence | Drop the linker when it adds no relation |
@@ -112,4 +112,5 @@ Worked rewrites, including two "leave unchanged" cases: [examples/truoc-va-sau.m
 | `[Tùy chọn]` → `[Nếu có]`, `[xx dB]` → `[xx] dB` | Placeholders are byte-for-byte. |
 | Rewriting `title:` in front matter | Front matter is data. Prose only. |
 | Overwriting a file outside git | Show the rewrite and ask first. |
+| Swapping a tell for its synonym (*Bên dưới là*, *Nhiều người thành đạt nói*) | Gone means gone. Cut it or state the point. |
 | Opening with "Đây là bản sửa…" or ending with "Nếu bạn muốn…" | Rewrite first, `Đã sửa:` last, nothing else. |

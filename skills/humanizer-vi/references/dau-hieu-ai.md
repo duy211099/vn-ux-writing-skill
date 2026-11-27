@@ -99,7 +99,7 @@ Ví dụ dưới đây viết mới cho tài liệu này, không lấy từ bài
 
 **Vì sao:** câu đi theo trật tự tiếng Anh (*sorry for the inconvenience*, *designed to*, *your*).
 
-**Sửa:** viết như người nói: nói cụ thể điều gì gây phiền, bỏ *của bạn* thừa, đổi bị động sang chủ động. *Sự cố*, *sự kiện* là từ bình thường. *Thay mặt công ty…* là cách mở thư bình thường.
+**Sửa:** viết như người nói. Trong câu xin lỗi, gọi tên việc đã xảy ra thay cho *sự bất tiện* (*xin lỗi vì dịch vụ bị gián đoạn*); bỏ *của bạn* thừa, đổi bị động sang chủ động. *Sự cố*, *sự kiện* là từ bình thường. *Thay mặt công ty…* là cách mở thư bình thường.
 
 > **Trước:** Đơn hàng sẽ giao chậm hai ngày. Chúng tôi xin lỗi vì sự bất tiện này và mong nhận được sự thông cảm của bạn.
 > **Sau:** Đơn hàng sẽ giao chậm hai ngày. Xin lỗi bạn vì phải chờ thêm.
@@ -113,7 +113,7 @@ Ví dụ dưới đây viết mới cho tài liệu này, không lấy từ bài
 
 **Vì sao:** người viết dọn đường thay vì nói ý chính.
 
-**Sửa:** bắt đầu bằng ý chính hoặc chi tiết cụ thể nhất.
+**Sửa:** bắt đầu bằng ý chính hoặc chi tiết cụ thể nhất, viết thành câu kể. Rút ngắn câu hỏi tu từ vẫn là câu hỏi tu từ; bài Facebook cũng vậy.
 
 > **Trước:** Bạn đã bao giờ tự hỏi vì sao cây trong nhà cứ héo dù tưới đều? Hãy cùng tìm hiểu nhé!
 > **Sau:** Cây trong nhà héo dù tưới đều thì thường là do tưới quá nhiều.
@@ -155,7 +155,7 @@ Ví dụ dưới đây viết mới cho tài liệu này, không lấy từ bài
 
 **Vì sao:** mượn uy tín của một nguồn không có tên.
 
-**Sửa:** nếu bài nêu tên nguồn, giữ. Nếu không, giữ ý nhưng nói đúng mức chắc chắn (*có thể giúp*, *nhiều người thấy*), hoặc hỏi người dùng nguồn. Không bịa tên nghiên cứu, tác giả, năm.
+**Sửa:** nếu bài nêu tên nguồn, giữ. Nếu không, bỏ cụm dẫn nguồn (*Nghiên cứu cho thấy*, *Nhiều người thành đạt nói*), giữ ý nhưng nói đúng mức chắc chắn (*có thể giúp*, *nhiều người thấy*), hoặc hỏi người dùng nguồn. Không bịa tên nghiên cứu, tác giả, năm.
 
 > **Trước:** Nghiên cứu cho thấy ngủ trưa 20 phút giúp tăng năng suất.
 > **Sau:** Ngủ trưa chừng 20 phút có thể giúp buổi chiều tỉnh táo hơn.
