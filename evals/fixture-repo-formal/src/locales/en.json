@@ -1,0 +1,10 @@
+{
+  "transfer": {
+    "title": "Transfer money",
+    "success": "Transfer completed",
+    "deleteRecipient": "Delete saved recipient"
+  },
+  "session": {
+    "expired": "Your session has expired. Please log in again."
+  }
+}

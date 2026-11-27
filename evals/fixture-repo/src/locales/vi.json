@@ -1,0 +1,16 @@
+{
+  "auth": {
+    "login": "Đăng nhập",
+    "loginError": "Đã xảy ra lỗi. Vui lòng thử lại sau.",
+    "passwordHint": "Mật khẩu phải có ít nhất 8 ký tự"
+  },
+  "cart": {
+    "empty": "Giỏ hàng của bạn trống",
+    "remove": "Bạn có chắc chắn muốn xóa mục này không?",
+    "removeConfirm": "OK"
+  },
+  "order": {
+    "placed": "Đơn hàng của bạn đã được đặt thành công",
+    "locationPermission": "Cho phép truy cập vị trí"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "transfer": {
+    "title": "Chuyển tiền",
+    "success": "Quý khách đã chuyển tiền thành công",
+    "deleteRecipient": "Xoá người nhận đã lưu"
+  },
+  "session": {
+    "expired": "Phiên đăng nhập đã hết hạn. Quý khách vui lòng đăng nhập lại để tiếp tục."
+  }
+}
