@@ -2,130 +2,166 @@
 
 Built 2026-11-27 for `humanizer-vi`. The table below sets the order of `references/dau-hieu-ai.md`. Raw samples are in `corpus/` and are the eval inputs for Task 6.
 
-## Models and samples
+## Sources and samples
 
-**Claude only.** No other model API was available. The samples come from three Claude models, run as fresh Claude Code subagents: Sonnet, Haiku and Opus.
+**Claude only.** OpenAI was tried through the `codex` CLI (v0.172, model `gpt-6.2-sol`) and failed with `401 Unauthorized: Missing bearer or basic authentication` (`codex login status`: "Not logged in"), so the corpus has no OpenAI samples. No other model provider was available.
 
-Each generator got a plain user request in Vietnamese, four requests per dispatch (one per genre), with no mention of style, AI tells or this project. Two dispatches per model gave 24 samples, 2 per genre per model:
+There are two routes, with about the same amount of text from each:
 
-| Genre | Sonnet | Haiku | Opus | Total |
-|---|---|---|---|---|
-| `blog` | 01, 04 | 02, 05 | 03, 06 | 6 |
-| `gioi-thieu-san-pham` | 01, 04 | 02, 05 | 03, 06 | 6 |
-| `facebook` | 01, 04 | 02, 05 | 03, 06 | 6 |
-| `email` | 01, 04 | 02, 05 | 03, 06 | 6 |
+| Source | How it was run | Samples | Words |
+|---|---|---|---|
+| **Subagent** (`sonnet`, `haiku`, `opus`) | Fresh Claude Code subagents. They carry the Claude Code system prompt, and each got four plain requests in one message. | 24 (8 per model) | ~8,200 |
+| **Bare** (`sonnet-bare`, `haiku-bare`, `opus-bare`) | `claude -p --model <m> --system-prompt "You are a helpful assistant." --tools ""`, run from an empty temp dir with no settings, one request per call. This is closest to a plain chat app. | 16 (Sonnet 8, Haiku 4, Opus 4) | ~8,100 |
 
-Files are named `<genre>-<nn>-<model>.md`. Each starts with a one-line comment giving the model and the exact prompt. Same `nn` means same topic. All files are NFC.
+| Genre | Subagent | Bare | Total |
+|---|---|---|---|
+| `blog` | 01–06 | 07–10 | 10 |
+| `gioi-thieu-san-pham` | 01–06 | 07–10 | 10 |
+| `facebook` | 01–06 | 07–10 | 10 |
+| `email` | 01–06 | 07–10 | 10 |
 
-Three of the six replies added a note to the user after the pieces (e.g. *"Ghi chú chung: các chỗ trong ngoặc vuông là thông tin chưa có…"*). I removed those notes, because they are not part of the requested text. Notes inside a piece were kept.
+Files are named `<genre>-<nn>-<source>.md`. Each starts with a one-line comment giving the model, the route and the exact prompt. Every topic is different, and all files are NFC. The prompts were plain user requests (*"Viết bài blog về món phở Hà Nội cho trang ẩm thực."*) with no mention of style or AI.
+
+Bare replies are kept verbatim, including the chatbot framing around them ("Dưới đây là…", offers to revise), because users paste exactly that. Three of the six subagent replies added a note to the user after the pieces. I removed those notes, since four pieces arrived in one reply. Their leftovers count is therefore slightly low.
 
 ## Results
 
-Counts come from reading every sample. "Occ." counts each occurrence. "Samples" is how many of the 24 samples contain the tell at least once. The order is by occurrences, with sample count breaking ties.
+I read every sample. "Occ." counts each occurrence. "Samples" is how many of the 40 samples contain the tell at least once. Rows are sorted by total occurrences.
 
-| # | Tell | Occ. | Samples | Status |
-|---|---|---|---|---|
-| 1 | Formatting by rule (bold label on every item, emoji at the start of each line, emoji + ALL-CAPS headline) | 15 | 7 | starting list |
-| 2 | Contrast staging, mostly in a new form: *không cần X, chỉ cần Y* / *X, không phải Y* | 11 | 6 | starting list; new form |
-| 3 | Staged closers (start-small pep line, *Một lần nữa, …*, empty *sẵn sàng hỗ trợ*) | 9 | 9 | starting list; new forms |
-| 4 | Forced triads and anaphora | 9 | 4 | starting list |
-| 5 | Translated syntax (*được thiết kế/được tạo ra để*, *của bạn* that could be dropped, *một cách*) | 8 | 3 | starting list |
-| 6 | Staged openers (rhetorical question, "many people think…" setup, *Dưới đây là*) | 7 | 6 | starting list; new form |
-| 7 | Markdown in channels that don't render it (`**bold**` in Facebook posts and emails) | 7 | 7 | **new** |
-| 8 | Inflation | 5 | 5 | starting list |
-| 9 | Problem → *giải quyết đúng việc đó* pivot | 3 | 3 | **new** |
-| 10 | Same-rhythm sentences | 2 | 2 | starting list |
-| 11 | Chatbot leftovers inside the text | 2 | 2 | starting list |
-| — | Linking-word padding (*Bên cạnh đó, Ngoài ra, Đồng thời, Hơn thế nữa, Không những vậy*) | 0 | 0 | starting list, **not seen** |
-| — | Sino-Vietnamese / verb stacking (*thực hiện việc, tiến hành, đóng vai trò quan trọng, góp phần nâng cao*) | 0 | 0 | starting list, **not seen** |
+| # | Tell | Occ. | Samples /40 | Subagent occ. (/24) | Bare occ. (/16) | Status |
+|---|---|---|---|---|---|---|
+| 1 | Formatting by rule: bold label on every item, emoji at the start of every line or heading, emoji + ALL-CAPS headline, Title Case headings, bold phrases inside prose | 64 | 19 | 15 (7) | 49 (12) | starting list |
+| 2 | Inflation | 34 | 13 | 5 (5) | 29 (8) | starting list |
+| 3 | Staged closers: *Lời kết/Kết luận* + moral, start-small pep line, "Tag ngay…/bình luận nhé" bait, *Một lần nữa, …*, *ngay hôm nay* | 28 | 21 | 9 (9) | 19 (12) | starting list; new forms |
+| 4 | Forced triads and anaphora | 27 | 13 | 9 (4) | 18 (9) | starting list |
+| 5 | Chatbot leftovers: framing line, multiple versions, offer to revise, notes to the user | 26 | 16 | 2 (2) | 24 (14) | starting list |
+| 6 | Contrast staging: *không cần X, chỉ cần Y*, *X, không phải Y*, *không chỉ… mà còn* | 21 | 10 | 11 (6) | 10 (4) | starting list; new form |
+| 7 | Translated syntax: *sự bất tiện/sự thông cảm*, *rất vui mừng thông báo rằng*, *Nếu có bất kỳ thắc mắc nào*, *được thiết kế để*, *của bạn* that could be dropped, *Điều này* opener | 18 | 9 | 9 (4) | 9 (5) | starting list |
+| 8 | Staged openers: rhetorical question, *Dưới đây là…*, "Có những X…" aphorism, "many people think X", *Lời đầu tiên* | 17 | 14 | 7 (6) | 10 (8) | starting list; new forms |
+| 9 | Markdown `**` in Facebook posts and emails | 14 | 14 | 7 (7) | 7 (7) | **new** |
+| 10 | Stock verb *mang đến / mang lại* | 7 | 5 | 0 | 7 (5) | **new** |
+| 11 | Problem → "we'll handle it" pivot (*giải quyết đúng việc đó*, *Hãy để chúng tôi lo*) | 5 | 5 | 3 (3) | 2 (2) | **new** |
+| 12 | Vague authority: *Nghiên cứu cho thấy…*, *Nhiều người thành đạt chia sẻ…*, *Người sành phở thường nói* | 4 | 2 | 0 | 4 (2) | **new** |
+| 13 | Same-rhythm sentences | 3 | 3 | 2 (2) | 1 (1) | starting list |
+| 14 | Sino-Vietnamese / verb stacking (*tiến hành*, *nhằm nâng cao*, *quá trình… hoàn tất*) | 3 | 1 | 0 | 3 (1) | starting list |
+| — | Linking-word padding (*Bên cạnh đó, Ngoài ra, Đồng thời, Hơn thế nữa, Không những vậy*) | 0 | 0 | 0 | 0 | starting list, **not seen as padding** |
 
-Seen, but in too few samples to count as tells (fewer than 3 occurrences, or normal for the genre): *Thứ nhất… Thứ năm* enumeration (1 sample), *Thay mặt [công ty], chúng tôi…* (2, normal for Vietnamese business email), and the en dash used only in titles (`Tên – khẩu hiệu`, 4). The corpus has no em dashes.
+### By source
 
-### Per model
+| Source | Occurrences | Per 1,000 words | Samples with none |
+|---|---|---|---|
+| Subagent Haiku | 39 | — | 0 / 8 |
+| Subagent Sonnet | 21 | — | 3 / 8 |
+| Subagent Opus | 19 | — | 3 / 8 |
+| **Subagent, all** | **79** | **≈ 9.6** | 6 / 24 |
+| Bare Sonnet | 93 | — | 0 / 8 |
+| Bare Haiku | 48 | — | 0 / 4 |
+| Bare Opus | 51 | — | 0 / 4 |
+| **Bare, all** | **192** | **≈ 23.7** | 0 / 16 |
 
-| Model | Occurrences | Samples with none |
-|---|---|---|
-| Haiku | 39 (8 samples) | 0 |
-| Sonnet | 20 (8 samples) | blog-01, facebook-01, gioi-thieu-san-pham-01 |
-| Opus | 19 (8 samples) | gioi-thieu-san-pham-03, gioi-thieu-san-pham-06, facebook-06 |
+The route matters more than the model. With the Claude Code system prompt, all three models write fairly plain Vietnamese. Bare, all three produce about 2.5 times as many tells per word. Every bare sample has tells, and the heaviest is 23 in one blog post (blog-09-haiku-bare). Formatting, inflation, chatbot framing and closers account for most of the gap.
 
-Haiku is the most marked. Its product pages and the Facebook anniversary post use almost every pattern. Six of the 24 samples have no tells.
+### Do linking-word padding and Sino-Vietnamese stacking appear outside the subagents?
+
+- **Sino-Vietnamese stacking: yes, but only once.** All three occurrences are in one bare formal email (email-07-sonnet-bare): *"Nhằm nâng cao chất lượng và đảm bảo hệ thống vận hành ổn định, an toàn, chúng tôi sẽ tiến hành bảo trì…"*. That email also has the related nominalizations *"hạn chế tối đa sự bất tiện"* and *"sự thông cảm"*, counted under translated syntax. The pattern seems tied to the formal *Quý khách* register.
+- **Linking-word padding: the words appear, but not as padding.** *"🌟 Ngoài ra, còn có:"* (facebook-09-haiku-bare) introduces a genuinely new list of events. *"Đồng thời, nên kiểm tra kỹ các thành phần…"* (gioi-thieu-san-pham-09-haiku-bare) adds a separate instruction. Under the brief's rule, neither counts. No sample opens sentence after sentence with *Bên cạnh đó / Ngoài ra / Hơn thế nữa*.
+- Other spec words also appear only in bare samples: *tối ưu* ("để đạt hiệu quả tối ưu"), *tuyệt vời* ("một không gian đọc sách tuyệt vời"), *cực* ("GIẢM GIÁ CỰC SỐC"), *trong thời đại…* (mid-sentence, not an opener), *Điều này* as a sentence opener, and *không chỉ… mà còn* once.
 
 ## Quotes per tell
 
 **1. Formatting by rule**
-- `- **Tưới nước:** mỗi ngày một lần…` / `- **Bón phân:** …` / `- **Sâu bệnh:** …` (blog-04-sonnet; four lists like this in one post)
-- `✅ Truyện tranh, truyện cổ tích…` … `❌ Sách rách mất trang, ẩm mốc` … `📍 Mang tới:` (facebook-04-sonnet)
-- `🌸 **MỪNG 20/10 – GIẢM 30% TOÀN BỘ DỊCH VỤ** 🌸` (facebook-03-opus)
+- `### ✅ Điểm nổi bật` / `### 🔧 Công nghệ lọc` / `### 📱 Tiện ích thông minh` … an emoji on every heading (gioi-thieu-san-pham-07-sonnet-bare)
+- `# Dịch Vụ Dọn Nhà Theo Giờ: Sạch Bóng Không Gian, Thảnh Thơi Cuộc Sống` (gioi-thieu-san-pham-10-opus-bare; Title Case)
+- `- **Tưới nước:** …` / `- **Bón phân:** …` / `- **Sâu bệnh:** …` (blog-04-sonnet)
 
-**2. Contrast staging.** The spec's forms *không chỉ… mà còn* and *không phải… mà là* do not occur at all. The same move shows up as a negation followed by a reassurance:
-- *"Bạn không cần hiểu từng chữ, chỉ cần hiểu ý chính."* (blog-02-haiku)
-- *"Không cần đắt, chỉ cần vừa chân, đế mềm và có độ bám."* (blog-03-opus; this post has four of these)
-- *"Đó là lỗi của chúng tôi trong việc dự trù và thông báo, không phải lỗi của anh/chị."* (email-04-sonnet)
+**2. Inflation**
+- *"một không gian đọc sách tuyệt vời cùng hàng ngàn đầu sách với giá ưu đãi chưa từng có!"* (facebook-09-haiku-bare)
+- *"tạo nên những hạt Robusta chất lượng bậc nhất… hương vị mộc mạc, mạnh mẽ của vùng đất đại ngàn"* (gioi-thieu-san-pham-08-sonnet-bare)
+- *"ý kiến của anh/chị có ý nghĩa rất lớn với chúng tôi"* (email-05-haiku)
 
-**3. Staged closers.** *Tóm lại*, *Có thể nói* and *Hy vọng bài viết…* do not occur. What does occur:
-- *"Tối nay, sau bữa cơm, hãy xỏ giày và đi một vòng quanh khu nhà. Vậy là được rồi."* (blog-03-opus)
-- *"Bạn bắt đầu từ hôm nay với 5 phút là đã đi trước những người còn đang chờ ngày rảnh."* (blog-02-haiku)
-- *"Một lần nữa, chúng tôi xin lỗi anh/chị, và cảm ơn anh/chị đã kiên nhẫn chờ đợi."* (email-04-sonnet)
+**3. Staged closers**
+- *"Sau vài năm, bạn sẽ cảm ơn chính mình vì quyết định hôm nay."* (blog-07-sonnet-bare). All four bare blogs end with a `## Lời kết` or `## Kết luận` section.
+- *"Một ngôi nhà sạch là khởi đầu cho một cuộc sống khỏe mạnh và hạnh phúc."* (gioi-thieu-san-pham-10-opus-bare)
+- *"👇 Tag ngay người bạn muốn cùng "dậy sớm, sống khỏe" nhé!"* (facebook-10-opus-bare). All three bare promo posts end with "Tag…".
 
 **4. Forced triads and anaphora**
-- *"Làm việc nhanh hơn, ít sai hơn, về đúng giờ"* (gioi-thieu-san-pham-05-haiku, headline)
-- *"đi chậm, ăn nhiều, và một chút tiếc nuối"* (blog-05-haiku, headline; the post never mentions any regret)
-- *"Có những buổi mưa tầm tã, có những buổi nắng cháy da, có những hôm ai cũng mệt rã rời…"* (facebook-02-haiku)
+- *"giải pháp linh hoạt, tiện lợi và tiết kiệm"* … *"sạch sẽ, gọn gàng, thơm tho"* (gioi-thieu-san-pham-10-opus-bare)
+- *"là bữa sáng quen thuộc, là món ăn khuya sau một ngày dài, là thứ để nhớ về khi xa quê"* (blog-08-sonnet-bare)
+- *"đi chậm, ăn nhiều, và một chút tiếc nuối"* (blog-05-haiku; the post never mentions any regret)
 
-**5. Translated syntax**
-- *"Ví Xanh được thiết kế đơn giản, dễ dùng…"* (gioi-thieu-san-pham-02-haiku)
-- *"theo dõi chi tiêu hằng ngày một cách nhanh gọn"* (gioi-thieu-san-pham-02-haiku)
-- *"Dữ liệu của bạn được mã hóa và chỉ bạn mới truy cập được."* (gioi-thieu-san-pham-02-haiku)
-
-**6. Staged openers.** *Hãy cùng tìm hiểu* and *Trong thời đại 4.0* do not occur. *Bạn có bao giờ…?* occurs twice. A new form, the "many people think X" setup, occurs three times:
-- *"Bạn có bao giờ mất cả buổi chiều chỉ để gộp dữ liệu từ ba file khác nhau…?"* (gioi-thieu-san-pham-05-haiku)
-- *"Nhiều người nghĩ muốn khỏe thì phải đăng ký phòng gym… Thật ra, chỉ cần đi bộ đều đặn…"* (blog-03-opus)
-- *"Mình từng nghĩ muốn học tiếng Anh thì phải có vài tiếng rảnh mỗi tối…"* (blog-02-haiku)
-
-**7. Markdown in channels that don't render it.** Facebook and most email clients show `**` as literal asterisks. 5 of 6 emails and 2 of 6 Facebook posts have them:
-- `**Tiêu đề: Thông báo điều chỉnh giá gói dịch vụ từ [ngày/tháng]**` (email-01-sonnet)
-- `**Chuyện gì đã xảy ra:** … **Tình trạng hiện tại:** … **Chúng tôi muốn bù đắp:**` (email-04-sonnet)
-- `Chúng mình đang nhận **sách cũ** để gửi lên…` (facebook-04-sonnet)
-
-**8. Inflation.** None of the spec's words occur (*vô cùng, cực kỳ, hoàn hảo, đột phá, tối ưu, vượt trội, hàng đầu, trải nghiệm tuyệt vời*). The one *hoàn hảo* in the corpus is negated (*"không cần một khoảng thời gian hoàn hảo"*), so I did not count it. What occurs is milder:
-- *"ý kiến của anh/chị có ý nghĩa rất lớn với chúng tôi"* (email-05-haiku)
-- *"Hôm nay là một cột mốc đáng nhớ của cả câu lạc bộ"* (facebook-02-haiku)
-- *"Bắt đầu quản lý tài chính thông minh hơn ngay hôm nay."* (gioi-thieu-san-pham-02-haiku)
-
-**9. Problem → solution pivot**
-- *"Ví Xanh được tạo ra để giải quyết đúng việc đó."* (gioi-thieu-san-pham-02-haiku)
-- *"Khóa học này được thiết kế để giải quyết đúng những việc đó."* (gioi-thieu-san-pham-05-haiku)
-- *"Phần mềm kế toán trên đám mây giải quyết khá gọn những chuyện như vậy."* (blog-06-opus)
-
-**10. Same-rhythm sentences**
-- *"Thứ nhất, gắn việc học… Thứ hai, ưu tiên… Thứ ba, nghe và đọc… Thứ tư, đừng đặt… Thứ năm, chấp nhận…"*. Each paragraph has the same shape: imperative, reason, payoff (blog-02-haiku).
-- *"Cảm ơn tất cả các thành viên… Cảm ơn những người đã đi trước… Và cảm ơn cả những người mới…"* (facebook-02-haiku)
-
-**11. Chatbot leftovers**
+**5. Chatbot leftovers**
+- *"Dưới đây là vài phiên bản để bạn chọn tùy phong cách nhé:"* followed by three versions (facebook-08-sonnet-bare)
+- *"Nếu bạn cho mình biết thời gian cụ thể, tên dịch vụ và tên công ty, mình có thể điền sẵn…"* (email-07-sonnet-bare). 14 of the 16 bare replies end with an offer or a note like this.
 - *"(Thông số trong ngoặc vuông cần thay bằng số liệu thật của sản phẩm trước khi đăng.)"* (gioi-thieu-san-pham-04-sonnet)
-- `[Nút: Tải ứng dụng miễn phí] [Nút: Xem bảng giá]` (gioi-thieu-san-pham-02-haiku)
+
+**6. Contrast staging**
+- *"Bạn không cần hiểu từng chữ, chỉ cần hiểu ý chính."* (blog-02-haiku)
+- *"Tiết kiệm không đòi hỏi bạn phải sống khắc khổ. Chỉ cần ghi chép chi tiêu…"* (blog-07-sonnet-bare)
+- *"Có những món ăn không chỉ để no bụng, mà còn kể một câu chuyện về cả một vùng đất."* (blog-08-sonnet-bare; the corpus's only *không chỉ… mà còn*)
+
+**7. Translated syntax**
+- *"Chúng tôi chân thành xin lỗi về sự bất tiện này và rất mong nhận được sự thông cảm từ Quý khách."* (email-07-sonnet-bare)
+- *"chúng tôi rất vui mừng thông báo rằng… anh/chị sẽ là một bổ sung giá trị cho đội ngũ"* (email-08-sonnet-bare)
+- *"Ví Xanh được thiết kế đơn giản, dễ dùng…"* (gioi-thieu-san-pham-02-haiku)
+
+**8. Staged openers**
+- *"Bạn có bao giờ nghĩ rằng chỉ 20 phút mỗi ngày có thể thay đổi cách bạn suy nghĩ, làm việc và sống?"* (blog-09-haiku-bare)
+- *"Có những nơi bạn đến một lần rồi thôi. Hội An thì khác…"* (blog-10-opus-bare)
+- *"Nhiều người nghĩ muốn khỏe thì phải đăng ký phòng gym… Thật ra, chỉ cần đi bộ đều đặn…"* (blog-03-opus)
+
+**9. Markdown in channels that don't render it.** Facebook and most email clients show `**` as literal asterisks. 9 of 10 emails and 5 of 10 Facebook posts have them.
+- `**Tiêu đề:** Thông báo trúng tuyển vị trí Nhân viên Marketing` (email-08-sonnet-bare)
+- `Chúng mình đang nhận **sách cũ** để gửi lên…` (facebook-04-sonnet)
+- `quán chính thức ra mắt **MENU LẨU MÙA ĐÔNG MỚI**` (facebook-07-sonnet-bare)
+
+**10. *mang đến / mang lại***
+- *"Son môi [Tên thương hiệu] mang đến màu sắc rực rỡ"* (gioi-thieu-san-pham-09-haiku-bare)
+- *"Dịch vụ dọn nhà theo giờ của chúng tôi mang đến giải pháp linh hoạt…"* (gioi-thieu-san-pham-10-opus-bare)
+- *"Đọc sách là một trong những thói quen đơn giản nhất nhưng mang lại giá trị lâu dài nhất."* (blog-09-haiku-bare)
+
+**11. Problem → "we'll handle it" pivot**
+- *"Ví Xanh được tạo ra để giải quyết đúng việc đó."* (gioi-thieu-san-pham-02-haiku)
+- *"Hãy để chúng tôi lo phần đó, còn bạn dành thời gian cho gia đình…"* (gioi-thieu-san-pham-10-opus-bare)
+- *"Hãy để [Tên phòng gym] giúp bạn thay đổi điều đó!"* (facebook-10-opus-bare)
+
+**12. Vague authority**
+- *"Nghiên cứu cho thấy đọc sách có thể làm giảm mức căng thẳng hiệu quả…"* (blog-09-haiku-bare)
+- *"Nhiều người thành đạt chia sẻ rằng thói quen đọc sách là một trong những yếu tố then chốt…"* (blog-09-haiku-bare)
+- *"Người sành phở thường nói: "Phở ngon hay dở là ở nước dùng.""* (blog-08-sonnet-bare)
+
+**13. Same rhythm**
+- *"Thứ nhất, gắn việc học… Thứ hai, ưu tiên… Thứ ba, nghe và đọc… Thứ tư… Thứ năm…"*, each paragraph with the same shape (blog-02-haiku)
+- Seven sections each built on "Đọc … giúp bạn …" (blog-09-haiku-bare)
+
+**14. Sino-Vietnamese stacking**
+- *"Nhằm nâng cao chất lượng và đảm bảo hệ thống vận hành ổn định, an toàn, chúng tôi sẽ tiến hành bảo trì định kỳ hệ thống"* (email-07-sonnet-bare)
+- *"Dịch vụ sẽ được khôi phục ngay sau khi quá trình bảo trì hoàn tất."* (email-07-sonnet-bare)
 
 ## How I tagged
 
-- I read each sample in full. Tells were counted by hand, then the tally was computed from a list of (tell, sample, quote) entries. I used grep only to look for the spec's literal phrases and to confirm that the zero counts really are zero.
-- **Linking words:** a linker counts as padding only if it opens a sentence without adding a real relation. All linkers in the corpus did real work: *Vì vậy*, *Trong khi đó*, *Ngược lại*, *Dù vậy*, *Có điều*. So the count is 0, and that zero is a finding, not a gap.
-- **Contrast:** a plain "without" (*mà không phải gọi ai*, *không cần mang máy theo*) does not count. A sentence counts when it sets up an expectation and knocks it down for effect (*không cần X, chỉ cần Y*). An honest caveat that gives information does not count, e.g. gioi-thieu-san-pham-04: *"bạn không nên kỳ vọng im lặng tuyệt đối"*.
-- **Triads:** concrete lists of real items do not count (*đồ ăn, động vật, gia đình*; *rủ mẹ, chị gái, bạn thân*). Evaluative or rhythmic triples and repeated sentence frames do count. Conventional Tết wishes do not count.
-- **Inflation:** *rất* appears 13 times, and most uses are ordinary (*rất hợp*, *rất ít công ty*). Only claims larger than the content supports count.
-- **Translated syntax:** *của bạn* counts only where dropping it loses nothing (*khoản chi đầu tiên của bạn*). It does not count where it is needed (*gói của bạn vẫn giữ nguyên*) or idiomatic (*bạn của bạn*).
-- **Formatting:** bold section headings in a blog or product page are normal web formatting and do not count. The tell is a bold label on *every* bullet, or an emoji on every line.
-- **Closers:** a call to action that is the point of the genre (register, call the hotline) does not count. A generic pep line or a repeated thank-you or apology does.
-- Square-bracket placeholders (`[Tên quán]`, 167 of them in 16 samples) are not counted as a tell. The writer is meant to fill them, and the humanizer must leave them alone.
+- I read each sample in full. Each occurrence went into a list of (tell, sample, quote), and the tables were computed from that list. Grep was used only to look for the spec's literal phrases and to check the zero counts.
+- **Linking words:** a linker counts as padding only if it adds no real relation. *Vì vậy*, *Trong khi đó*, *Ngược lại*, *Dù vậy*, *Có điều*, and the *Ngoài ra* and *Đồng thời* above all add something real, so none of them count.
+- **Contrast:** a plain "without" (*mà không phải gọi ai*) does not count. An honest caveat does not count (*"bạn không nên kỳ vọng im lặng tuyệt đối"*), and neither does a factual correction (*"thuộc thành phố Đà Nẵng chứ không còn thuộc tỉnh Quảng Nam"*). What counts is an expectation set up and knocked down for effect.
+- **Triads:** concrete lists of real items do not count (*phòng ngủ, phòng khách, phòng làm việc*; *gia đình, bạn bè, đồng nghiệp*), nor do product spec lists or tasting notes. Evaluative or rhythmic triples and repeated frames do count.
+- **Inflation:** *rất* is mostly ordinary (*rất hợp*, *rất ít công ty*). Spec numbers (*lọc 99,97%*) do not count. Claims larger than the content supports do count, including slogan subtitles.
+- **Translated syntax:** *của bạn* counts only where it can be dropped without loss. *sự + noun* counts only in apology or thanks formulas (*sự bất tiện*, *sự chậm trễ*, *sự thông cảm*), not in ordinary nouns (*sự cố*, *sự kiện*) or literary uses (*chính sự giản dị ấy*). *Thay mặt [công ty]…* is a normal Vietnamese business opener and does not count.
+- **Formatting:** bold section headings in a blog or product page are normal web formatting. The tell is a bold label on *every* item, an emoji on every line or heading, Title Case, or bold phrases inside running prose. In Facebook and email, `**` is counted under row 9 instead.
+- **Closers:** a call to action that is the point of the genre (register, the hotline) does not count. A generic moral, pep line, engagement bait, urgency line, or repeated thank-you or apology does count.
+- **Same rhythm:** counted only when the same frame opens three or more sentences or paragraphs in a row.
+- **Chatbot leftovers:** each distinct framing line, note or offer counts once.
+- Square-bracket placeholders (`[Tên quán]`, present in most samples) are not counted. The writer is meant to fill them, and the humanizer must leave them alone.
+- The bare set was tagged after the subagent set. The *sự + noun* rule surfaced while tagging it, so I re-checked the subagent set and added one hit (email-04-sonnet, *"sự chậm trễ này"*).
 
 ## What this means for the catalogue
 
-1. **Reorder the spec's list.** In this corpus, formatting, contrast staging, closers and triads lead. Linking-word padding and Sino-Vietnamese stacking did not occur once. Keep them in the catalogue, because they are documented tells of Vietnamese AI text in general, but list them last and mark them *yếu nếu đứng một mình* until another corpus shows them.
-2. **Change the examples.** Contrast staging should lead with *không cần X, chỉ cần Y*. Staged closers should include the start-small pep line and *Một lần nữa, …*. Staged openers should add the "many people think X" setup. Inflation should be about claims larger than the content (*có ý nghĩa rất lớn*, *cột mốc đáng nhớ*), not a word list.
-3. **Add two patterns.** Markdown in Facebook and email: strip `**`, or say it shows as literal asterisks. The problem → *giải quyết đúng việc đó* pivot in sales copy.
+1. **Order by the combined table.** Formatting, inflation, closers, triads and chatbot framing lead. Contrast staging, translated syntax and openers follow. Linking-word padding and Sino-Vietnamese stacking go last, marked *yếu nếu đứng một mình*. Stacking appears only in formal *Quý khách* email, so the catalogue can name that register.
+2. **Update the examples.** Inflation should describe claims larger than the content (*chưa từng có*, *bậc nhất*, *đại ngàn*), not just a word list. Closers should include *Lời kết* + moral, "Tag ngay…" and *ngay hôm nay*. Contrast should lead with *không cần X, chỉ cần Y*. Openers should include the "Có những X…" aphorism and *Dưới đây là*.
+3. **Add four patterns.** Markdown in Facebook and email; *mang đến / mang lại*; the problem → "we'll handle it" pivot; vague authority (*Nghiên cứu cho thấy*). The last has only 4 hits in 2 samples and is the weakest of the four.
+4. **Chatbot leftovers are common in pasted chat output** (14 of 16 bare replies). The skill should strip the framing and offers but never touch `[placeholders]`.
 
 ## Limits
 
-- **Claude only, through a coding-agent harness.** The generators ran as Claude Code subagents, not in a plain chat app and not through the bare API. The harness system prompt may make the prose plainer than what a user gets from a chat app. The corpus also includes no GPT, Gemini or local Vietnamese models, which are often the source of *Bên cạnh đó*, *Ngoài ra* and *vô cùng*. The zero counts in this corpus may not hold for those models.
-- 24 samples, one tagger, no second rater. The counts are small. Treat ranks 8–11 as roughly tied.
-- Human-written controls are not part of this step. Same-rhythm and triads, in particular, need a control comparison before they can be trusted.
+- **Claude only.** Codex/OpenAI failed on auth, and no Gemini or local Vietnamese model was available. Linking-word padding is widely reported in Vietnamese AI text from other models, and neither Claude route produced it, so its rank here may not hold for other models.
+- **Two routes, one family.** The bare route is the closer stand-in for what users paste. The subagent route undercounts tells by about 2.5× per word. Evals in Task 6 should draw mainly on the bare samples.
+- 40 samples and one tagger, with no second rater. Treat rows 10–14 as roughly tied.
+- No human-written controls yet. Triads and same rhythm, in particular, need a control comparison before they can be trusted.
