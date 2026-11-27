@@ -23,17 +23,24 @@ Trước → Sau — lý do
 
 ## Cài đặt
 
-**Claude Code**
+**Claude Code.** Nên cài cả plugin `viet-writing` (có thêm `humanizer-vi`, `style-vi` và hai lệnh rà soát):
+
+```
+/plugin marketplace add duy211099/vn-ux-writing-skill
+/plugin install viet-writing@viet-writing
+```
+
+Chỉ cài skill này:
 
 ```bash
-npx skills add duy211099/vn-ux-writing-skill@ux-writing-vi -g -y
+npx skills add duy211099/vn-ux-writing-skill --skill ux-writing-vi -g -y
 ```
 
 Hoặc cài thủ công:
 
 ```bash
 git clone https://github.com/duy211099/vn-ux-writing-skill.git
-ln -s "$PWD/vn-ux-writing-skill/ux-writing-vi" ~/.claude/skills/ux-writing-vi
+ln -s "$PWD/vn-ux-writing-skill/skills/ux-writing-vi" ~/.claude/skills/ux-writing-vi
 ```
 
 Hướng dẫn đầy đủ: https://github.com/duy211099/vn-ux-writing-skill#cài-đặt
@@ -88,6 +95,6 @@ Góp ý và sửa lỗi: mở issue hoặc pull request, nhất là khi bạn th
 - **While coding:** when the agent writes strings in a repo with a Vietnamese locale, the skill keeps one voice across the app through `docs/giong-van.md`. It writes Vietnamese from the intent of English source strings rather than translating them word for word, and it applies a pattern for each element.
 - **On request:** give it text, a screenshot or a URL, and it returns `Trước → Sau — lý do` rewrites.
 
-**Install for Claude Code:** symlink or copy `ux-writing-vi/` into `~/.claude/skills/`.
+**Install for Claude Code:** install the whole `viet-writing` plugin (`/plugin marketplace add duy211099/vn-ux-writing-skill`, then `/plugin install viet-writing@viet-writing`), or symlink or copy `skills/ux-writing-vi/` into `~/.claude/skills/`.
 
 **Credits:** adapted from Christopher Greer's [UX Writing Skill](https://github.com/content-designer/ux-writing-skill) (MIT). Language rules are paraphrased from the Microsoft Vietnamese Localization Style Guide. All Vietnamese examples are original. Released under the MIT license.
