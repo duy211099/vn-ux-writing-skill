@@ -1,5 +1,5 @@
 ---
-source: https://vi.wikipedia.org/wiki/Thành_viên:Sanga
+source: https://vi.wikipedia.org/w/index.php?oldid=1446770
 revision: 1446770
 date: 2008-09-08
 author: "Sanga"

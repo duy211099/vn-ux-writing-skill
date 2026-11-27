@@ -1,5 +1,5 @@
 ---
-source: https://vi.wikipedia.org/wiki/Thảo_luận:Lễ_Chiến_sĩ_trận_vong
+source: https://vi.wikipedia.org/w/index.php?oldid=2960201
 revision: 2960201
 date: 2010-05-30
 author: "Future ahead"

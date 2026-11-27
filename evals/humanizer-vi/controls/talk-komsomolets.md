@@ -1,5 +1,5 @@
 ---
-source: https://vi.wikipedia.org/wiki/Thảo_luận:Sự_cố_tàu_ngầm_nguyên_tử_Komsomolets
+source: https://vi.wikipedia.org/w/index.php?oldid=67766135
 revision: 67766135
 date: 2021-12-30
 author: "Heo khánh"

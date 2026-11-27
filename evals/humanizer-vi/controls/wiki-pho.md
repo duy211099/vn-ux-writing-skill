@@ -1,5 +1,5 @@
 ---
-source: https://vi.wikipedia.org/wiki/Phở
+source: https://vi.wikipedia.org/w/index.php?oldid=68655878
 revision: 68655878
 date: 2022-05-27
 author: "Các tác giả Wikipedia tiếng Việt (xem lịch sử trang): Phở"

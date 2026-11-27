@@ -1,5 +1,5 @@
 ---
-source: https://vi.wikipedia.org/wiki/Chùa_Một_Cột
+source: https://vi.wikipedia.org/w/index.php?oldid=68465893
 revision: 68465893
 date: 2022-04-14
 author: "Các tác giả Wikipedia tiếng Việt (xem lịch sử trang): Chùa Một Cột"

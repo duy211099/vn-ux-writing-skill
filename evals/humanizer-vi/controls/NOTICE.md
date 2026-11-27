@@ -2,7 +2,7 @@
 
 Thư mục này **không** thuộc giấy phép MIT của phần còn lại của repo. Mỗi file giữ giấy phép của nguồn gốc, ghi trong phần front matter (`license`, `author`, `source`, `revision`). Không đóng gói các file này vào skill zip.
 
-These are human-written Vietnamese texts (all dated before 2022-06-01) used only as "leave unchanged" controls for `humanizer-vi`. Text bodies are copied from the sources without changes, apart from stripping wiki markup and joining line wraps.
+These are human-written Vietnamese texts (all dated before 2022-06-01) used only as "leave unchanged" controls for `humanizer-vi`. Each file is an excerpt, not the whole page or document. Wording is copied unchanged, apart from: wiki markup stripped, line wraps joined, and some lines left out (a signature, a real name, an age, or neighbouring paragraphs). `talk-komsomolets.md` joins two comments by the same user from the same day. Tatoeba files group several sentences by one owner into one file, with every sentence ID in `revision`. Sources are permalinks to the exact revision.
 
 | License | Files | What you must do when reusing |
 |---|---|---|

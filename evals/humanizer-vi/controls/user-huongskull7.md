@@ -1,5 +1,5 @@
 ---
-source: https://vi.wikipedia.org/wiki/Thành_viên:Huongskull7
+source: https://vi.wikipedia.org/w/index.php?oldid=26444481
 revision: 26444481
 date: 2017-04-04
 author: "Huongskull7"
